@@ -5,7 +5,7 @@
       <Property Name="Name">PictureBoxControl1</Property>
       <Property Name="Size">373, 446</Property>
       <Property Name="Location">0, 2</Property>
-      <Property Name="ImageFile">..\..\Bilder\N.png</Property>
+      <Property Name="ImageFile">..\..\blue.png</Property>
     </Object>
     <Property Name="Name">Panel</Property>
     <Property Name="Size">375, 448</Property>
