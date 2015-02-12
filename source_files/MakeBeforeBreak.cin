@@ -1,0 +1,88 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  int i = 0;
+  int _last_position = 0;
+  int _repeated = 0;
+  int _sensors_active = 0;
+  int _allowed = 0;
+  int _bits_changed = 0;
+  int _legal_positions[15] = 
+  {
+    /* 
+    { {7:Not used}, {6:--}, {5:++}, {4:-}, {3:+}, {2:C}, {1-0:A-M} }
+    bit 7: Not used
+    bit 6: --
+    bit 5: ++
+    bit 4: -
+    bit 3: +
+    bit 2: C
+    bit 1-0: A-M 
+    */
+    //Automatic shift
+    0x42, // 01000010
+    0x52, // 01010010
+    0x12, // 00010010
+    0x16, // 00010110
+    0x0E, // 00001110
+    0x0A, // 00001010
+    0x2A, // 00101010
+    0x22, // 00100010
+    //Switching Automatic -> Manual
+    0x06, // 00000110
+    0x07, // 00000111
+    0x05, // 00000101
+    //Manual shift
+    0x15, // 00010101
+    0x11, // 00010001
+    0x0D, // 00001101
+    0x09  // 00001001
+  };
+    
+}
+
+void MBB(int sensor_status)
+{  
+  //Rule 1: At least 1 sensor active (excluding A/M)
+  //Rule 2: No more than 2 sensors active at any point (excluding A/M)
+  _sensors_active = 0;
+  for(i = 0; i < 5; i++)
+    if ( (((sensor_status >> 2) >> i) & 0x1) == 1)
+      _sensors_active++;
+  //Rule 1
+  if (_sensors_active == 0)
+    write("Broke rule 1 of MBB!");
+  //Rule 2
+  if (_sensors_active > 2)
+    write("Broke rule 2 of MBB!");
+  
+  //Rule 3: Only 2 adjacent sensors can be active
+  _bits_changed = 0;
+  for (i = 0; i < 8; i++)
+    if( (sensor_status & (0x80 >> i)) != (_last_position & (0x80 >> i)) )
+      _bits_changed++;
+    
+  if (_bits_changed > 1)
+    write("Broke rule 3 of MBB!");
+  
+  //Rule 4: 2 signal franks between every adjacent position
+  if ( sensor_status != _last_position && _last_position > 0)
+  {
+    if (_repeated < 1)
+      write("Broke rule 4 of MBB!");
+    _repeated = 0;
+  }
+  if ( sensor_status == _last_position )
+    _repeated++;
+  
+  //Rule 5: Sensor activation must follow mechanical patterns
+  //TODO
+  
+  
+  _last_position = sensor_status;
+}
