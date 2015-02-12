@@ -7,12 +7,15 @@ includes
 variables
 {
   int i = 0;
-  int _last_position = 0;
+  int j = 0;
+  int _last_position = 0x06; //Assume shifter begin in neutral
+  int _last_move = 0x06;
   int _repeated = 0;
   int _sensors_active = 0;
   int _allowed = 0;
-  int _bits_changed = 0;
-  int _legal_positions[15] = 
+  int _non_adjacent_active = 0;
+  int _matched_pattern = 0;
+  int _legal_patterns[15][4] = 
   {
     /* 
     { {7:Not used}, {6:--}, {5:++}, {4:-}, {3:+}, {2:C}, {1-0:A-M} }
@@ -25,25 +28,59 @@ variables
     bit 1-0: A-M 
     */
     //Automatic shift
-    0x42, // 01000010
-    0x52, // 01010010
-    0x12, // 00010010
-    0x16, // 00010110
-    0x0E, // 00001110
-    0x0A, // 00001010
-    0x2A, // 00101010
-    0x22, // 00100010
+    { 0x42, 0x52 },
+    { 0x52, 0x42, 0x12 },
+    { 0x12, 0x52, 0x16 },
+    { 0x16, 0x12, 0x06 },
+    { 0x0E, 0x06, 0x0A },
+    { 0x0A, 0x0E, 0x2A },
+    { 0x2A, 0x0A, 0x22 },
+    { 0x22, 0x2A },
     //Switching Automatic -> Manual
-    0x06, // 00000110
-    0x07, // 00000111
-    0x05, // 00000101
+    { 0x06, 0x16, 0x0E, 0x07 },
+    { 0x07, 0x05, 0x06 },
+    { 0x05, 0x0D, 0x15, 0x07 },
     //Manual shift
-    0x15, // 00010101
-    0x11, // 00010001
-    0x0D, // 00001101
-    0x09  // 00001001
+    { 0x15, 0x05, 0x11 },
+    { 0x11, 0x15 }, 
+    { 0x0D, 0x09, 0x05 },
+    { 0x09, 0x0D }
   };
     
+}
+
+//Returns 1 if a non-adjacent sensor is active
+int Test_Adjacent(int sensor, int mask)
+{
+  switch(sensor & mask)
+  {
+    //0 is allowed positions, 1 is not
+    case 0x40:
+      if ((sensor & 0xAC) > 0) return 1; //mask: 1010 1100
+      break;
+      
+    case 0x20:
+      if ((sensor & 0xD4) > 0) return 1; //mask: 1101 0100
+      break;
+      
+    case 0x10:
+      if ((sensor & 0xA4) > 0) return 1; //mask: 1010 0100
+      break;
+      
+    case 0x08:
+      if ((sensor & 0xD0) > 0) return 1; //mask: 1101 0000
+      break;
+      
+    case 0x04:
+      if ((sensor & 0xE0) > 0) return 1; //mask: 1110 0000
+      break;
+      
+    default:
+        //something else probably is wrong if it reached this, so return error anyway
+        return 1;
+      break;
+  }
+  return 0;
 }
 
 void MBB(int sensor_status)
@@ -53,36 +90,50 @@ void MBB(int sensor_status)
   _sensors_active = 0;
   for(i = 0; i < 5; i++)
     if ( (((sensor_status >> 2) >> i) & 0x1) == 1)
-      _sensors_active++;
+      _sensors_active++; // count the number of active sensors
+    
   //Rule 1
-  if (_sensors_active == 0)
+  if (!_sensors_active) //No active sensor
     write("Broke rule 1 of MBB!");
   //Rule 2
-  if (_sensors_active > 2)
+  if (_sensors_active > 2) //More than 2 active sensors
     write("Broke rule 2 of MBB!");
   
   //Rule 3: Only 2 adjacent sensors can be active
-  _bits_changed = 0;
-  for (i = 0; i < 8; i++)
-    if( (sensor_status & (0x80 >> i)) != (_last_position & (0x80 >> i)) )
-      _bits_changed++;
-    
-  if (_bits_changed > 1)
+  _non_adjacent_active = 0;
+  for (i = 0; i < 6; i++)
+    if( (sensor_status & (0x80 >> i)) == (0x80 >> i) ) //Enter on first 1 in the sensor values i.e. 0(this->)1010010
+    {
+      _non_adjacent_active = Test_Adjacent(sensor_status, (0x80 >> i));
+      break; //break out of for loop to skip looking at the other 1s, looking at the first is enough
+    }
+      
+  if (_non_adjacent_active) //If a non adjacent sensor is found active a rule is broken
     write("Broke rule 3 of MBB!");
   
   //Rule 4: 2 signal franks between every adjacent position
-  if ( sensor_status != _last_position && _last_position > 0)
+  if ( sensor_status != _last_position)
   {
+    //Enter if the value changed since the last time
+    //If the last value didn't appear at least twice, a rule was broken
     if (_repeated < 1)
       write("Broke rule 4 of MBB!");
     _repeated = 0;
+    _last_move = _last_position; //Save the last movement of the magnet / sensor shift
   }
-  if ( sensor_status == _last_position )
-    _repeated++;
+  else _repeated++; //Keep track of how many times the message have been sent in a row
+  
   
   //Rule 5: Sensor activation must follow mechanical patterns
-  //TODO
-  
+  _matched_pattern = 0;
+  for (i = 0; i < 15; i++)
+    if (_legal_patterns[i][0] == sensor_status) //Look through the matrix to find the message
+      for (j = 0; j < 4; j++)
+        if (_legal_patterns[i][j] == _last_move) //See if the movement is in the list of allowed moves
+          _matched_pattern++;
+        
+  if(!_matched_pattern)
+    write("Broke rule 5 of MBB!");
   
   _last_position = sensor_status;
 }
