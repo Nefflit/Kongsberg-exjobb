@@ -1,13 +1,67 @@
 <?xml version="1.0"?>
 <Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null">
   <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="sensorPanel">
-    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl1" ControlName="sensorPic">
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">54, 13</Property>
+      <Property Name="Location">133, 194</Property>
+      <Property Name="Text">Automatic</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">43, 13</Property>
+      <Property Name="Location">45, 194</Property>
+      <Property Name="Text">Manual</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl8" ControlName="A">
+      <Property Name="Name">PictureBoxControl8</Property>
+      <Property Name="Size">88, 78</Property>
+      <Property Name="Location">118, 213</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl7" ControlName="M">
+      <Property Name="Name">PictureBoxControl7</Property>
+      <Property Name="Size">88, 78</Property>
+      <Property Name="Location">24, 213</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl6" ControlName="N">
+      <Property Name="Name">PictureBoxControl6</Property>
+      <Property Name="Size">88, 78</Property>
+      <Property Name="Location">339, 315</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl5" ControlName="NN">
+      <Property Name="Name">PictureBoxControl5</Property>
+      <Property Name="Size">88, 78</Property>
+      <Property Name="Location">339, 399</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl4" ControlName="C">
+      <Property Name="Name">PictureBoxControl4</Property>
+      <Property Name="Size">88, 78</Property>
+      <Property Name="Location">339, 213</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl3" ControlName="U">
+      <Property Name="Name">PictureBoxControl3</Property>
+      <Property Name="Size">88, 78</Property>
+      <Property Name="Location">339, 129</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl2" ControlName="UU">
+      <Property Name="Name">PictureBoxControl2</Property>
+      <Property Name="Size">85, 78</Property>
+      <Property Name="Location">339, 34</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl1" ControlName="sensorBackground">
       <Property Name="Name">PictureBoxControl1</Property>
-      <Property Name="Size">373, 446</Property>
-      <Property Name="Location">0, 2</Property>
-      <Property Name="ImageFile">..\..\blue.png</Property>
+      <Property Name="Size">542, 525</Property>
+      <Property Name="Location">0, 0</Property>
+      <Property Name="ImageFile">..\images\N.png</Property>
     </Object>
     <Property Name="Name">Panel</Property>
-    <Property Name="Size">375, 448</Property>
+    <Property Name="Size">542, 525</Property>
   </Object>
 </Panel>
