@@ -62,6 +62,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">187, 131</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;M;1;;;-1</Property>
       <Property Name="TabIndex">6</Property>
@@ -71,6 +72,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">187, 95</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;A;1;;;-1</Property>
       <Property Name="TabIndex">5</Property>
@@ -80,6 +82,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">63, 167</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;NN;1;;;-1</Property>
       <Property Name="TabIndex">4</Property>
@@ -89,6 +92,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">63, 131</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;N;1;;;-1</Property>
       <Property Name="TabIndex">3</Property>
@@ -98,6 +102,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">63, 95</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;C;1;;;-1</Property>
       <Property Name="TabIndex">2</Property>
@@ -107,6 +112,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">63, 59</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;U;1;;;-1</Property>
       <Property Name="TabIndex">1</Property>
@@ -116,6 +122,7 @@
       <Property Name="Size">23, 30</Property>
       <Property Name="Location">63, 23</Property>
       <Property Name="StateCnt">2</Property>
+      <Property Name="Activation">Left</Property>
       <Property Name="SwitchValues">1;2;0;1</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;UU;1;;;-1</Property>
       <Property Name="TabIndex">0</Property>

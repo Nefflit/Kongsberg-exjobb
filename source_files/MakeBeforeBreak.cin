@@ -90,9 +90,10 @@ int Test_Adjacent(int sensor, int mask)
 void MBB(int sensor_status)
 {  
   /*******************************************************************
-    Change the background before altering the signal
+    Change the background before altering the signal and reset the errors
   *******************************************************************/
   ChangeBackground(sensor_status);
+  ResetMBBErrors();
   
   /*******************************************************************
     Add user specified errors to the sensor value
@@ -113,10 +114,10 @@ void MBB(int sensor_status)
     
   //Rule 1
   if (!_sensors_active) //No active sensor
-    write("Broke rule 1 of MBB!");
+    SetErrorBackground("rule1");
   //Rule 2
   if (_sensors_active > 2) //More than 2 active sensors
-    write("Broke rule 2 of MBB!");
+    SetErrorBackground("rule2");
   
   //Rule 3: Only 2 adjacent sensors can be active
   _non_adjacent_active = 0;
@@ -128,15 +129,15 @@ void MBB(int sensor_status)
     }
       
   if (_non_adjacent_active == 1) //If a non adjacent sensor is found active a rule is broken
-    write("Broke rule 3 of MBB!");
+    SetErrorBackground("rule3");
   
   //Rule 4: 2 signal franks between every adjacent position
   if ( sensor_status != _last_position)
   {
     //Enter if the value changed since the last time
     //If the last value didn't appear at least twice, a rule was broken
-    if (_repeated < 1)
-      write("Broke rule 4 of MBB!");
+    if (_repeated < 1))
+      SetErrorBackground("rule4");
     _repeated = 0;
     _last_move = _last_position; //Save the last movement of the magnet / sensor shift
   }
@@ -152,7 +153,7 @@ void MBB(int sensor_status)
           _matched_pattern++;
         
   if(!_matched_pattern)
-    write("Broke rule 5 of MBB!");
+    SetErrorBackground("rule5");
 
   _last_position = sensor_status;
   

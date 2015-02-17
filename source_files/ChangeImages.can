@@ -30,6 +30,7 @@ void ChangeBackground(int background)
   }
 }
 
+//Updates the display sensors on screen to the new active states
 void ChangeDisplaySensors(int sensors)
 {
   if (sensors & 0x40) setPictureBoxImage("sensorPanel", "NN", "..\\images\\ActiveSensor.png");
@@ -55,3 +56,18 @@ void ChangeDisplaySensors(int sensors)
 }
 
 
+//Reset the background images in the MBBError panel for the next test
+void ResetMBBErrors(void)
+{
+  setPictureBoxImage("MBBRules", "rule1", "..\\images\\okay.png");
+  setPictureBoxImage("MBBRules", "rule2", "..\\images\\okay.png");
+  setPictureBoxImage("MBBRules", "rule3", "..\\images\\okay.png");
+  setPictureBoxImage("MBBRules", "rule4", "..\\images\\okay.png");
+  setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay.png");
+}
+
+//Set the provided rule background to red
+void SetErrorBackground(char rule[])
+{
+  setPictureBoxImage("MBBRules", rule, "..\\images\\error.png");
+}
