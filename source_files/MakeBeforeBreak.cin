@@ -1,7 +1,7 @@
 /*@!Encoding:1252*/
 includes
 {
-  #include "ChangePictureboxImage.can"
+  #include "ChangeImages.can"
 }
 
 variables
@@ -83,6 +83,9 @@ int Test_Adjacent(int sensor, int mask)
   return 0;
 }
 
+//Evaluates MakeBeforeBreak on the input value
+//Input value should be in format:
+//7:0, 6:--, 5:++, 4:-, 3:+, 2:C, 1:A, 0:M
 void MBB(int sensor_status)
 {  
   /*******************************************************************

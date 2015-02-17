@@ -16,12 +16,12 @@ void changePicture(int pic)
     case 0x06:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\N.png");  break;
     case 0x16:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\N2R.png");  break;
     case 0x12:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\R.png");  break;
-    case 0x52:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\.png");  break;
-    case 0x42:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\.png");  break;
+    case 0x52:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\R2--.png");  break;
+    case 0x42:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\--.png");  break;
     case 0x0E:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\N2D.png");  break;
     case 0x0A:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\D.png");  break;
-    case 0x2A:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\.png");  break;
-    case 0x22:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\.png");  break;
+    case 0x2A:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\D2++.png");  break;
+    case 0x22:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\++.png");  break;
     case 0x07:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\N2M.png");  break;
     case 0x05:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\M.png");  break;
     case 0x15:  setPictureBoxImage("sensorPanel", "sensorPic" , "..\\images\\M2-.png");  break;
