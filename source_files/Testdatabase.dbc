@@ -38,21 +38,33 @@ BU_: receiver_node test_node
 
 
 
-EV_ M: 0 [0|1] "Bit" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ M_A: 0 [0|1] "Bit" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ A: 0 [0|1] "Bit" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ A_A: 0 [0|1] "Bit" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ C: 0 [0|1] "Bit" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ C_A: 0 [0|1] "Bit" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ N: 0 [0|1] "Bit" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ U_A: 0 [0|1] "Bit" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ U: 0 [0|1] "Bit" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ UU_A: 0 [0|1] "Bit" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ UU: 0 [0|1] "Bit" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ N_A: 0 [0|1] "Bit" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ NN: 0 [0|1] "Bit" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ M: 0 [0|1] "Bit" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ P: 0 [0|1] "Bit" 0 8 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ A: 0 [0|1] "Bit" 0 8 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ C: 0 [0|1] "Bit" 0 9 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ N: 0 [0|1] "Bit" 0 10 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ U: 0 [0|1] "Bit" 0 11 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ UU: 0 [0|1] "Bit" 0 12 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ NN: 0 [0|1] "Bit" 0 13 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ NN_A: 0 [0|1] "Bit" 0 14 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 BA_DEF_  "BusType" STRING ;
 BA_DEF_ BU_  "NodeLayerModules" STRING ;
