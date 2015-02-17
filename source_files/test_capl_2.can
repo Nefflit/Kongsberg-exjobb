@@ -1,0 +1,106 @@
+/*@!Encoding:1252*/
+includes
+{
+  #include "..\Git\source_files\MakeBeforeBreak.CIN"
+}
+
+variables
+{
+
+}
+
+on key '5'
+{
+  write("Pressed key: %c", this);
+  MBB(0x06); //AC
+}
+
+on key '4'
+{
+  write("Pressed key: %c", this);
+  MBB(0x0E); //AC -> +
+}
+
+on key '3'
+{
+  write("Pressed key: %c", this);
+  MBB(0x0A); //+
+}
+
+on key '2'
+{
+  write("Pressed key: %c", this);
+  MBB(0x2A); //+ -> ++
+}
+
+on key '1'
+{
+  write("Pressed key: %c", this);
+  MBB(0x22); //++
+}
+
+on key '6'
+{
+  write("Pressed key: %c", this);
+  MBB(0x16); //AC -> -
+}
+
+on key '7'
+{
+  write("Pressed key: %c", this);
+  MBB(0x12); //-
+}
+
+on key '8'
+{
+  write("Pressed key: %c", this);
+  MBB(0x52); //- -> --
+}
+
+on key '9'
+{
+  write("Pressed key: %c", this);
+  MBB(0x42); //--
+}
+
+on key 'q'
+{
+  write("Pressed key: %c", this);
+  MBB(0x07); //A -> M / M -> A
+}
+
+on key 't'
+{
+  write("Pressed key: %c", this);
+  MBB(0x05); //MC
+}
+
+on key 'y'
+{
+  write("Pressed key: %c", this);
+  MBB(0x0D); //MC -> +
+}
+
+on key 'u'
+{
+  write("Pressed key: %c", this);
+  MBB(0x09); //M+
+}
+
+on key 'r'
+{
+  write("Pressed key: %c", this);
+  MBB(0x15); //MC -> -
+}
+
+on key 'e'
+{
+  write("Pressed key: %c", this);
+  MBB(0x11); //M-
+}
+
+on key '0'
+{
+  write("Pressed key: %c", this);
+  MBB(0x01); //no sensor active
+}
