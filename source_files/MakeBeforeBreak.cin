@@ -2,6 +2,7 @@
 includes
 {
   #include "ChangeImages.can"
+  #include "AddErrors.can"
 }
 
 variables
@@ -89,10 +90,15 @@ int Test_Adjacent(int sensor, int mask)
 void MBB(int sensor_status)
 {  
   /*******************************************************************
+    Change the background before altering the signal
+  *******************************************************************/
+  ChangeBackground(sensor_status);
+  
+  /*******************************************************************
     Add user specified errors to the sensor value
   *******************************************************************/
   
-  // TODO:
+  sensor_status = AddErrors(sensor_status);
   
   /*******************************************************************
     Evaluate Make Before Break on the possibly error injected value
@@ -153,5 +159,5 @@ void MBB(int sensor_status)
   /*******************************************************************
     Update Interface
   *******************************************************************/
-  changePicture(sensor_status);
+  //TODO
 }
