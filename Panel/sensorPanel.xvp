@@ -17,7 +17,7 @@
       <Property Name="Name">PictureBoxControl8</Property>
       <Property Name="Size">88, 78</Property>
       <Property Name="Location">118, 213</Property>
-      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+      <Property Name="ImageFile">..\images\ActiveSensor.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl7" ControlName="M">
       <Property Name="Name">PictureBoxControl7</Property>
@@ -41,7 +41,7 @@
       <Property Name="Name">PictureBoxControl4</Property>
       <Property Name="Size">88, 78</Property>
       <Property Name="Location">339, 213</Property>
-      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
+      <Property Name="ImageFile">..\images\ActiveSensor.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl3" ControlName="U">
       <Property Name="Name">PictureBoxControl3</Property>

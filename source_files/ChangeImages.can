@@ -13,19 +13,45 @@ void ChangeBackground(int background)
 {
   switch (background)
   {
-    case 0x06:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\N.png");  break;
-    case 0x16:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\N2R.png");  break;
-    case 0x12:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\R.png");  break;
-    case 0x52:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\R2--.png");  break;
-    case 0x42:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\--.png");  break;
-    case 0x0E:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\N2D.png");  break;
-    case 0x0A:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\D.png");  break;
-    case 0x2A:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\D2++.png");  break;
-    case 0x22:  setPictureBoxImage("sensorPanel", "sensorBackground" , "..\\images\\++.png");  break;    
+    case 0x05:
+    case 0x06:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\N.png");  break;
+    case 0x15:
+    case 0x16:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\N2R.png");  break;
+    case 0x11:
+    case 0x12:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\R.png");  break;
+    case 0x52:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\R2--.png");  break;
+    case 0x42:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\--.png");  break;
+    case 0x0D:
+    case 0x0E:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\N2D.png");  break;
+    case 0x09:
+    case 0x0A:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\D.png");  break;
+    case 0x2A:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\D2++.png");  break;
+    case 0x22:  setPictureBoxImage("sensorPanel", "sensorBackground", "..\\images\\++.png");  break;    
   }
 }
 
 void ChangeDisplaySensors(int sensors)
 {
+  if (sensors & 0x40) setPictureBoxImage("sensorPanel", "NN", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "NN", "..\\images\\InactiveSensor.png");
   
+  if (sensors & 0x20) setPictureBoxImage("sensorPanel", "UU", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "UU", "..\\images\\InactiveSensor.png");
+  
+  if (sensors & 0x10) setPictureBoxImage("sensorPanel", "N", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "N", "..\\images\\InactiveSensor.png");
+  
+  if (sensors & 0x08) setPictureBoxImage("sensorPanel", "U", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "U", "..\\images\\InactiveSensor.png");
+  
+  if (sensors & 0x04) setPictureBoxImage("sensorPanel", "C", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "C", "..\\images\\InactiveSensor.png");
+  
+  if (sensors & 0x02) setPictureBoxImage("sensorPanel", "A", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "A", "..\\images\\InactiveSensor.png");
+  
+  if (sensors & 0x01) setPictureBoxImage("sensorPanel", "M", "..\\images\\ActiveSensor.png");
+  else setPictureBoxImage("sensorPanel", "M", "..\\images\\InactiveSensor.png");
 }
+
+

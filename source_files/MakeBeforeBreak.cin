@@ -159,5 +159,5 @@ void MBB(int sensor_status)
   /*******************************************************************
     Update Interface
   *******************************************************************/
-  //TODO
+  ChangeDisplaySensors(sensor_status);
 }
