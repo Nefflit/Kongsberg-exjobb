@@ -10,11 +10,13 @@ variables
   int last_value;
 }
 
+//Tar emot diagnosmeddelanden från växelspaken
 on message EgsmToVddmPropDiagResFrame
 {
   
 }
 
+//Skickar en diagnosförfrågan en gång per ms till växelspaken
 on timer timer1ms
 {
   MBB(last_value);

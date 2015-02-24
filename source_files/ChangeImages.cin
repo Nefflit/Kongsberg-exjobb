@@ -72,5 +72,5 @@ void SetMBBErrors(int found[])
   
   if (found[4]) setPictureBoxImage("MBBRules", "rule5", "..\\images\\error5.png");
   else setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay5.png");
-  
+  putValueToControl("sensorPanel", "output_view", "test");
 }
