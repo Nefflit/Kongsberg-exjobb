@@ -4,64 +4,64 @@
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl5" Children="Controls" ControlName="Static Text 5">
       <Property Name="Name">StaticTextControl5</Property>
       <Property Name="Size">363, 13</Property>
-      <Property Name="Location">11, 113</Property>
+      <Property Name="Location">3, 206</Property>
       <Property Name="Text">Rule 4: 2 signal flanks must always be detected between adjacent positions</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl4" Children="Controls" ControlName="Static Text 4">
       <Property Name="Name">StaticTextControl4</Property>
       <Property Name="Size">225, 13</Property>
-      <Property Name="Location">11, 79</Property>
+      <Property Name="Location">3, 150</Property>
       <Property Name="Text">Rule 3: Only 2 adjacent sensors can be active</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 3">
       <Property Name="Name">StaticTextControl3</Property>
       <Property Name="Size">237, 13</Property>
-      <Property Name="Location">11, 45</Property>
+      <Property Name="Location">3, 94</Property>
       <Property Name="Text">Rule 2: Maximum 2 sensors activated at any time</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
       <Property Name="Name">StaticTextControl2</Property>
       <Property Name="Size">204, 13</Property>
-      <Property Name="Location">11, 11</Property>
+      <Property Name="Location">3, 40</Property>
       <Property Name="Text">Rule 1: At least 1 sensor always activated</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
       <Property Name="Name">StaticTextControl1</Property>
-      <Property Name="Size">282, 13</Property>
-      <Property Name="Location">11, 147</Property>
+      <Property Name="Size">283, 17</Property>
+      <Property Name="Location">3, 258</Property>
       <Property Name="Text">Rule 5: Sensor activation must follow mechanical positions</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl5" ControlName="rule5">
       <Property Name="Name">PictureBoxControl5</Property>
-      <Property Name="Size">384, 28</Property>
-      <Property Name="Location">3, 139</Property>
-      <Property Name="ImageFile">..\images\okay.png</Property>
+      <Property Name="Size">374, 50</Property>
+      <Property Name="Location">3, 225</Property>
+      <Property Name="ImageFile">..\images\okay5.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl4" ControlName="rule4">
       <Property Name="Name">PictureBoxControl4</Property>
-      <Property Name="Size">384, 28</Property>
-      <Property Name="Location">3, 105</Property>
-      <Property Name="ImageFile">..\images\okay.png</Property>
+      <Property Name="Size">374, 50</Property>
+      <Property Name="Location">3, 169</Property>
+      <Property Name="ImageFile">..\images\okay4.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl3" ControlName="rule3">
       <Property Name="Name">PictureBoxControl3</Property>
-      <Property Name="Size">384, 28</Property>
-      <Property Name="Location">3, 71</Property>
-      <Property Name="ImageFile">..\images\okay.png</Property>
+      <Property Name="Size">374, 50</Property>
+      <Property Name="Location">3, 113</Property>
+      <Property Name="ImageFile">..\images\okay3.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl2" ControlName="rule2">
       <Property Name="Name">PictureBoxControl2</Property>
-      <Property Name="Size">384, 28</Property>
-      <Property Name="Location">3, 37</Property>
-      <Property Name="ImageFile">..\images\okay.png</Property>
+      <Property Name="Size">374, 50</Property>
+      <Property Name="Location">3, 57</Property>
+      <Property Name="ImageFile">..\images\okay2.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl1" ControlName="rule1">
       <Property Name="Name">PictureBoxControl1</Property>
-      <Property Name="Size">384, 28</Property>
+      <Property Name="Size">374, 50</Property>
       <Property Name="Location">3, 3</Property>
-      <Property Name="ImageFile">..\images\okay.png</Property>
+      <Property Name="ImageFile">..\images\okay1.png</Property>
     </Object>
     <Property Name="Name">Panel</Property>
-    <Property Name="Size">390, 172</Property>
+    <Property Name="Size">380, 275</Property>
   </Object>
 </Panel>

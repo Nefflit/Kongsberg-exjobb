@@ -1,7 +1,7 @@
 /*@!Encoding:1252*/
 includes
 {
-  #include "ChangeImages.can"
+  #include "ChangeImages.cin"
 }
 
 variables
@@ -15,6 +15,7 @@ variables
   int _allowed = 0;
   int _non_adjacent_active = 0;
   int _matched_pattern = 0;
+  int _found_error[5] = {0,0,0,0,0};
   int _legal_patterns[15][4] = 
   {
     /* 
@@ -120,14 +121,10 @@ int AddErrors(int sensor)
 void MBB(int sensor_status)
 {  
   /*******************************************************************
-    Change the background before altering the signal and reset the errors
+    Change the background before altering the signal
   *******************************************************************/
-  
   ChangeBackground(sensor_status);
-  if (_last_position != sensor_status)//Reset positions when the position changes
-  {
-    ResetMBBErrors();
-  }
+
   /*******************************************************************
     Add user specified errors to the sensor value
   *******************************************************************/
@@ -147,10 +144,10 @@ void MBB(int sensor_status)
     3
   //Rule 1
   if (!_sensors_active) //No active sensor
-    SetErrorBackground("rule1");
+    _found_error[0] = 1;
   //Rule 2
   if (_sensors_active > 2) //More than 2 active sensors
-    SetErrorBackground("rule2");
+    _found_error[1] = 1;
   
   //Rule 3: Only 2 adjacent sensors can be active
   _non_adjacent_active = 0;
@@ -162,7 +159,7 @@ void MBB(int sensor_status)
     }
       
   if (_non_adjacent_active == 1) //If a non adjacent sensor is found active a rule is broken
-    SetErrorBackground("rule3");
+    _found_error[2] = 1;
   
   //Rule 4: 2 signal franks between every adjacent position
   if ( sensor_status != _last_position)
@@ -170,7 +167,7 @@ void MBB(int sensor_status)
     //Enter if the value changed since the last time
     //If the last value didn't appear at least twice, a rule was broken
     if (_repeated < 1)
-      SetErrorBackground("rule4");
+      _found_error[3] = 1;
     _repeated = 0;
     _last_move = _last_position; //Save the last movement of the magnet / sensor shift
   }
@@ -186,7 +183,7 @@ void MBB(int sensor_status)
           _matched_pattern++;
         
   if(!_matched_pattern)
-    SetErrorBackground("rule5");
+    _found_error[4] = 1;
 
   _last_position = sensor_status;
   
