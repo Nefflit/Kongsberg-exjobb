@@ -124,7 +124,6 @@ void MBB(int sensor_status)
     Change the background before altering the signal
   *******************************************************************/
   ChangeBackground(sensor_status);
-
   /*******************************************************************
     Add user specified errors to the sensor value
   *******************************************************************/
@@ -141,7 +140,7 @@ void MBB(int sensor_status)
   for(i = 0; i < 5; i++)
     if ( (((sensor_status >> 2) >> i) & 0x1) == 1)
       _sensors_active++; // count the number of active sensors
-    3
+    
   //Rule 1
   if (!_sensors_active) //No active sensor
     _found_error[0] = 1;
