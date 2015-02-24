@@ -55,19 +55,42 @@ void ChangeDisplaySensors(int sensors)
   else setPictureBoxImage("sensorPanel", "M", "..\\images\\InactiveSensor.png");
 }
 
-
 //Reset the background images in the MBBError panel for the next test
-void ResetMBBErrors(void)
+void ResetMBBErrors()
 {
-  setPictureBoxImage("MBBRules", "rule1", "..\\images\\okay.png");
-  setPictureBoxImage("MBBRules", "rule2", "..\\images\\okay.png");
-  setPictureBoxImage("MBBRules", "rule3", "..\\images\\okay.png");
-  setPictureBoxImage("MBBRules", "rule4", "..\\images\\okay.png");
-  setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay.png");
+  setPictureBoxImage("MBBRules", "rule1", "..\\images\\okay1.png");
+  setPictureBoxImage("MBBRules", "rule2", "..\\images\\okay2.png");
+  setPictureBoxImage("MBBRules", "rule3", "..\\images\\okay3.png");
+  setPictureBoxImage("MBBRules", "rule4", "..\\images\\okay4.png");
+  setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay5.png");
 }
 
-//Set the provided rule background to red
-void SetErrorBackground(char rule[])
+//Set the rule 1 background to red
+void SetRule1Broken(void)
 {
-  setPictureBoxImage("MBBRules", rule, "..\\images\\error.png");
+  setPictureBoxImage("MBBRules", "rule1", "..\\images\\error1.png");
+}
+
+//Set the rule 2 background to red
+void SetRule2Broken(void)
+{
+  setPictureBoxImage("MBBRules", "rule2", "..\\images\\error2.png");
+}
+
+//Set the rule 3 background to red
+void SetRule3Broken(void)
+{
+  setPictureBoxImage("MBBRules", "rule3", "..\\images\\error3.png");
+}
+
+//Set the rule 4 background to red
+void SetRule4Broken()
+{
+  setPictureBoxImage("MBBRules", "rule4", "..\\images\\error4.png");
+}
+
+//Set the rule 5 background to red
+void SetRule5Broken()
+{
+  setPictureBoxImage("MBBRules", "rule5", "..\\images\\error5.png");
 }

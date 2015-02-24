@@ -6,101 +6,130 @@ includes
 
 variables
 {
+  msTimer timer1ms;
+  int last_value;
+}
 
+on message EgsmToVddmPropDiagResFrame
+{
+  
+}
+
+on timer timer1ms
+{
+  MBB(last_value);
+  setTimer(timer1ms, 1);
 }
 
 on key '5'
 {
   write("Pressed key: %c", this);
   MBB(0x06); //AC
+  last_value = 0x06;
+  setTimer(timer1ms, 1);
 }
 
 on key '4'
 {
   write("Pressed key: %c", this);
   MBB(0x0E); //AC -> +
+  last_value = 0x0E;
 }
 
 on key '3'
 {
   write("Pressed key: %c", this);
   MBB(0x0A); //+
+  last_value = 0x0A;
 }
 
 on key '2'
 {
   write("Pressed key: %c", this);
   MBB(0x2A); //+ -> ++
+  last_value = 0x2A;
 }
 
 on key '1'
 {
   write("Pressed key: %c", this);
   MBB(0x22); //++
+  last_value = 0x22;
 }
 
 on key '6'
 {
   write("Pressed key: %c", this);
   MBB(0x16); //AC -> -
+  last_value = 0x16;
 }
 
 on key '7'
 {
   write("Pressed key: %c", this);
   MBB(0x12); //-
+  last_value = 0x12;
 }
 
 on key '8'
 {
   write("Pressed key: %c", this);
   MBB(0x52); //- -> --
+  last_value = 0x52;
 }
 
 on key '9'
 {
   write("Pressed key: %c", this);
   MBB(0x42); //--
+  last_value = 0x42;
 }
 
 on key 'q'
 {
   write("Pressed key: %c", this);
   MBB(0x07); //A -> M / M -> A
+  last_value = 0x07;
 }
 
 on key 't'
 {
   write("Pressed key: %c", this);
   MBB(0x05); //MC
+  last_value = 0x05;
 }
 
 on key 'y'
 {
   write("Pressed key: %c", this);
   MBB(0x0D); //MC -> +
+  last_value = 0x0D;
 }
 
 on key 'u'
 {
   write("Pressed key: %c", this);
   MBB(0x09); //M+
+  last_value = 0x09;
 }
 
 on key 'r'
 {
   write("Pressed key: %c", this);
   MBB(0x15); //MC -> -
+  last_value = 0x15;
 }
 
 on key 'e'
 {
   write("Pressed key: %c", this);
   MBB(0x11); //M-
+  last_value = 0x11;
 }
 
 on key '0'
 {
   write("Pressed key: %c", this);
   MBB(0x01); //no sensor active
+  last_value = 0x01;
 }
