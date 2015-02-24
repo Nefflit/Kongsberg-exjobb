@@ -1,7 +1,7 @@
 /*@!Encoding:1252*/
 includes
 {
-  #include "..\source_files\MakeBeforeBreak.CIN"
+  #include "..\source_files\MakeBeforeBreak.cin"
 }
 
 variables
