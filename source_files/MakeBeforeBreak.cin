@@ -2,7 +2,6 @@
 includes
 {
   #include "ChangeImages.can"
-  #include "AddErrors.can"
 }
 
 variables
@@ -123,9 +122,10 @@ void MBB(int sensor_status)
   /*******************************************************************
     Change the background before altering the signal and reset the errors
   *******************************************************************/
+  
+  ChangeBackground(sensor_status);
   if (_last_move != sensor_status)//Reset positions when the position changes
   {
-    ChangeBackground(sensor_status);
     ResetMBBErrors();
   }
   /*******************************************************************
