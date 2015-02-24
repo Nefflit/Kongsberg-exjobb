@@ -124,7 +124,6 @@ void MBB(int sensor_status)
     Change the background before altering the signal
   *******************************************************************/
   ChangeBackground(sensor_status);
-
   /*******************************************************************
     Add user specified errors to the sensor value
   *******************************************************************/
