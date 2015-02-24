@@ -47,7 +47,6 @@ variables
     { 0x0D, 0x09, 0x05 },
     { 0x09, 0x0D }
   };
-    long time;
 }
 
 //Returns 1 if a non-adjacent sensor is active
