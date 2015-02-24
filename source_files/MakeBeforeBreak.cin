@@ -124,7 +124,7 @@ void MBB(int sensor_status)
   *******************************************************************/
   
   ChangeBackground(sensor_status);
-  if (_last_move != sensor_status)//Reset positions when the position changes
+  if (_last_position != sensor_status)//Reset positions when the position changes
   {
     ResetMBBErrors();
   }
@@ -144,7 +144,7 @@ void MBB(int sensor_status)
   for(i = 0; i < 5; i++)
     if ( (((sensor_status >> 2) >> i) & 0x1) == 1)
       _sensors_active++; // count the number of active sensors
-    
+    3
   //Rule 1
   if (!_sensors_active) //No active sensor
     SetErrorBackground("rule1");

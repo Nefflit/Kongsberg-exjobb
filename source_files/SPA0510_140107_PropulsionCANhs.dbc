@@ -1,0 +1,2618 @@
+VERSION "PropulsionCANhs"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BECM DEMspa ECM EGSM ESM ETC IEM IGM OBC SRS TACM TCM VCM VDDM
+
+
+BO_ 2659200640 AsdmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2655145600 AudToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2674536064 BbsToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2030 BcmToEtcCarbPropDiagResFrame: 8 VDDM
+
+BO_ 1585 BcmToEtcPropDiagResFrame: 8 VDDM
+
+BO_ 327 BecmPropFr01: 8 BECM
+ SG_ HvBattEgyAvlDcha : 3|12@0+ (5,0) [0|20475] "Wh"  ECM,OBC
+ SG_ HvBattEgyAvlDcha_UB : 23|1@0+ (1,0) [0|1] ""  ECM,OBC
+ SG_ HvBattPwrLimDcha : 48|9@0+ (0.25,0) [0|125] "kW"  ECM,OBC
+ SG_ HvBattPwrLimDcha_UB : 49|1@0+ (1,0) [0|1] ""  ECM,OBC
+ SG_ HvBattUDc : 18|11@0+ (0.25,0) [0|511] "Volt"  ECM,IEM,IGM,OBC
+ SG_ HvBattUDc_UB : 19|1@0+ (1,0) [0|1] ""  ECM,IEM,IGM,OBC
+ SG_ HvBattUDynMaxLim : 34|11@0+ (0.25,0) [0|511] "Volt"  IEM,IGM
+ SG_ HvBattUDynMaxLim_UB : 35|1@0+ (1,0) [0|1] ""  IEM,IGM
+ SG_ HvSysActvnInhb : 37|1@0+ (1,0) [0|0] ""  ECM
+ SG_ HvSysActvnInhb_UB : 38|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvSysPwrOff : 20|1@0+ (1,0) [0|0] ""  ECM
+ SG_ HvSysPwrOff_UB : 21|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvSysRlySts : 7|2@0+ (1,0) [0|0] ""  ECM,IEM,IGM,OBC
+ SG_ HvSysRlySts_UB : 22|1@0+ (1,0) [0|1] ""  ECM,IEM,IGM,OBC
+ SG_ HvSysSts : 5|2@0+ (1,0) [0|0] ""  ECM
+ SG_ HvSysSts_UB : 36|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 373 BecmPropFr02: 8 BECM
+ SG_ HvBattIDc : 4|13@0+ (0.1,-410) [-410|409.1] "A"  ECM,OBC
+ SG_ HvBattIDc_UB : 5|1@0+ (1,0) [0|1] ""  ECM,OBC
+ SG_ HvBattLimnIndcn : 47|16@0+ (1,0) [0|65535] "NoUnit"  ECM
+ SG_ HvBattLimnIndcn_UB : 28|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattPwrLimChrg : 23|9@0+ (0.25,0) [0|125] "kW"  ECM
+ SG_ HvBattPwrLimChrg_UB : 30|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattUDynMinLim : 26|11@0+ (0.25,0) [0|511] "Volt"  IEM,IGM
+ SG_ HvBattUDynMinLim_UB : 27|1@0+ (1,0) [0|1] ""  IEM,IGM
+
+BO_ 581 BecmPropFr03: 8 BECM
+ SG_ HvBattChrgnCmpl : 7|1@0+ (1,0) [0|0] ""  OBC
+ SG_ HvBattChrgnCmpl_UB : 6|1@0+ (1,0) [0|1] ""  OBC
+ SG_ HvBattCoolgReq : 39|2@0+ (1,0) [0|0] ""  ECM
+ SG_ HvBattCoolgReq_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattILim : 4|13@0+ (0.1,-410) [-410|409.1] "A"  OBC
+ SG_ HvBattILim_UB : 5|1@0+ (1,0) [0|1] ""  OBC
+ SG_ HvBattSoc : 47|11@0+ (0.05,0) [0|100] "%"  ECM,IEM,IGM,OBC
+ SG_ HvBattSoc_UB : 52|1@0+ (1,0) [0|1] ""  ECM,IEM,IGM,OBC
+ SG_ HvBattULim : 50|11@0+ (0.25,0) [0|511] "Volt"  OBC
+ SG_ HvBattULim_UB : 51|1@0+ (1,0) [0|1] ""  OBC
+ SG_ HvSysLimnIndcn : 23|16@0+ (1,0) [0|65535] "NoUnit"  ECM
+ SG_ HvSysLimnIndcn_UB : 35|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 659 BecmPropFr04: 8 BECM
+ SG_ HvBattEgyCdn : 63|8@0+ (0.5,0) [0|100] "%"  ECM
+ SG_ HvBattEgyCdn_UB : 20|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattErrIndcnReq : 21|1@0+ (1,0) [0|0] ""  ECM
+ SG_ HvBattErrIndcnReq_UB : 22|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattSocLimHi : 42|11@0+ (0.05,0) [0|100] "%"  ECM
+ SG_ HvBattSocLimHi_UB : 43|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattSocLimLo : 39|11@0+ (0.05,0) [0|100] "%"  ECM
+ SG_ HvBattSocLimLo_UB : 44|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattSocLimMax : 18|11@0+ (0.05,0) [0|100] "%"  ECM
+ SG_ HvBattSocLimMax_UB : 19|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattSocLimMin : 2|11@0+ (0.05,0) [0|100] "%"  ECM
+ SG_ HvBattSocLimMin_UB : 23|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 661 BecmPropFr05: 8 BECM
+ SG_ HvBattChrgnPwrCritDes : 7|10@0+ (20,0) [0|20460] "W"  ECM
+ SG_ HvBattChrgnPwrCritDes_UB : 38|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattChrgnPwrNormDes : 13|10@0+ (20,0) [0|20460] "W"  ECM
+ SG_ HvBattChrgnPwrNormDes_UB : 19|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattChrgnTiReq : 18|11@0+ (1,0) [0|2047] "Mins"  ECM
+ SG_ HvBattChrgnTiReq_UB : 39|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattCoolgEgyReq : 51|12@0+ (5,0) [0|20475] "Wh"  ECM
+ SG_ HvBattCoolgEgyReq_UB : 52|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattCoolgSts : 36|1@0+ (1,0) [0|0] ""  ECM
+ SG_ HvBattCoolgSts_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattCoolgTiReq : 34|11@0+ (1,0) [0|2047] "Mins"  ECM
+ SG_ HvBattCoolgTiReq_UB : 35|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvSysCrashFb : 54|2@0+ (1,0) [0|0] ""  VDDM
+ SG_ HvSysCrashFb_UB : 55|1@0+ (1,0) [0|1] ""  VDDM
+
+BO_ 837 BecmPropFr06: 8 BECM
+ SG_ HvBattIdCal1Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal1Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ECM
+
+BO_ 833 BecmPropFr07: 8 BECM
+ SG_ HvBattIdCal3Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal3Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ECM
+
+BO_ 821 BecmPropFr08: 8 BECM
+ SG_ HvBattIdCal2Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal2Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ECM
+
+BO_ 789 BecmPropFr09: 8 BECM
+ SG_ HvBattChrgnSts : 56|1@0+ (1,0) [0|0] ""  ECM
+ SG_ HvBattChrgnSts_UB : 57|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattEgyAvlChrg : 43|12@0+ (5,0) [0|20475] "Wh"  ECM,OBC
+ SG_ HvBattEgyAvlChrg_UB : 47|1@0+ (1,0) [0|1] ""  ECM,OBC
+ SG_ HvBattFanReq : 45|2@0+ (1,0) [0|0] ""  ECM
+ SG_ HvBattFanReq_UB : 46|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattT_UB : 7|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattTHvBattTAvg : 6|13@0- (0.1,0) [-256|255.9] "degC"  ECM
+ SG_ HvBattTHvBattTMax : 9|13@0- (0.1,0) [-256|255.9] "degC"  ECM
+ SG_ HvBattTHvBattTMin : 28|13@0- (0.1,0) [-256|255.9] "degC"  ECM
+
+BO_ 805 BecmPropFr10: 8 BECM
+ SG_ HvBattIdCal4Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ HvBattIdCal4Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ECM
+
+BO_ 817 BecmPropFr11: 8 BECM
+ SG_ HvBattCooltFlowEstimd : 30|7@0+ (0.1,0) [0|12.7] "L / min"  ECM
+ SG_ HvBattCooltFlowEstimd_UB : 31|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattCooltT : 36|13@0- (0.1,0) [-256|255.9] "degC"  ECM
+ SG_ HvBattCooltT_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattEgyAvlForCdng : 51|12@0+ (5,0) [0|20475] "Wh"  ECM
+ SG_ HvBattEgyAvlForCdng_UB : 52|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 769 BecmPropFr12: 8 BECM
+ SG_ HvBattChrgnPwrCns : 17|10@0+ (20,0) [0|20460] "W"  ECM
+ SG_ HvBattChrgnPwrCns_UB : 18|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattIdChks : 39|32@0+ (1,0) [0|2147483647] "NoUnit"  ECM
+ SG_ HvBattIdChks_UB : 14|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattPwrCdn : 7|8@0+ (0.5,0) [0|100] "%"  ECM
+ SG_ HvBattPwrCdn_UB : 15|1@0+ (1,0) [0|1] ""  ECM
+ SG_ HvBattRInt : 12|10@0+ (0.01,0) [0|10.23] "Ohm"  ECM
+ SG_ HvBattRInt_UB : 13|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 1305 BecmPropNMFr: 8 BECM
+
+BO_ 2026 BecmToEtcCarbPropDiagResFrame: 8 BECM
+
+BO_ 2663820928 BecmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1589 BecmToVddmPropDiagResFrame: 8 BECM
+
+BO_ 2674667136 BmsToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671914624 CcmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671783552 CemToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671922816 DdmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1409 DemDevPropFr01: 8 DEMspa
+ SG_ DftlCtrlInfo1Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo1Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 1410 DemDevPropFr02: 8 DEMspa
+ SG_ DftlCtrlInfo2Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo2Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 1411 DemDevPropFr03: 8 DEMspa
+ SG_ DftlCtrlInfo3Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo3Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 1412 DemDevPropFr04: 8 DEMspa
+ SG_ DftlCtrlInfo4Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo4Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 1413 DemDevPropFr05: 8 DEMspa
+ SG_ DftlCtrlInfo5Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo5Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 1414 DemDevPropFr06: 8 DEMspa
+ SG_ DftlCtrlInfo6Byte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ DftlCtrlInfo6Byte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 294 DemPropFr01: 8 DEMspa
+ SG_ DftlFltIndcn : 26|3@0+ (1,0) [0|0] ""  VDDM
+ SG_ DftlFltIndcn_UB : 30|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ DftlRatReRi : 23|8@0+ (0.5,0) [0|100] "%"  ECM,VDDM
+ SG_ DftlRatReRi_UB : 31|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ PtDrvModReqToDftlAckdLgt : 35|1@0+ (1,0) [0|0] ""  ECM
+ SG_ PtDrvModReqToDftlAckdLgt_UB : 36|1@0+ (1,0) [0|1] ""  ECM
+ SG_ PtDrvModReqToDftlAckdVert : 34|1@0+ (1,0) [0|0] ""  ECM
+ SG_ PtDrvModReqToDftlAckdVert_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmStAxleReActr : 28|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmStAxleReActr_UB : 29|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmStAxleReLatActr : 33|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmStAxleReLatActr_UB : 38|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmTqDftlAxleReAct : 6|15@0- (0.610352,0) [-10000|9999.39] "NewtonMeter"  ECM,TCM
+ SG_ TrsmTqDftlAxleReAct_UB : 7|1@0+ (1,0) [0|1] ""  ECM,TCM
+
+BO_ 1310 DemPropNMFr: 8 DEMspa
+
+BO_ 2663845504 DemToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1431 DEMtoETCXcpFr01: 8 DEMspa
+
+BO_ 1432 DEMtoETCXcpFr02: 8 DEMspa
+
+BO_ 1433 DEMtoETCXcpFr03: 8 DEMspa
+
+BO_ 1434 DEMtoETCXcpFr04: 8 DEMspa
+
+BO_ 1435 DEMtoETCXcpFr05: 8 DEMspa
+
+BO_ 1436 DEMtoETCXcpFr06: 8 DEMspa
+
+BO_ 1592 DemToVddmPropDiagResFrame: 8 DEMspa
+
+BO_ 2667589248 DimToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 74 ECMPropFr00: 8 ECM
+ SG_ AccrPedlRat : 6|15@0+ (0.003906,0) [0|100] "%"  DEMspa,ESM,TCM,VDDM
+ SG_ AccrPedlRat_UB : 7|1@0+ (1,0) [0|1] ""  DEMspa,ESM,TCM,VDDM
+ SG_ WhlMotSysTqReq : 19|12@0+ (4,-8188) [-8188|8192] "NewtonMeter"  IEM
+ SG_ WhlMotSysTqReq_UB : 20|1@0+ (1,0) [0|1] ""  IEM
+
+BO_ 80 ECMPropFr01: 8 ECM
+ SG_ IsgModReq : 21|3@0+ (1,0) [0|0] ""  IGM
+ SG_ IsgModReq_UB : 22|1@0+ (1,0) [0|1] ""  IGM
+ SG_ IsgTqReq : 2|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  IGM
+ SG_ IsgTqReq_UB : 3|1@0+ (1,0) [0|1] ""  IGM
+ SG_ PrpsnTqFrntReq : 55|16@0- (1,0) [-20000|20000] "NewtonMeter"  DEMspa,VDDM
+ SG_ PrpsnTqFrntReq_UB : 39|1@0+ (1,0) [0|1] ""  DEMspa,VDDM
+ SG_ PtCluTqReq : 18|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  TCM
+ SG_ PtCluTqReq_UB : 23|1@0+ (1,0) [0|1] ""  TCM
+ SG_ WhlMotSysModReq : 6|3@0+ (1,0) [0|0] ""  IEM
+ SG_ WhlMotSysModReq_UB : 7|1@0+ (1,0) [0|1] ""  IEM
+
+BO_ 102 ECMPropFr02: 8 ECM
+ SG_ EngN : 30|15@0+ (0.5,0) [0|16383.5] "rpm"  BECM,DEMspa,IEM,IGM,OBC,TCM
+ SG_ EngNChks : 47|8@0+ (1,0) [0|255] "NoUnit"  BECM,DEMspa,IEM,IGM,OBC,TCM
+ SG_ EngNCntr : 55|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,IEM,IGM,OBC,TCM
+ SG_ EngNSafe_UB : 51|1@0+ (1,0) [0|1] ""  BECM,DEMspa,IEM,IGM,OBC,TCM
+ SG_ EngNSafeEngNGrdt : 15|16@0- (1,0) [-30000|32767] "RpmPerSec"  BECM,DEMspa,IEM,IGM,OBC,TCM
+ SG_ EngSt1WdSts : 59|4@0+ (1,0) [0|0] ""  BECM,ESM,IEM,IGM,TCM,VDDM
+ SG_ EngSt1WdSts_UB : 49|1@0+ (1,0) [0|1] ""  BECM,ESM,IEM,IGM,TCM,VDDM
+ SG_ EngTqLimDly : 6|7@0+ (5,0) [0|635] "Milliseconds"  TCM
+ SG_ EngTqLimDly_UB : 7|1@0+ (1,0) [0|1] ""  TCM
+ SG_ PtGearAct : 63|4@0+ (1,0) [0|0] ""  DEMspa,VDDM
+ SG_ PtGearAct_UB : 48|1@0+ (1,0) [0|1] ""  DEMspa,VDDM
+
+BO_ 277 ECMPropFr03: 8 ECM
+ SG_ DrvrDesDir : 37|3@0+ (1,0) [0|0] ""  ESM,VDDM
+ SG_ DrvrDesDir_UB : 39|1@0+ (1,0) [0|1] ""  ESM,VDDM
+ SG_ PtCluTq_UB : 28|1@0+ (1,0) [0|1] ""  TCM,VDDM
+ SG_ PtCluTqPtCluTq : 5|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  TCM,VDDM
+ SG_ PtCluTqPtCluTqDyn : 10|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  TCM,VDDM
+ SG_ PtCluTqPtCluTqQly : 31|3@0+ (1,0) [0|0] ""  TCM,VDDM
+ SG_ PtCluTqReqWoTrsmIntv : 34|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  TCM
+ SG_ PtCluTqReqWoTrsmIntv_UB : 38|1@0+ (1,0) [0|1] ""  TCM
+ SG_ PtReqToTrsmActr : 26|3@0+ (1,0) [0|0] ""  TACM
+ SG_ PtReqToTrsmActr_UB : 27|1@0+ (1,0) [0|1] ""  TACM
+
+BO_ 305 ECMPropFr04: 8 ECM
+ SG_ DcDcActvdReq : 42|1@0+ (1,0) [0|0] ""  IGM
+ SG_ DcDcActvdReq_UB : 44|1@0+ (1,0) [0|1] ""  IGM
+ SG_ LoadValCalcd : 63|8@0+ (0.392157,0) [0|100] "%"  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ LoadValCalcd_UB : 43|1@0+ (1,0) [0|1] ""  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ PrpsnActvnReq : 21|1@0+ (1,0) [0|0] ""  IEM
+ SG_ PrpsnActvnReq_UB : 22|1@0+ (1,0) [0|1] ""  IEM
+ SG_ PtAllwdToTrsmActr : 15|4@0+ (1,0) [0|0] ""  TACM,TCM
+ SG_ PtAllwdToTrsmActrChks : 7|8@0+ (1,0) [0|255] "Unitless"  TACM,TCM
+ SG_ PtAllwdToTrsmActrCntr : 11|4@0+ (1,0) [0|15] "Unitless"  TACM,TCM
+ SG_ PtAllwdToTrsmActrSafe_UB : 23|1@0+ (1,0) [0|1] ""  TACM,TCM
+ SG_ PtTiToCluEngmt : 39|8@0+ (0.01,0) [0|2.55] "s"  DEMspa,VDDM
+ SG_ PtTiToCluEngmt_UB : 46|1@0+ (1,0) [0|1] ""  DEMspa,VDDM
+ SG_ WhlMotSysPwrLimMax : 41|10@0+ (0.5,0) [0|511] "kW"  IEM
+ SG_ WhlMotSysPwrLimMax_UB : 45|1@0+ (1,0) [0|1] ""  IEM
+
+BO_ 405 ECMPropFr05: 8 ECM
+ SG_ EngCooltInhbFlow : 52|1@0+ (1,0) [0|0] ""  IGM,VDDM
+ SG_ EngCooltInhbFlow_UB : 53|1@0+ (1,0) [0|1] ""  IGM,VDDM
+ SG_ EngKdSts : 35|2@0+ (1,0) [0|0] ""  TCM
+ SG_ EngKdSts_UB : 36|1@0+ (1,0) [0|1] ""  TCM
+ SG_ HvPwrEgyPrio : 18|3@0+ (1,0) [0|0] ""  BECM,OBC,VDDM
+ SG_ HvPwrEgyPrio_UB : 19|1@0+ (1,0) [0|1] ""  BECM,OBC,VDDM
+ SG_ IsgPwrLimMax : 33|10@0+ (0.5,0) [0|511] "kW"  IGM
+ SG_ IsgPwrLimMax_UB : 55|1@0+ (1,0) [0|1] ""  IGM
+ SG_ IsgPwrLimMin : 31|10@0+ (0.5,-511) [-511|0] "kW"  IGM
+ SG_ IsgPwrLimMin_UB : 37|1@0+ (1,0) [0|1] ""  IGM
+ SG_ OnBdChrgrPwrEnaAllwd : 51|1@0+ (1,0) [0|0] ""  OBC
+ SG_ OnBdChrgrPwrEnaAllwd_UB : 54|1@0+ (1,0) [0|1] ""  OBC
+ SG_ WhlMotSysSpdIdleReq : 49|10@0+ (1,0) [0|1023] "Rpm"  IEM
+ SG_ WhlMotSysSpdIdleReq_UB : 50|1@0+ (1,0) [0|1] ""  IEM
+ SG_ WhlMotSysTqAllwd : 5|2@0+ (1,0) [0|3] "NoUnit"  IEM
+ SG_ WhlMotSysTqAllwdChks : 15|8@0+ (1,0) [0|255] "Unitless"  IEM
+ SG_ WhlMotSysTqAllwdCntr : 3|4@0+ (1,0) [0|15] "Unitless"  IEM
+ SG_ WhlMotSysTqAllwdGrp_UB : 6|1@0+ (1,0) [0|1] ""  IEM
+
+BO_ 401 ECMPropFr06: 8 ECM
+ SG_ HvOnMaiReq : 53|2@0+ (1,0) [0|0] ""  BECM
+ SG_ HvOnMaiReq_UB : 51|1@0+ (1,0) [0|1] ""  BECM
+ SG_ IsgTqAllwd_UB : 54|1@0+ (1,0) [0|1] ""  IGM
+ SG_ IsgTqAllwdIsgTqAllwd : 43|4@0+ (1,0) [0|15] "NoUnit"  IGM
+ SG_ IsgTqAllwdIsgTqAllwdChks : 39|8@0+ (1,0) [0|255] "Unitless"  IGM
+ SG_ IsgTqAllwdIsgTqAllwdCntr : 47|4@0+ (1,0) [0|15] "Unitless"  IGM
+ SG_ PtToTrsmRatMgrIf_UB : 55|1@0+ (1,0) [0|1] ""  TCM
+ SG_ PtToTrsmRatMgrIfPtGearReq : 19|4@0+ (1,0) [0|0] ""  TCM
+ SG_ PtToTrsmRatMgrIfPtGearReqInter : 23|4@0+ (1,0) [0|0] ""  TCM
+ SG_ PtToTrsmRatMgrIfPtLockFwAtGearFi : 24|1@0+ (1,0) [0|0] ""  TCM
+ SG_ PtToTrsmRatMgrIfPtLockUpReq : 7|2@0+ (1,0) [0|0] ""  TCM
+ SG_ PtToTrsmRatMgrIfPtLockUpSlipReq : 5|14@0+ (1,-8191) [-8191|8192] "rpm"  TCM
+ SG_ PtToTrsmRatMgrIfPtShiftTypReq : 28|4@0+ (1,0) [0|0] ""  TCM
+ SG_ PtToTrsmRatMgrIfPtTrsmModReq : 31|3@0+ (1,0) [0|0] ""  TCM
+ SG_ WhlMotSysActvDampgModReq : 50|2@0+ (1,0) [0|0] ""  IEM
+ SG_ WhlMotSysActvDampgModReq_UB : 48|1@0+ (1,0) [0|1] ""  IEM
+
+BO_ 512 EcmPropFr07: 8 ECM
+ SG_ PtTqAtAxleFrntAct : 7|16@0- (1,0) [-20000|20000] "NewtonMeter"  DEMspa
+ SG_ PtTqAtWhlFrntActGroup_UB : 52|1@0+ (1,0) [0|1] ""  DEMspa
+ SG_ PtTqAtWhlFrntLeAct : 23|16@0- (1,0) [-20000|20000] "NewtonMeter"  DEMspa
+ SG_ PtTqAtWhlFrntRiAct : 39|16@0- (1,0) [-20000|20000] "NewtonMeter"  DEMspa
+ SG_ PtTqAtWhlsFrntQly : 55|3@0+ (1,0) [0|0] ""  DEMspa
+ SG_ WhlMotSysPwrLimMin : 49|10@0+ (0.5,-511) [-511|0] "kW"  IEM
+ SG_ WhlMotSysPwrLimMin_UB : 50|1@0+ (1,0) [0|1] ""  IEM
+
+BO_ 545 EcmPropFr08: 8 ECM
+ SG_ CoolgForHvBattSts : 13|2@0+ (1,0) [0|0] ""  BECM
+ SG_ CoolgForHvBattSts_UB : 14|1@0+ (1,0) [0|1] ""  BECM
+ SG_ DrvgCyc : 57|1@0+ (1,0) [0|0] ""  TCM
+ SG_ DrvgCyc_UB : 56|1@0+ (1,0) [0|1] ""  TCM
+ SG_ EngNLim : 55|8@0+ (64,0) [0|16320] "rpm"  TCM
+ SG_ EngNLim_UB : 35|1@0+ (1,0) [0|1] ""  TCM
+ SG_ EngT : 47|8@0+ (1,-50) [-50|200] "degC"  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ EngTGrp_UB : 34|1@0+ (1,0) [0|1] ""  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ EngTQf : 33|2@0+ (1,0) [0|0] ""  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ GearLvrEna : 11|1@0+ (1,0) [0|0] ""  TCM
+ SG_ GearLvrEna_UB : 10|1@0+ (1,0) [0|1] ""  TCM
+ SG_ HvBattCoolgCmd : 63|2@0+ (1,0) [0|0] ""  BECM
+ SG_ HvBattCoolgCmd_UB : 61|1@0+ (1,0) [0|1] ""  BECM
+ SG_ IsgActvDampgModReq : 39|2@0+ (1,0) [0|0] ""  IGM
+ SG_ IsgActvDampgModReq_UB : 37|1@0+ (1,0) [0|1] ""  IGM
+ SG_ PrpsnFbLimnIndcn : 22|4@0+ (1,0) [0|15] "NoUnit"  BECM,IEM,IGM,TCM
+ SG_ PrpsnFbLimnIndcn_UB : 23|1@0+ (1,0) [0|1] ""  BECM,IEM,IGM,TCM
+ SG_ PtRatMgrMod : 17|10@0+ (1,0) [0|1023] "NoUnit"  TCM
+ SG_ PtRatMgrMod_UB : 18|1@0+ (1,0) [0|1] ""  TCM
+ SG_ ThrPos : 7|8@0+ (0.5,0) [0|100] "%"  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ ThrPos_UB : 15|1@0+ (1,0) [0|1] ""  BECM,IEM,IGM,OBC,TCM,VDDM
+ SG_ WrmUpCyc : 9|1@0+ (1,0) [0|0] ""  TCM
+ SG_ WrmUpCyc_UB : 8|1@0+ (1,0) [0|1] ""  TCM
+
+BO_ 592 EcmPropFr09: 8 ECM
+ SG_ EngIdleCtrlRefVal : 38|15@0+ (0.5,0) [0|16383.5] "rpm"  TCM
+ SG_ EngIdleCtrlRefVal_UB : 55|1@0+ (1,0) [0|1] ""  TCM
+ SG_ HvBattChrgnCmd : 52|2@0+ (1,0) [0|0] ""  BECM
+ SG_ HvBattChrgnCmd_UB : 53|1@0+ (1,0) [0|1] ""  BECM
+ SG_ HvBattChrgnPwrAllwd : 49|10@0+ (20,0) [0|20460] "W"  BECM
+ SG_ HvBattChrgnPwrAllwd_UB : 50|1@0+ (1,0) [0|1] ""  BECM
+ SG_ IsgSpdReq : 22|15@0+ (0.5,0) [0|16383.5] "rpm"  IGM
+ SG_ IsgSpdReq_UB : 39|1@0+ (1,0) [0|1] ""  IGM
+ SG_ PtRatMgrAdpvMod : 7|16@0+ (1,0) [0|65535] "NoUnit"  TCM
+ SG_ PtRatMgrAdpvMod_UB : 23|1@0+ (1,0) [0|1] ""  TCM
+
+BO_ 341 EcmPropFr10: 8 ECM
+ SG_ CluPedlPsd_UB : 23|1@0+ (1,0) [0|1] ""  DEMspa,VDDM
+ SG_ CluPedlPsdCluPedlPsd : 36|1@0+ (1,0) [0|0] ""  DEMspa,VDDM
+ SG_ CluPedlPsdCluPedlPsdChks : 47|8@0+ (1,0) [0|255] "NoUnit"  DEMspa,VDDM
+ SG_ CluPedlPsdCluPedlPsdCntr : 35|4@0+ (1,0) [0|15] "NoUnit"  DEMspa,VDDM
+ SG_ CluPedlPsdCluPedlPsdSts : 37|1@0+ (1,0) [0|0] ""  DEMspa,VDDM
+ SG_ EngTiOff : 1|10@0+ (1,0) [0|1023] "Mins"  TCM
+ SG_ EngTiOff_UB : 6|1@0+ (1,0) [0|1] ""  TCM
+ SG_ IsgEngSpdOfActvDampg : 54|15@0+ (0.5,0) [0|16383.5] "rpm"  IGM
+ SG_ IsgEngSpdOfActvDampg_UB : 55|1@0+ (1,0) [0|1] ""  IGM
+ SG_ PtDrvModReqToDftl : 5|4@0+ (1,0) [0|0] ""  DEMspa
+ SG_ PtDrvModReqToDftl_UB : 7|1@0+ (1,0) [0|1] ""  DEMspa
+ SG_ TrsmParkLockd : 21|2@0+ (1,0) [0|0] ""  EGSM,TACM,TCM,VDDM
+ SG_ TrsmParkLockdChks : 31|8@0+ (1,0) [0|255] "Unitless"  EGSM,TACM,TCM,VDDM
+ SG_ TrsmParkLockdCntr : 19|4@0+ (1,0) [0|15] "Unitless"  EGSM,TACM,TCM,VDDM
+ SG_ TrsmParkLockdSafe_UB : 22|1@0+ (1,0) [0|1] ""  EGSM,TACM,TCM,VDDM
+
+BO_ 647 EcmPropFr11: 8 ECM
+ SG_ CooltFlowForDtElec : 49|10@0+ (0.01,0) [0|10.23] "L / min"  IEM,IGM
+ SG_ CooltFlowForDtElec_UB : 46|1@0+ (1,0) [0|1] ""  IEM,IGM
+ SG_ CooltTSigForDtElec : 44|11@0+ (0.1,-40) [-40|140] "degC"  IEM,IGM
+ SG_ CooltTSigForDtElec_UB : 45|1@0+ (1,0) [0|1] ""  IEM,IGM
+ SG_ EngAmbTCalcd : 16|9@0+ (0.5,-60) [-60|195.5] "Unitless"  OBC,TCM,VDDM
+ SG_ EngAmbTCalcd_UB : 17|1@0+ (1,0) [0|1] ""  OBC,TCM,VDDM
+ SG_ HvBattChrgnEgyCnsAllwd : 39|8@0+ (50,0) [0|12750] "Wh"  BECM
+ SG_ HvBattChrgnEgyCnsAllwd_UB : 47|1@0+ (1,0) [0|1] ""  BECM
+ SG_ MonrCycCmpl : 18|1@0+ (1,0) [0|0] ""  BECM,IEM,IGM,OBC,VDDM
+ SG_ MonrCycCmpl_UB : 19|1@0+ (1,0) [0|1] ""  BECM,IEM,IGM,OBC,VDDM
+ SG_ PrpsnSysActv : 20|1@0+ (1,0) [0|0] ""  BECM,IEM,IGM,OBC,VDDM
+ SG_ PrpsnSysActv_UB : 21|1@0+ (1,0) [0|1] ""  BECM,IEM,IGM,OBC,VDDM
+
+BO_ 577 EcmPropFr12: 8 ECM
+ SG_ TrsmActrKey_UB : 4|1@0+ (1,0) [0|1] ""  TACM
+ SG_ TrsmActrKeyEna : 15|8@0+ (1,0) [0|255] "Unitless"  TACM
+ SG_ TrsmActrKeyEnaChks : 23|8@0+ (1,0) [0|255] "Unitless"  TACM
+ SG_ TrsmActrKeyEnaCntr : 3|4@0+ (1,0) [0|15] "Unitless"  TACM
+
+BO_ 1312 EcmPropNMFr: 8 ECM
+
+BO_ 2024 EcmToEtcCarbPropDiagResFrame: 8 ECM
+
+BO_ 2663779968 EcmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1584 EcmToVddmPropDiagResFrame: 8 ECM
+
+BO_ 309 EgsmPropFr01: 8 EGSM
+ SG_ DrvrGearShiftDirReq1Chks : 15|8@0+ (1,0) [0|255] "Unitless"  ECM
+ SG_ DrvrGearShiftDirReq1Cntr : 3|4@0+ (1,0) [0|15] "Unitless"  ECM
+ SG_ DrvrGearShiftDirReq1DwnTipAut : 4|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftDirReq1PosnAut : 5|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftDirReq1UpTipAut : 6|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftDirReq2_UB : 23|1@0+ (1,0) [0|1] ""  ECM
+ SG_ DrvrGearShiftDirReq2Chks : 31|8@0+ (1,0) [0|255] "Unitless"  ECM
+ SG_ DrvrGearShiftDirReq2Cntr : 19|4@0+ (1,0) [0|15] "Unitless"  ECM
+ SG_ DrvrGearShiftDirReq2DwnTipAut : 20|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftDirReq2PosnAut : 21|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftDirReq2UpTipAut : 22|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftDirReqSafe1_UB : 7|1@0+ (1,0) [0|1] ""  ECM
+ SG_ DrvrGearShiftManReq_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ DrvrGearShiftManReqDwnTipReq : 32|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftManReqSteerWhlDwnRe : 33|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftManReqSteerWhlUpReq : 34|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftManReqTipReq : 35|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftManReqUpTipReq : 36|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftParkReq : 39|1@0+ (1,0) [0|0] ""  ECM
+ SG_ DrvrGearShiftParkReq_UB : 38|1@0+ (1,0) [0|1] ""  ECM
+ SG_ GearShiftUnitSts : 47|3@0+ (1,0) [0|0] ""  ECM
+ SG_ GearShiftUnitSts_UB : 44|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 1302 EgsmPropNMFr: 8 EGSM
+
+BO_ 2663804544 EgsmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1587 EgsmToVddmPropDiagResFrame: 8 EGSM
+
+BO_ 1278 EgsmVFCPropFr: 8 EGSM
+ SG_ VFCVectorEGSM_UB : 55|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ VFCVectorEGSMGrp1 : 7|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+ SG_ VFCVectorEGSMGrp2 : 23|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+ SG_ VFCVectorEGSMGrp3 : 39|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+
+BO_ 801 ESMPropFr01: 4 ESM
+ SG_ ComLostExtrSound : 7|1@0+ (1,0) [0|0] ""  VDDM
+ SG_ ComLostExtrSound_UB : 15|1@0+ (1,0) [0|1] ""  VDDM
+
+BO_ 1320 EsmPropNmFr: 8 ESM
+
+BO_ 2663861888 EsmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1594 EsmToVddmPropDiagResFrame: 8 ESM
+
+BO_ 1415 EtcDEVPropFr03: 8 ETC
+ SG_ DftlDevCtrlByte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ DftlDevCtrlByte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+
+BO_ 1405 ETCPropFr01: 8 ETC
+ SG_ IniValMstCfgIDPropulsionCAN : 7|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+
+BO_ 1406 ETCPropFr02: 8 ETC
+ SG_ IniValSigCfgIDPropulsionCAN : 7|16@0+ (1,0) [0|65535] "NoUnit"  BECM,DEMspa,ECM,EGSM,ESM,IEM,IGM,OBC,SRS,TACM,TCM
+
+BO_ 2015 EtcToAllCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647662591 EtcToAllJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659521 EtcToAsdmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659026 EtcToAudJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661393 EtcToBbsJ2534DiagReqFrame: 8 ETC
+
+BO_ 2022 EtcToBcmCarbPropDiagReqFrame: 8 ETC
+
+BO_ 1841 EtcToBcmPropDiagReqFrame: 8 ETC
+
+BO_ 2018 EtcToBecmCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647660085 EtcToBecmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661409 EtcToBmsJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661073 EtcToCcmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661057 EtcToCemJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661074 EtcToDdmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660088 EtcToDemJ2534DiagReqFrame: 8 ETC
+
+BO_ 1448 ETCtoDEMXCPFr01: 8 ETC
+
+BO_ 1447 ETCtoDEMXCPFr02: 8 ETC
+
+BO_ 1449 ETCtoDEMXCPFr03: 8 ETC
+
+BO_ 1450 ETCtoDEMXCPFr04: 8 ETC
+
+BO_ 1451 ETCtoDEMXCPFr05: 8 ETC
+
+BO_ 1452 ETCtoDEMXCPFr06: 8 ETC
+
+BO_ 2647660545 EtcToDimJ2534DiagReqFrame: 8 ETC
+
+BO_ 2016 EtcToEcmCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647660080 EtcToEcmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660083 EtcToEgsmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660090 EtcToEsmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660129 EtcToGsmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660609 EtcToHudJ2534DiagReqFrame: 8 ETC
+
+BO_ 2019 EtcToIemCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647660087 EtcToIemJ2534DiagReqFrame: 8 ETC
+
+BO_ 2020 EtcToIgmCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647660086 EtcToIgmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659009 EtcToIhuJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661394 EtcToImsJ2534DiagReqFrame: 8 ETC
+
+BO_ 2021 EtcToObcCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647660084 EtcToObcJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661410 EtcToOhcJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661411 EtcToOhcrJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661075 EtcToPdmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661077 EtcToPotJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660050 EtcToPscmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661076 EtcToPsmdJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661082 EtcToPsmpJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659542 EtcToRmlJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659543 EtcToRmrJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660054 EtcToSasJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660053 EtcToSclJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659570 EtcToSodlJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659571 EtcToSodrJ2534DiagReqFrame: 8 ETC
+
+BO_ 2033 EtcToSrsCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647661569 EtcToSrsJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660052 EtcToSumJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661457 EtcToSwmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647660092 EtcToTacmJ2534DiagReqFrame: 8 ETC
+
+BO_ 1424 ETCtoTACMXcpFr01: 8 ETC
+
+BO_ 1428 ETCtoTACMXcpFr02: 8 ETC
+
+BO_ 2017 EtcToTcmCarbPropDiagReqFrame: 8 ETC
+
+BO_ 2647660082 EtcToTcmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661080 EtcToTemJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647661079 EtcToTrmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647659025 EtcToTvmJ2534DiagReqFrame: 8 ETC
+
+BO_ 2647658497 EtcToVcmJ2534DiagReqFrame: 8 ETC
+
+BO_ 1438 EtcToVddmBcmPropCCPFr: 8 ETC
+ SG_ CCPFrameReqByte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ CCPFrameReqByte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+
+BO_ 1416 ETCtoVDDMBCMXCPFr01: 8 ETC
+
+BO_ 2647660033 EtcToVddmJ2534DiagReqFrame: 8 ETC
+
+BO_ 1793 EtcToVddmPropDiagReqFrame: 8 ETC
+
+BO_ 2647659569 EtcToWamJ2534DiagReqFrame: 8 ETC
+
+BO_ 2664181376 GsmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1633 GsmToVddmPropDiagResFrame: 8 TCM
+
+BO_ 2668113536 HudToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 69 IEMPropFr01: 8 IEM
+ SG_ WhlMotSysModSts : 34|3@0+ (1,0) [0|0] ""  ECM
+ SG_ WhlMotSysModSts_UB : 35|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysTqAvlMax : 47|12@0+ (4,-8188) [-8188|8192] "NewtonMeter"  ECM
+ SG_ WhlMotSysTqAvlMaxMin_UB : 36|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysTqAvlMin : 51|12@0+ (4,-8188) [-8188|8192] "NewtonMeter"  ECM
+ SG_ WhlMotSysTqEst : 3|12@0+ (4,-8188) [-8188|8192] "NewtonMeter"  ECM,VDDM
+ SG_ WhlMotSysTqEstChks : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM,VDDM
+ SG_ WhlMotSysTqEstCntr : 7|4@0+ (1,0) [0|15] "NoUnit"  ECM,VDDM
+ SG_ WhlMotSysTqEstGroup_UB : 37|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ WhlMotSysTqEstQlyFac : 39|2@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ WhlMotSysTqEstSpdLimn : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM,VDDM
+
+BO_ 96 IemPropFr02: 8 IEM
+ SG_ ImobEngSts2 : 36|2@0+ (1,0) [0|0] ""  VDDM
+ SG_ ImobEngSts2_UB : 37|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ WhlMotSysCluSts : 22|1@0+ (1,0) [0|0] ""  ECM
+ SG_ WhlMotSysCluSts_UB : 23|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysIDc : 20|13@0+ (0.1,-410) [-410|409.1] "A"  ECM
+ SG_ WhlMotSysIDc_UB : 21|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysLimnIndcn : 55|16@0+ (1,0) [0|65535] "NoUnit"  ECM
+ SG_ WhlMotSysLimnIndcn_UB : 39|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysSpdAct : 6|15@0+ (0.1,-1638.4) [-1638.4|1638.3] "rpm"  ECM,VDDM
+ SG_ WhlMotSysSpdAct_UB : 7|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ WhlMotSysUdc : 34|11@0+ (0.25,0) [0|511] "Volt"  BECM,ECM
+ SG_ WhlMotSysUdc_UB : 38|1@0+ (1,0) [0|1] ""  BECM,ECM
+
+BO_ 773 IemPropFr03: 8 IEM
+ SG_ WhlMotSysCoolgReq : 14|3@0+ (1,0) [0|0] ""  ECM
+ SG_ WhlMotSysCoolgReq_UB : 11|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysErrIndcnReq : 10|1@0+ (1,0) [0|0] ""  ECM
+ SG_ WhlMotSysErrIndcnReq_UB : 9|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysInvrT : 7|8@0+ (1,-50) [-50|200] "degC"  ECM
+ SG_ WhlMotSysInvrT_UB : 15|1@0+ (1,0) [0|1] ""  ECM
+ SG_ WhlMotSysMotT : 23|8@0+ (1,-50) [-50|200] "degC"  ECM
+ SG_ WhlMotSysMotT_UB : 8|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 613 IemPropFr04: 8 IEM
+ SG_ ImobEngChk2_UB : 1|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ ImobEngChkSts2 : 0|1@0+ (1,0) [0|0] ""  VDDM
+ SG_ ImobEngDataChk20 : 15|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk21 : 23|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk22 : 31|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk23 : 39|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk24 : 47|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk25 : 55|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk26 : 63|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+
+BO_ 1308 IemPropNMFr: 8 IEM
+
+BO_ 2027 IemToEtcCarbPropDiagResFrame: 8 IEM
+
+BO_ 2663837312 IemToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1591 IemToVddmPropDiagResFrame: 8 IEM
+
+BO_ 289 IgmPropFr01: 8 IGM
+ SG_ DcDcActvd : 28|1@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ DcDcActvd_UB : 29|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ IsgIDc : 52|13@0+ (0.1,-410) [-410|409.1] "A"  ECM
+ SG_ IsgIDc_UB : 53|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgModSts : 26|3@0+ (1,0) [0|0] ""  ECM
+ SG_ IsgModSts_UB : 27|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgSpdAct : 36|13@0+ (1,0) [0|8191] "Rpm"  ECM
+ SG_ IsgSpdAct_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgTqActChks : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ IsgTqActCntr : 6|4@0+ (1,0) [0|15] "NoUnit"  ECM
+ SG_ IsgTqActIsgTqAct : 2|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ IsgTqActQualityFactor : 31|2@0+ (1,0) [0|0] ""  ECM
+ SG_ IsgTqEstGroup_UB : 7|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 342 IgmPropFr02: 8 IGM
+ SG_ FltElecDcDc : 22|1@0+ (1,0) [0|0] ""  VDDM
+ SG_ FltElecDcDc_UB : 23|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ FltTDcDc : 20|1@0+ (1,0) [0|0] ""  VDDM
+ SG_ FltTDcDc_UB : 21|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ IDcDcActHiSide : 4|13@0+ (0.1,-410) [-410|409.1] "A"  ECM,OBC
+ SG_ IDcDcActHiSide_UB : 5|1@0+ (1,0) [0|1] ""  ECM,OBC
+ SG_ IDcDcActLoSide : 47|8@0+ (1,0) [0|254] "Ampr"  VDDM
+ SG_ IDcDcActLoSide_UB : 7|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ IDcDcAvlMaxLoSide : 39|8@0+ (1,0) [0|254] "Ampr"  VDDM
+ SG_ IDcDcAvlMaxLoSide_UB : 6|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ IsgUDc : 18|11@0+ (0.25,0) [0|511] "Volt"  BECM,ECM
+ SG_ IsgUDc_UB : 19|1@0+ (1,0) [0|1] ""  BECM,ECM
+ SG_ UDcDcActHiSide : 50|11@0+ (0.25,0) [0|511] "Volt"  BECM,ECM,OBC
+ SG_ UDcDcActHiSide_UB : 51|1@0+ (1,0) [0|1] ""  BECM,ECM,OBC
+
+BO_ 337 IgmPropFr03: 8 IGM
+ SG_ IsgLimnIndcn : 31|16@0+ (1,0) [0|65535] "NoUnit"  ECM
+ SG_ IsgLimnIndcn_UB : 62|1@0+ (1,0) [0|1] ""  ECM
+ SG_ LimnIndcnDcDc : 47|16@0+ (1,0) [0|65535] "NoUnit"  ECM
+ SG_ LimnIndcnDcDc_UB : 60|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TqAvlIsg_UB : 6|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TqAvlIsgMax : 5|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TqAvlIsgMin : 10|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+
+BO_ 625 IgmPropFr04: 8 IGM
+ SG_ ImobEngChk3_UB : 1|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ ImobEngChkSts3 : 0|1@0+ (1,0) [0|0] ""  VDDM
+ SG_ ImobEngDataChk30 : 15|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk31 : 23|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk32 : 31|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk33 : 39|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk34 : 47|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk35 : 55|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngDataChk36 : 63|8@0+ (1,0) [0|255] "NoUnit"  VDDM
+ SG_ ImobEngSts3 : 3|2@0+ (1,0) [0|0] ""  VDDM
+ SG_ ImobEngSts3_UB : 4|1@0+ (1,0) [0|1] ""  VDDM
+
+BO_ 785 IgmPropFr05: 8 IGM
+ SG_ DcDcCoolgReq : 14|3@0+ (1,0) [0|0] ""  ECM
+ SG_ DcDcCoolgReq_UB : 11|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgCoolgReqInvr : 10|3@0+ (1,0) [0|0] ""  ECM
+ SG_ IsgCoolgReqInvr_UB : 23|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgCooltT : 39|8@0+ (1,-40) [-40|215] "degC"  ECM,IEM
+ SG_ IsgCooltT_UB : 17|1@0+ (1,0) [0|1] ""  ECM,IEM
+ SG_ IsgErrIndcnReq : 22|1@0+ (1,0) [0|0] ""  ECM
+ SG_ IsgErrIndcnReq_UB : 21|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgInvrT : 47|8@0+ (1,-50) [-50|200] "degC"  ECM
+ SG_ IsgInvrT_UB : 18|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgMotCooltFlowReq : 49|10@0+ (0.05,0) [0|51.15] "L / min"  ECM
+ SG_ IsgMotCooltFlowReq_UB : 50|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgMotCooltTFlg : 20|1@0+ (1,0) [0|0] ""  ECM
+ SG_ IsgMotCooltTFlg_UB : 19|1@0+ (1,0) [0|1] ""  ECM
+ SG_ IsgMotT : 7|8@0+ (1,-50) [-50|200] "degC"  ECM
+ SG_ IsgMotT_UB : 15|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TDcDc : 31|8@0+ (1,-40) [-40|215] "degC"  ECM
+ SG_ TDcDc_UB : 16|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 1307 IgmPropNMFr: 8 IGM
+
+BO_ 2028 IgmToEtcCarbPropDiagResFrame: 8 IGM
+
+BO_ 2663829120 IgmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1590 IgmToVddmPropDiagResFrame: 8 IGM
+
+BO_ 2655006336 IhuToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2674544256 ImsToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 145 ObcPropFr01: 8 OBC
+ SG_ ChrgnTiEstimd : 10|11@0+ (1,0) [0|2047] "Mins"  VDDM
+ SG_ ChrgnTiEstimd_UB : 11|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ ChrgrSt : 2|3@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ ChrgrSt_UB : 3|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ HldChrgnReq : 14|1@0+ (1,0) [0|0] ""  BECM
+ SG_ HldChrgnReq_UB : 15|1@0+ (1,0) [0|1] ""  BECM
+ SG_ OnBdChrgrCoolgReq : 53|3@0+ (1,0) [0|0] ""  ECM
+ SG_ OnBdChrgrCoolgReq_UB : 54|1@0+ (1,0) [0|1] ""  ECM
+ SG_ OnBdChrgrErrIndcnReq : 12|1@0+ (1,0) [0|0] ""  ECM
+ SG_ OnBdChrgrErrIndcnReq_UB : 13|1@0+ (1,0) [0|1] ""  ECM
+ SG_ OnBdChrgrHndlSts : 6|3@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ OnBdChrgrHndlSts_UB : 7|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ OnBdChrgrT : 47|8@0+ (1,-40) [-40|215] "degC"  ECM
+ SG_ OnBdChrgrT_UB : 55|1@0+ (1,0) [0|1] ""  ECM
+ SG_ PwrDcDcAvl : 25|10@0+ (20,0) [0|20460] "W"  IGM
+ SG_ PwrDcDcAvl_UB : 26|1@0+ (1,0) [0|1] ""  IGM
+ SG_ PwrEgyMgrAvl : 49|10@0+ (20,0) [0|20460] "W"  ECM
+ SG_ PwrEgyMgrAvl_UB : 50|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 1304 ObcPropNMFr: 8 OBC
+
+BO_ 2029 ObcToEtcCarbPropDiagResFrame: 8 OBC
+
+BO_ 2663812736 ObcToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1588 ObcToVddmPropDiagResFrame: 8 OBC
+
+BO_ 2674683520 OhcrToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2674675328 OhcToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671931008 PdmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671947392 PotToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2663534208 PscmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671939200 PsmdToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671988352 PsmpToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2659372672 RmlToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2659380864 RmrToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2663566976 SasToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2663558784 SclToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2659602048 SodlToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2659610240 SodrToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 53 SrsPropFr01: 4 SRS
+ SG_ CrashSts2 : 1|2@0+ (1,0) [0|0] ""  BECM,ECM,IEM,IGM,TCM
+ SG_ CrashSts2_UB : 2|1@0+ (1,0) [0|1] ""  BECM,ECM,IEM,IGM,TCM
+
+BO_ 1306 SrsPropNMFr: 8 SRS
+
+BO_ 2041 SrsToEtcCarbPropDiagResFrame: 8 SRS
+
+BO_ 2675977856 SrsToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2663550592 SumToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2675060352 SwmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 343 TacmPropFr01: 8 TACM
+ SG_ TrsmActrSnsrPosn_UB : 7|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmActrSnsrPosnChks : 15|8@0+ (1,0) [0|255] "Unitless"  ECM
+ SG_ TrsmActrSnsrPosnCntr : 3|4@0+ (1,0) [0|15] "Unitless"  ECM
+ SG_ TrsmActrSnsrPosnTrsmActrSnsrPosn : 6|3@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmActrUnitSts : 23|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmActrUnitSts_UB : 21|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 1323 TacmPropNMFr: 8 TACM
+
+BO_ 2663878272 TacmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1425 TACMtoETCXcpFr01: 8 TACM
+
+BO_ 1426 TACMtoETCXcpFr02: 8 TACM
+
+BO_ 1427 TACMtoETCXcpFr03: 8 TACM
+
+BO_ 1596 TacmToVddmPropDiagResFrame: 8 TACM
+
+BO_ 257 TCMPropFr01: 8 TCM
+ SG_ TrsmGearChgProgs : 62|3@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmGearChgProgs_UB : 63|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmModAct : 58|3@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmModAct_UB : 59|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmToPrpsnCluTqRec_UB : 48|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmToPrpsnCluTqRecTrsmCluTqMaxF : 7|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TrsmToPrpsnCluTqRecTrsmCluT_0000 : 12|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TrsmToPrpsnCluTqRecTrsmCluTqMaxS : 17|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TrsmToPrpsnCluTqRecTrsmCluTqMinF : 38|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TrsmToPrpsnCluTqRecTrsmCluTqMinS : 43|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+
+BO_ 273 TCMPropFr02: 8 TCM
+ SG_ TrsmCluTqMaxDlyEstimn : 42|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TrsmCluTqMaxDlyEstimn_UB : 63|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmGearAct : 59|4@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ TrsmGearAct_UB : 60|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ TrsmN_UB : 43|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ TrsmNTrsmNChks : 39|8@0+ (1,0) [0|255] "NoUnit"  ECM,VDDM
+ SG_ TrsmNTrsmNCntr : 47|4@0+ (1,0) [0|15] "NoUnit"  ECM,VDDM
+ SG_ TrsmNTrsmNInp : 6|15@0+ (0.5,0) [0|16383.5] "rpm"  ECM,VDDM
+ SG_ TrsmNTrsmNInpOk : 7|1@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ TrsmNTrsmNOutp : 22|15@0+ (0.5,0) [0|16383.5] "rpm"  ECM,VDDM
+ SG_ TrsmNTrsmNOutpOk : 23|1@0+ (1,0) [0|0] ""  ECM,VDDM
+
+BO_ 261 TCMPropFr03: 8 TCM
+ SG_ TrsmLockUpStTar : 50|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmLockUpStTar_UB : 51|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmModNotAvlSts : 63|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ TrsmModNotAvlSts_UB : 48|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmParkLockEngdFlg : 38|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmParkLockEngdFlg_UB : 39|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmToPrpsnNReqRec_UB : 24|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmToPrpsnNReqRecTrsmNReqCtrl : 7|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmToPrpsnNReqRecTrsmNReqMax : 6|15@0+ (0.5,0) [0|16383.5] "rpm"  ECM
+ SG_ TrsmToPrpsnNReqRecTrsmNReqMin : 23|15@0+ (0.5,0) [0|16383.5] "rpm"  ECM
+ SG_ TrsmTqRat : 35|12@0+ (0.01,0) [0|40.95] "Unitless"  ECM
+ SG_ TrsmTqRat_UB : 36|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 385 TCMPropFr04: 8 TCM
+ SG_ EngRunngReqByTrsm : 49|2@0+ (1,0) [0|0] ""  ECM
+ SG_ EngRunngReqByTrsm_UB : 63|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmGearRatTar : 19|12@0+ (0.01,0) [0|40.95] "Unitless"  ECM
+ SG_ TrsmGearRatTar_UB : 20|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmGearTar : 53|4@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmGearTar_UB : 54|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmLockUpStAct : 57|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmLockUpStAct_UB : 58|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmNeutFailr : 7|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmNeutFailr_UB : 6|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmPLockUp : 5|14@0+ (1,0) [0|16383] "Unitless"  ECM
+ SG_ TrsmPLockUp_UB : 23|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmShiftInhb : 21|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmShiftInhb_UB : 22|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmVehSpd : 39|16@0+ (0.01,0) [0|655.35] "Km/h"  BECM,ECM,IEM,IGM,OBC
+ SG_ TrsmVehSpd_UB : 55|1@0+ (1,0) [0|1] ""  BECM,ECM,IEM,IGM,OBC
+
+BO_ 389 TCMPropFr05: 8 TCM
+ SG_ TrsmActrPosn : 54|3@0+ (1,0) [0|0] ""  ECM,TACM
+ SG_ TrsmActrPosnChks : 63|8@0+ (1,0) [0|255] "Unitless"  ECM,TACM
+ SG_ TrsmActrPosnCntr : 51|4@0+ (1,0) [0|15] "Unitless"  ECM,TACM
+ SG_ TrsmActrPosnSafe_UB : 55|1@0+ (1,0) [0|1] ""  ECM,TACM
+ SG_ TrsmFltIndcn : 12|5@0+ (1,0) [0|0] ""  ECM,VDDM
+ SG_ TrsmFltIndcn_UB : 13|1@0+ (1,0) [0|1] ""  ECM,VDDM
+ SG_ TrsmGearRat : 35|12@0+ (0.01,0) [0|40.95] "Unitless"  ECM
+ SG_ TrsmGearRat_UB : 36|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmOilT : 7|8@0+ (1,-60) [-60|195] "degC"  ECM
+ SG_ TrsmOilT_UB : 15|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmSelfLrngMod : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ TrsmSelfLrngMod_UB : 14|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmSelfLrngModAtPwrDwn : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ TrsmSelfLrngModAtPwrDwn_UB : 39|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 629 TCMPropFr06: 8 TCM
+ SG_ FltDwnTipReq : 32|1@0+ (1,0) [0|0] ""  ECM
+ SG_ FltGearShiftReqFromDrvr_UB : 37|1@0+ (1,0) [0|1] ""  ECM
+ SG_ FltSteerWhlDwn : 33|1@0+ (1,0) [0|0] ""  ECM
+ SG_ FltSteerWhlUp : 34|1@0+ (1,0) [0|0] ""  ECM
+ SG_ FltTipReq : 35|1@0+ (1,0) [0|0] ""  ECM
+ SG_ FltUpTipReq : 36|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmEngmtLimd_UB : 45|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmEngmtLimdTrsmEngmtLimd : 44|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmEngmtLimdTrsmEngmtLimdChks : 55|8@0+ (1,0) [0|255] "NoUnit"  ECM
+ SG_ TrsmEngmtLimdTrsmEngmtLimdCntr : 43|4@0+ (1,0) [0|15] "NoUnit"  ECM
+ SG_ TrsmErrIndcnReq : 38|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmErrIndcnReq_UB : 39|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmHotSt : 47|2@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmHotSt_UB : 7|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmReqForPfmncRedn : 63|1@0+ (1,0) [0|0] ""  ECM
+ SG_ TrsmReqForPfmncRedn_UB : 62|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmTqLoss_UB : 6|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmTqLossTrsmTqEff : 1|10@0+ (0.1,0) [0|100] "%"  ECM
+ SG_ TrsmTqLossTrsmTqLoss : 31|8@0+ (0.5,0) [0|127] "Unitless"  ECM
+ SG_ TrsmTqLossTrsmTqLossChks : 23|8@0+ (1,0) [0|255] "Unitless"  ECM
+ SG_ TrsmTqLossTrsmTqLossCntr : 5|4@0+ (1,0) [0|15] "Unitless"  ECM
+
+BO_ 326 TCMPropFr07: 8 TCM
+ SG_ TrsmEngNTqMax : 2|11@0+ (1,-1024) [-1024|1023] "NewtonMeter"  ECM
+ SG_ TrsmEngNTqMaxChks : 23|8@0+ (1,0) [0|255] "Unitless"  ECM
+ SG_ TrsmEngNTqMaxCntr : 6|4@0+ (1,0) [0|15] "Unitless"  ECM
+ SG_ TrsmEngNTqMaxSafe_UB : 7|1@0+ (1,0) [0|1] ""  ECM
+ SG_ TrsmGearNotAvlSts : 27|12@0+ (1,0) [0|4095] "NoUnit"  ECM
+ SG_ TrsmGearNotAvlSts_UB : 28|1@0+ (1,0) [0|1] ""  ECM
+
+BO_ 1303 TcmPropNMFr: 8 TCM
+
+BO_ 2025 TcmToEtcCarbPropDiagResFrame: 8 TCM
+
+BO_ 2663796352 TcmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1586 TcmToVddmPropDiagResFrame: 8 TCM
+
+BO_ 1279 TCMVFCPropFr: 8 TCM
+ SG_ VFCVectorTCM_UB : 55|1@0+ (1,0) [0|1] ""  VDDM
+ SG_ VFCVectorTCMGrp1 : 7|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+ SG_ VFCVectorTCMGrp2 : 23|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+ SG_ VFCVectorTCMGrp3 : 39|16@0+ (1,0) [0|65535] "NoUnit"  VDDM
+
+BO_ 2671971968 TemToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2671963776 TrmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 2655137408 TvmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1791 UudtDemFr01: 8 DEMspa
+
+BO_ 1790 UudtDemFr02: 8 DEMspa
+
+BO_ 1789 UudtEcmFr01: 8 ECM
+
+BO_ 1788 UudtEcmFr02: 8 ECM
+
+BO_ 1787 UudtEcmFr03: 8 ECM
+
+BO_ 1786 UudtEcmFr04: 8 ECM
+
+BO_ 1770 UudtEgsmFr01: 8 EGSM
+
+BO_ 1771 UudtEgsmFr02: 8 EGSM
+
+BO_ 1776 UudtIemFr01: 8 IEM
+
+BO_ 1777 UudtIemFr02: 8 IEM
+
+BO_ 1778 UudtIemFr03: 8 IEM
+
+BO_ 1779 UudtIgmFr01: 8 IGM
+
+BO_ 1780 UudtIgmFr02: 8 IGM
+
+BO_ 1781 UudtIgmFr03: 8 IGM
+
+BO_ 1785 UudtTcmFr01: 8 TCM
+
+BO_ 1784 UudtTcmFr02: 8 TCM
+
+BO_ 1783 UudtTcmFr03: 8 TCM
+
+BO_ 1782 UudtTcmFr04: 8 TCM
+
+BO_ 2650812032 VcmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1437 VddmBcmToEtcPropCCPFr: 8 VDDM
+ SG_ CCPFrameRespByte0 : 7|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte1 : 15|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte2 : 23|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte3 : 31|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte4 : 39|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte5 : 47|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte6 : 55|8@0+ (1,0) [0|255] "NoUnit"  ETC
+ SG_ CCPFrameRespByte7 : 63|8@0+ (1,0) [0|255] "NoUnit"  ETC
+
+BO_ 1417 VDDMBCMtoETCXCPFr01: 8 VDDM
+
+BO_ 529 VDDMPropFr02: 8 VDDM
+ SG_ SteerWhlAgSafe : 6|15@0- (0.000977,0) [-14.5|14.5] "rad"  DEMspa
+ SG_ SteerWhlAgSpdSafe : 21|14@0- (0.007812,0) [-50|50] "rad/s"  DEMspa
+ SG_ SteerWhlSnsr_UB : 7|1@0+ (1,0) [0|1] ""  DEMspa
+ SG_ SteerWhlSnsrQf : 23|2@0+ (1,0) [0|0] ""  DEMspa
+ SG_ SteerWhlSnsrSafeChks : 39|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ SteerWhlSnsrSafeCntr : 47|4@0+ (1,0) [0|15] "NoUnit"  DEMspa
+
+BO_ 134 VDDMPropFr03: 8 VDDM
+ SG_ WhlSpdCircumlFrnt_UB : 7|1@0+ (1,0) [0|1] ""  DEMspa,TCM
+ SG_ WhlSpdCircumlFrntLe : 6|15@0+ (0.00391,0) [0|125.003] "m/s"  DEMspa,TCM
+ SG_ WhlSpdCircumlFrntLeQf : 25|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ WhlSpdCircumlFrntRiQf : 27|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ WhlSpdCircumlFrntWhlSpdCircumlFr : 23|8@0+ (1,0) [0|255] "NoUnit"  DEMspa,TCM
+ SG_ WhlSpdCircumlFrntWhlSpdCirc_0000 : 31|4@0+ (1,0) [0|15] "NoUnit"  DEMspa,TCM
+ SG_ WhlSpdCircumlFrntWhlSpdCirc_0001 : 39|15@0+ (0.00391,0) [0|125.003] "m/s"  DEMspa,TCM
+
+BO_ 118 VDDMPropFr05: 8 VDDM
+ SG_ BrkPedlNotPsdSafe : 8|1@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ BrkPedlPsd : 9|1@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ BrkPedlPsdChks : 7|8@0+ (1,0) [0|255] "NoUnit"  DEMspa,TCM
+ SG_ BrkPedlPsdCntr : 15|4@0+ (1,0) [0|15] "NoUnit"  DEMspa,TCM
+ SG_ BrkPedlPsdQf : 11|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ BrkPedlPsdSafeGroup_UB : 23|1@0+ (1,0) [0|1] ""  DEMspa,TCM
+ SG_ VehMtnStChks : 31|8@0+ (1,0) [0|255] "NoUnit"  ECM,IEM
+ SG_ VehMtnStCntr : 19|4@0+ (1,0) [0|15] "NoUnit"  ECM,IEM
+ SG_ VehMtnStSafe : 22|3@0+ (1,0) [0|0] ""  ECM,IEM
+ SG_ VehMtnStSafeGroup_UB : 57|1@0+ (1,0) [0|1] ""  ECM,IEM
+ SG_ VehSpdLgtSafe : 38|15@0+ (0.00391,0) [0|125.003] "m/s"  BECM,DEMspa,ESM,IEM,TCM
+ SG_ VehSpdLgtSafeChks : 55|8@0+ (1,0) [0|255] "NoUnit"  BECM,DEMspa,ESM,IEM,TCM
+ SG_ VehSpdLgtSafeCntr : 63|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,ESM,IEM,TCM
+ SG_ VehSpdLgtSafeGroup_UB : 39|1@0+ (1,0) [0|1] ""  BECM,DEMspa,ESM,IEM,TCM
+ SG_ VehSpdLgtSafeQf : 59|2@0+ (1,0) [0|0] ""  BECM,DEMspa,ESM,IEM,TCM
+
+BO_ 565 VDDMPropFr06: 8 VDDM
+ SG_ VehCfgPrmBlk : 7|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal1 : 15|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal2 : 23|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal3 : 31|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal4 : 39|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal5 : 47|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal6 : 55|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+ SG_ VehCfgPrmVal7 : 63|8@0+ (1,0) [0|255] "Unitless"  DEMspa,EGSM,IEM,IGM,OBC,TCM
+
+BO_ 113 VDDMPropFr07: 8 VDDM
+ SG_ AxleSlipRelAct : 53|14@0- (0.003906,0) [-29.997|30.001] "m/s"  ECM,IEM
+ SG_ AxleSlipRelAct_UB : 54|1@0+ (1,0) [0|1] ""  ECM,IEM
+ SG_ WhlSpdCircumlRe_UB : 7|1@0+ (1,0) [0|1] ""  DEMspa,TCM
+ SG_ WhlSpdCircumlReLe : 6|15@0+ (0.00391,0) [0|125.003] "m/s"  DEMspa,TCM
+ SG_ WhlSpdCircumlReLeQf : 25|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ WhlSpdCircumlReRi : 39|15@0+ (0.00391,0) [0|125.003] "m/s"  DEMspa,TCM
+ SG_ WhlSpdCircumlReRiQf : 27|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ WhlSpdCircumlReWhlSpdCircumlReCh : 23|8@0+ (1,0) [0|255] "NoUnit"  DEMspa,TCM
+ SG_ WhlSpdCircumlReWhlSpdCircumlReCn : 31|4@0+ (1,0) [0|15] "NoUnit"  DEMspa,TCM
+
+BO_ 65 VDDMPropFr08: 8 VDDM
+ SG_ BrkTqAtWhlsReq : 7|12@0+ (4,0) [0|16380] "Nm"  ECM,TCM
+ SG_ BrkTqAtWhlsReq_UB : 11|1@0+ (1,0) [0|1] ""  ECM,TCM
+ SG_ PtTqAtAxleReMaxReq : 55|16@0- (1,0) [-20000|20000] "NewtonMeter"  DEMspa,ECM
+ SG_ PtTqAtAxleReMaxReq_UB : 42|1@0+ (1,0) [0|1] ""  DEMspa,ECM
+ SG_ PtTqAtAxleReMinReq : 23|16@0- (1,0) [-20000|20000] "NewtonMeter"  ECM,IEM
+ SG_ PtTqAtAxleReMinReqChks : 39|8@0+ (1,0) [0|255] "NoUnit"  ECM,IEM
+ SG_ PtTqAtAxleReMinReqCntr : 47|4@0+ (1,0) [0|15] "NoUnit"  ECM,IEM
+ SG_ PtTqAtAxleReMinReqGroup_UB : 43|1@0+ (1,0) [0|1] ""  ECM,IEM
+
+BO_ 129 VDDMPropFr09: 8 VDDM
+ SG_ ADataRawSafe_UB : 56|1@0+ (1,0) [0|1] ""  DEMspa,TCM
+ SG_ ADataRawSafeChks : 7|8@0+ (1,0) [0|255] "NoUnit"  DEMspa,TCM
+ SG_ ADataRawSafeCntr : 15|4@0+ (1,0) [0|15] "NoUnit"  DEMspa,TCM
+ SG_ ALat1 : 23|15@0- (0.0085,0) [-138.992|139.001] "m/s^2"  DEMspa,TCM
+ SG_ ALat1Qf1 : 11|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ ALgt1 : 38|15@0- (0.0085,0) [-138.992|139.001] "m/s^2"  DEMspa,TCM
+ SG_ ALgt1Qf1 : 9|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ AVert2 : 55|15@0- (0.0085,0) [-138.992|139.001] "m/s^2"  DEMspa,TCM
+ SG_ AVert2Qf1 : 24|2@0+ (1,0) [0|0] ""  DEMspa,TCM
+
+BO_ 357 VDDMPropFr10: 8 VDDM
+ SG_ BrkFricTqAtWhlAct_UB : 5|1@0+ (1,0) [0|1] ""  ECM,TCM
+ SG_ BrkFricTqAtWhlFrntLeAct : 4|13@0+ (1,0) [0|8191] "Nm"  ECM,TCM
+ SG_ BrkFricTqAtWhlFrntRiAct : 20|13@0+ (1,0) [0|8191] "Nm"  ECM,TCM
+ SG_ BrkFricTqAtWhlReLeAct : 36|13@0+ (1,0) [0|8191] "Nm"  ECM,TCM
+ SG_ BrkFricTqAtWhlReRiAct : 52|13@0+ (1,0) [0|8191] "Nm"  ECM,TCM
+ SG_ EngTracCtrlActvFrntMax : 6|1@0+ (1,0) [0|0] ""  DEMspa
+ SG_ EngTracCtrlActvFrntMax_UB : 7|1@0+ (1,0) [0|1] ""  DEMspa
+
+BO_ 369 VDDMPropFr11: 8 VDDM
+ SG_ BrkFricTqTotAtWhlsAct_UB : 7|1@0+ (1,0) [0|1] ""  ECM,TCM
+ SG_ BrkFricTqTotAtWhlsActBrkFricTqTo : 6|15@0+ (1,0) [0|20000] "NewtonMeter"  ECM,TCM
+ SG_ BrkFricTqTotAtWhlsActBrkFri_0000 : 23|8@0+ (1,0) [0|255] "NoUnit"  ECM,TCM
+ SG_ BrkFricTqTotAtWhlsActBrkFri_0001 : 31|4@0+ (1,0) [0|15] "NoUnit"  ECM,TCM
+ SG_ LockgCenSts_UB : 48|1@0+ (1,0) [0|1] ""  OBC
+ SG_ LockgCenStsLockSt : 51|2@0+ (1,0) [0|0] ""  OBC
+ SG_ LockgCenStsUpdEve : 49|1@0+ (1,0) [0|0] ""  OBC
+ SG_ LockgCenTrigSrc : 55|4@0+ (1,0) [0|0] ""  OBC
+ SG_ SpdRotlForWhlsAtAxleRe : 38|15@0+ (0.5,0) [0|16383.5] "rpm"  ECM,IEM
+ SG_ SpdRotlForWhlsAtAxleRe_UB : 39|1@0+ (1,0) [0|1] ""  ECM,IEM
+ SG_ YawStabyCtrlActv : 27|1@0+ (1,0) [0|0] ""  DEMspa,ECM
+ SG_ YawStabyCtrlActv_UB : 26|1@0+ (1,0) [0|1] ""  DEMspa,ECM
+
+BO_ 353 VDDMPropFr12: 8 VDDM
+ SG_ AgDataRawSafe_UB : 55|1@0+ (1,0) [0|1] ""  DEMspa
+ SG_ AgDataRawSafeChks : 39|8@0+ (1,0) [0|255] "NoUnit"  DEMspa
+ SG_ AgDataRawSafeCntr : 47|4@0+ (1,0) [0|15] "NoUnit"  DEMspa
+ SG_ RollRate1 : 7|16@0- (0.000244,0) [-6|6] "rad/s"  DEMspa
+ SG_ RollRate1Qf1 : 43|2@0+ (1,0) [0|0] ""  DEMspa
+ SG_ YawRate1 : 23|16@0- (0.000244,0) [-6|6] "rad/s"  DEMspa
+ SG_ YawRate1Qf1 : 41|2@0+ (1,0) [0|0] ""  DEMspa
+
+BO_ 561 VDDMPropFr14: 8 VDDM
+ SG_ AmbTIndcd : 3|12@0+ (0.1,-100) [-100|309.5] "Unitless"  BECM
+ SG_ AmbTIndcdQf : 5|2@0+ (1,0) [0|0] ""  BECM
+ SG_ AmbTIndcdUnit : 7|2@0+ (1,0) [0|0] ""  BECM
+ SG_ AmbTIndcdWithUnit_UB : 39|1@0+ (1,0) [0|1] ""  BECM
+ SG_ TiDrvgCycOff : 23|16@0+ (1,0) [0|65535] "Sec"  DEMspa,ECM,TCM
+ SG_ TiDrvgCycOff_UB : 38|1@0+ (1,0) [0|1] ""  DEMspa,ECM,TCM
+ SG_ TrlrPrsnt : 37|1@0+ (1,0) [0|0] ""  DEMspa,TCM
+ SG_ TrlrPrsnt_UB : 55|1@0+ (1,0) [0|1] ""  DEMspa,TCM
+ SG_ WhlCircum : 35|12@0+ (1,0) [0|4095] "NoUnit"  DEMspa,TCM
+ SG_ WhlCircum_UB : 36|1@0+ (1,0) [0|1] ""  DEMspa,TCM
+
+BO_ 609 VDDMPropFr15: 8 VDDM
+ SG_ ImobEngDataMgrReq30 : 15|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngDataMgrReq31 : 23|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngDataMgrReq32 : 31|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngDataMgrReq33 : 39|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngDataMgrReq34 : 47|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngDataMgrReq35 : 55|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngDataMgrReq36 : 63|8@0+ (1,0) [0|255] "NoUnit"  IGM
+ SG_ ImobEngMgrReq3_UB : 2|1@0+ (1,0) [0|1] ""  IGM
+ SG_ ImobEngMgrReqCmd3 : 1|2@0+ (1,0) [0|0] ""  IGM
+
+BO_ 597 VDDMPropFr16: 8 VDDM
+ SG_ ImobEngDataMgrReq20 : 15|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngDataMgrReq21 : 23|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngDataMgrReq22 : 31|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngDataMgrReq23 : 39|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngDataMgrReq24 : 47|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngDataMgrReq25 : 55|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngDataMgrReq26 : 63|8@0+ (1,0) [0|255] "NoUnit"  IEM
+ SG_ ImobEngMgrReq2_UB : 2|1@0+ (1,0) [0|1] ""  IEM
+ SG_ ImobEngMgrReqCmd2 : 1|2@0+ (1,0) [0|0] ""  IEM
+
+BO_ 641 VDDMPropFr17: 8 VDDM
+ SG_ CarTiGlb : 7|32@0+ (0.1,0) [0|214748364.7] "s"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ CarTiGlb_UB : 39|1@0+ (1,0) [0|1] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+
+BO_ 86 VDDMPropFr18: 8 VDDM
+ SG_ CarModSts1 : 39|3@0+ (1,0) [0|0] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ CarModSubtypWdCarModSubtyp : 36|3@0+ (1,0) [0|7] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ ChrgnUReq : 55|8@0+ (0.025,10.6) [10.6|16] "Volt"  ECM,IGM
+ SG_ ChrgnUReq_UB : 40|1@0+ (1,0) [0|1] ""  ECM,IGM
+ SG_ EgyLvlElecMai : 27|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ EgyLvlElecSubtyp : 31|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ FltEgyCnsWdSts : 33|1@0+ (1,0) [0|0] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ IntrBriSts : 44|4@0+ (1,0) [0|15] "NoUnit"  EGSM,TCM
+ SG_ IntrBriSts_UB : 45|1@0+ (1,0) [0|1] ""  EGSM,TCM
+ SG_ PwrLvlElecMai : 19|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ PwrLvlElecSubtyp : 23|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ TwliBriSts : 47|1@0+ (1,0) [0|0] ""  EGSM,TCM
+ SG_ TwliBriSts_UB : 46|1@0+ (1,0) [0|1] ""  EGSM,TCM
+ SG_ UsgModSts : 11|4@0+ (1,0) [0|0] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ VehModMngtGlbSafe1_UB : 32|1@0+ (1,0) [0|1] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ VehModMngtGlbSafe1Chks : 7|8@0+ (1,0) [0|255] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ VehModMngtGlbSafe1Cntr : 15|4@0+ (1,0) [0|15] "NoUnit"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+
+BO_ 645 VDDMPropFr19: 8 VDDM
+ SG_ AmbTRaw_UB : 45|1@0+ (1,0) [0|1] ""  DEMspa,ECM
+ SG_ AmbTRawQly : 44|2@0+ (1,0) [0|0] ""  DEMspa,ECM
+ SG_ AmbTRawVal : 42|11@0+ (0.1,-70) [-70|134.7] "degC"  DEMspa,ECM
+ SG_ BkpOfDstTrvld : 20|21@0+ (1,0) [0|2000000] "km"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ BkpOfDstTrvld_UB : 21|1@0+ (1,0) [0|1] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ SoundExtActvSts : 22|1@0+ (1,0) [0|0] ""  ESM
+ SG_ SoundExtActvSts_UB : 23|1@0+ (1,0) [0|1] ""  ESM
+ SG_ VehBattUGroup_UB : 2|1@0+ (1,0) [0|1] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ VehBattUSysU : 15|8@0+ (0.1,0) [0|25] "Volt"  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+ SG_ VehBattUSysUQf : 1|2@0+ (1,0) [0|0] ""  BECM,DEMspa,EGSM,ESM,IEM,IGM,OBC,TACM,TCM
+
+BO_ 1407 VDDMPropFr20: 4 VDDM
+ SG_ MstCfgIDPropulsionCAN : 7|16@0+ (1,0) [0|65535] "NoUnit"  BECM,DEMspa,ECM,EGSM,ESM,IEM,IGM,OBC,SRS,TACM,TCM
+ SG_ MstCfgIDPropulsionCAN_UB : 23|1@0+ (1,0) [0|1] ""  BECM,DEMspa,ECM,EGSM,ESM,IEM,IGM,OBC,SRS,TACM,TCM
+ SG_ PrpsnCntrForMissCom : 31|8@0+ (1,0) [0|255] "NoUnit"  BECM,DEMspa,ECM,EGSM,ESM,IEM,IGM,OBC,SRS,TACM,TCM
+ SG_ PrpsnCntrForMissCom_UB : 22|1@0+ (1,0) [0|1] ""  BECM,DEMspa,ECM,EGSM,ESM,IEM,IGM,OBC,SRS,TACM,TCM
+
+BO_ 344 VDDMPropFr21: 8 VDDM
+ SG_ DrvrBrkTqAtWhlsReqd : 39|16@0- (1,0) [-20000|20000] "NewtonMeter"  TCM
+ SG_ DrvrBrkTqAtWhlsReqdDrvrBrkTqAtWh : 31|8@0+ (1,0) [0|255] "NoUnit"  TCM
+ SG_ DrvrBrkTqAtWhlsReqdDrvrBrkT_0000 : 19|4@0+ (1,0) [0|15] "NoUnit"  TCM
+ SG_ DrvrBrkTqAtWhlsReqdGroup_UB : 22|1@0+ (1,0) [0|1] ""  TCM
+ SG_ DrvrBrkTqAtWhlsReqdQf : 21|2@0+ (1,0) [0|0] ""  TCM
+ SG_ EpbSts_UB : 23|1@0+ (1,0) [0|1] ""  DEMspa,ECM,TCM
+ SG_ EpbStsEpbSts : 15|4@0+ (1,0) [0|0] ""  DEMspa,ECM,TCM
+ SG_ EpbStsEpbStsChks : 7|8@0+ (1,0) [0|255] "NoUnit"  DEMspa,ECM,TCM
+ SG_ EpbStsEpbStsCntr : 11|4@0+ (1,0) [0|15] "NoUnit"  DEMspa,ECM,TCM
+ SG_ PtActrReModReq : 49|2@0+ (1,0) [0|0] ""  ECM,IEM
+ SG_ PtActrReModReq_UB : 50|1@0+ (1,0) [0|1] ""  ECM,IEM
+
+BO_ 1314 VddmPropNMfr: 8 VDDM
+
+BO_ 2047 VddmToAllFuncPropDiagReqFrame: 8 VDDM
+
+BO_ 1845 VddmToBecmPropDiagReqFrame: 8 VDDM
+
+BO_ 1848 VddmToDemPropDiagReqFrame: 8 VDDM
+
+BO_ 1840 VddmToEcmPropDiagReqFrame: 8 VDDM
+
+BO_ 1843 VddmToEgsmPropDiagReqFrame: 8 VDDM
+
+BO_ 1850 VddmToEsmPropDiagReqFrame: 8 VDDM
+
+BO_ 1537 VddmToEtcDiagResFrame: 8 VDDM
+
+BO_ 2663394944 VddmToEtcJ2534DiagResFrame: 8 VCM
+
+BO_ 1889 VddmToGsmPropDiagReqFrame: 8 VDDM
+
+BO_ 1847 VddmToIemPropDiagReqFrame: 8 VDDM
+
+BO_ 1846 VddmToIgmPropDiagReqFrame: 8 VDDM
+
+BO_ 1844 VddmToObcPropDiagReqFrame: 8 VDDM
+
+BO_ 1852 VddmToTacmPropDiagReqFrame: 8 VDDM
+
+BO_ 1842 VddmToTcmPropDiagReqFrame: 8 VDDM
+
+BO_ 2659593856 WamToEtcJ2534DiagResFrame: 8 VCM
+
+
+
+BA_DEF_  "BaudRate" FLOAT 1000 1000000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","cyclicIfActive","spontaneousWithDelay";
+BA_DEF_ BO_  "GenMsgCycleTime" FLOAT 0 300000;
+BA_DEF_ BO_  "GenMsgDelayTime" FLOAT 0 300000;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -1.79769313486232E+308 1.84467440737096E+019;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "BaudRate" 1000;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "BaudRate" 500000;
+BA_ "GenMsgSendType" BO_ 2659200640 1;
+BA_ "GenMsgCycleTime" BO_ 2659200640 5;
+BA_ "GenMsgSendType" BO_ 2655145600 1;
+BA_ "GenMsgCycleTime" BO_ 2655145600 5;
+BA_ "GenMsgSendType" BO_ 2674536064 1;
+BA_ "GenMsgCycleTime" BO_ 2674536064 5;
+BA_ "GenMsgSendType" BO_ 2030 1;
+BA_ "GenMsgCycleTime" BO_ 2030 5;
+BA_ "GenMsgSendType" BO_ 1585 1;
+BA_ "GenMsgCycleTime" BO_ 1585 5;
+BA_ "GenMsgSendType" BO_ 327 0;
+BA_ "GenMsgCycleTime" BO_ 327 20;
+BA_ "GenMsgDelayTime" BO_ 327 0;
+BA_ "GenMsgSendType" BO_ 373 0;
+BA_ "GenMsgCycleTime" BO_ 373 25;
+BA_ "GenMsgDelayTime" BO_ 373 0;
+BA_ "GenMsgSendType" BO_ 581 0;
+BA_ "GenMsgCycleTime" BO_ 581 70;
+BA_ "GenMsgDelayTime" BO_ 581 0;
+BA_ "GenMsgSendType" BO_ 659 0;
+BA_ "GenMsgCycleTime" BO_ 659 400;
+BA_ "GenMsgDelayTime" BO_ 659 0;
+BA_ "GenMsgSendType" BO_ 661 0;
+BA_ "GenMsgCycleTime" BO_ 661 600;
+BA_ "GenMsgDelayTime" BO_ 661 0;
+BA_ "GenMsgSendType" BO_ 837 0;
+BA_ "GenMsgCycleTime" BO_ 837 1000;
+BA_ "GenMsgDelayTime" BO_ 837 0;
+BA_ "GenMsgSendType" BO_ 833 0;
+BA_ "GenMsgCycleTime" BO_ 833 1000;
+BA_ "GenMsgDelayTime" BO_ 833 0;
+BA_ "GenMsgSendType" BO_ 821 0;
+BA_ "GenMsgCycleTime" BO_ 821 1000;
+BA_ "GenMsgDelayTime" BO_ 821 0;
+BA_ "GenMsgSendType" BO_ 789 0;
+BA_ "GenMsgCycleTime" BO_ 789 800;
+BA_ "GenMsgDelayTime" BO_ 789 0;
+BA_ "GenMsgSendType" BO_ 805 0;
+BA_ "GenMsgCycleTime" BO_ 805 1000;
+BA_ "GenMsgDelayTime" BO_ 805 0;
+BA_ "GenMsgSendType" BO_ 817 0;
+BA_ "GenMsgCycleTime" BO_ 817 1000;
+BA_ "GenMsgDelayTime" BO_ 817 0;
+BA_ "GenMsgSendType" BO_ 769 0;
+BA_ "GenMsgCycleTime" BO_ 769 600;
+BA_ "GenMsgDelayTime" BO_ 769 0;
+BA_ "GenMsgSendType" BO_ 1305 1;
+BA_ "GenMsgCycleTime" BO_ 1305 1000;
+BA_ "GenMsgSendType" BO_ 2026 1;
+BA_ "GenMsgCycleTime" BO_ 2026 5;
+BA_ "GenMsgSendType" BO_ 2663820928 1;
+BA_ "GenMsgCycleTime" BO_ 2663820928 5;
+BA_ "GenMsgSendType" BO_ 1589 1;
+BA_ "GenMsgCycleTime" BO_ 1589 5;
+BA_ "GenMsgSendType" BO_ 2674667136 1;
+BA_ "GenMsgCycleTime" BO_ 2674667136 5;
+BA_ "GenMsgSendType" BO_ 2671914624 1;
+BA_ "GenMsgCycleTime" BO_ 2671914624 5;
+BA_ "GenMsgSendType" BO_ 2671783552 1;
+BA_ "GenMsgCycleTime" BO_ 2671783552 5;
+BA_ "GenMsgSendType" BO_ 2671922816 1;
+BA_ "GenMsgCycleTime" BO_ 2671922816 5;
+BA_ "GenMsgSendType" BO_ 1409 1;
+BA_ "GenMsgCycleTime" BO_ 1409 5;
+BA_ "GenMsgSendType" BO_ 1410 1;
+BA_ "GenMsgCycleTime" BO_ 1410 5;
+BA_ "GenMsgSendType" BO_ 1411 1;
+BA_ "GenMsgCycleTime" BO_ 1411 5;
+BA_ "GenMsgSendType" BO_ 1412 1;
+BA_ "GenMsgCycleTime" BO_ 1412 5;
+BA_ "GenMsgSendType" BO_ 1413 1;
+BA_ "GenMsgCycleTime" BO_ 1413 5;
+BA_ "GenMsgSendType" BO_ 1414 1;
+BA_ "GenMsgCycleTime" BO_ 1414 5;
+BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 15;
+BA_ "GenMsgDelayTime" BO_ 294 0;
+BA_ "GenMsgSendType" BO_ 1310 1;
+BA_ "GenMsgCycleTime" BO_ 1310 1000;
+BA_ "GenMsgSendType" BO_ 2663845504 1;
+BA_ "GenMsgCycleTime" BO_ 2663845504 5;
+BA_ "GenMsgSendType" BO_ 1431 1;
+BA_ "GenMsgCycleTime" BO_ 1431 20;
+BA_ "GenMsgSendType" BO_ 1432 1;
+BA_ "GenMsgCycleTime" BO_ 1432 20;
+BA_ "GenMsgSendType" BO_ 1433 1;
+BA_ "GenMsgCycleTime" BO_ 1433 20;
+BA_ "GenMsgSendType" BO_ 1434 1;
+BA_ "GenMsgCycleTime" BO_ 1434 20;
+BA_ "GenMsgSendType" BO_ 1435 1;
+BA_ "GenMsgCycleTime" BO_ 1435 20;
+BA_ "GenMsgSendType" BO_ 1436 1;
+BA_ "GenMsgCycleTime" BO_ 1436 20;
+BA_ "GenMsgSendType" BO_ 1592 1;
+BA_ "GenMsgCycleTime" BO_ 1592 5;
+BA_ "GenMsgSendType" BO_ 2667589248 1;
+BA_ "GenMsgCycleTime" BO_ 2667589248 5;
+BA_ "GenMsgSendType" BO_ 74 0;
+BA_ "GenMsgCycleTime" BO_ 74 10;
+BA_ "GenMsgDelayTime" BO_ 74 0;
+BA_ "GenMsgSendType" BO_ 80 0;
+BA_ "GenMsgCycleTime" BO_ 80 10;
+BA_ "GenMsgDelayTime" BO_ 80 0;
+BA_ "GenMsgSendType" BO_ 102 0;
+BA_ "GenMsgCycleTime" BO_ 102 15;
+BA_ "GenMsgDelayTime" BO_ 102 0;
+BA_ "GenMsgSendType" BO_ 277 0;
+BA_ "GenMsgCycleTime" BO_ 277 15;
+BA_ "GenMsgDelayTime" BO_ 277 0;
+BA_ "GenMsgSendType" BO_ 305 0;
+BA_ "GenMsgCycleTime" BO_ 305 20;
+BA_ "GenMsgDelayTime" BO_ 305 0;
+BA_ "GenMsgSendType" BO_ 405 0;
+BA_ "GenMsgCycleTime" BO_ 405 25;
+BA_ "GenMsgDelayTime" BO_ 405 0;
+BA_ "GenMsgSendType" BO_ 401 0;
+BA_ "GenMsgCycleTime" BO_ 401 25;
+BA_ "GenMsgDelayTime" BO_ 401 0;
+BA_ "GenMsgSendType" BO_ 512 0;
+BA_ "GenMsgCycleTime" BO_ 512 25;
+BA_ "GenMsgDelayTime" BO_ 512 0;
+BA_ "GenMsgSendType" BO_ 545 0;
+BA_ "GenMsgCycleTime" BO_ 545 50;
+BA_ "GenMsgDelayTime" BO_ 545 0;
+BA_ "GenMsgSendType" BO_ 592 0;
+BA_ "GenMsgCycleTime" BO_ 592 70;
+BA_ "GenMsgDelayTime" BO_ 592 0;
+BA_ "GenMsgSendType" BO_ 341 0;
+BA_ "GenMsgCycleTime" BO_ 341 25;
+BA_ "GenMsgDelayTime" BO_ 341 0;
+BA_ "GenMsgSendType" BO_ 647 0;
+BA_ "GenMsgCycleTime" BO_ 647 300;
+BA_ "GenMsgDelayTime" BO_ 647 0;
+BA_ "GenMsgSendType" BO_ 577 0;
+BA_ "GenMsgCycleTime" BO_ 577 50;
+BA_ "GenMsgDelayTime" BO_ 577 0;
+BA_ "GenMsgSendType" BO_ 1312 1;
+BA_ "GenMsgCycleTime" BO_ 1312 1000;
+BA_ "GenMsgSendType" BO_ 2024 1;
+BA_ "GenMsgCycleTime" BO_ 2024 5;
+BA_ "GenMsgSendType" BO_ 2663779968 1;
+BA_ "GenMsgCycleTime" BO_ 2663779968 5;
+BA_ "GenMsgSendType" BO_ 1584 1;
+BA_ "GenMsgCycleTime" BO_ 1584 5;
+BA_ "GenMsgSendType" BO_ 309 0;
+BA_ "GenMsgCycleTime" BO_ 309 20;
+BA_ "GenMsgDelayTime" BO_ 309 0;
+BA_ "GenMsgSendType" BO_ 1302 1;
+BA_ "GenMsgCycleTime" BO_ 1302 1000;
+BA_ "GenMsgSendType" BO_ 2663804544 1;
+BA_ "GenMsgCycleTime" BO_ 2663804544 5;
+BA_ "GenMsgSendType" BO_ 1587 1;
+BA_ "GenMsgCycleTime" BO_ 1587 5;
+BA_ "GenMsgSendType" BO_ 1278 0;
+BA_ "GenMsgCycleTime" BO_ 1278 50;
+BA_ "GenMsgDelayTime" BO_ 1278 0;
+BA_ "GenMsgSendType" BO_ 801 0;
+BA_ "GenMsgCycleTime" BO_ 801 1000;
+BA_ "GenMsgDelayTime" BO_ 801 0;
+BA_ "GenMsgSendType" BO_ 1320 1;
+BA_ "GenMsgCycleTime" BO_ 1320 1000;
+BA_ "GenMsgSendType" BO_ 2663861888 1;
+BA_ "GenMsgCycleTime" BO_ 2663861888 5;
+BA_ "GenMsgSendType" BO_ 1594 1;
+BA_ "GenMsgCycleTime" BO_ 1594 5;
+BA_ "GenMsgSendType" BO_ 1415 1;
+BA_ "GenMsgCycleTime" BO_ 1415 5;
+BA_ "GenMsgSendType" BO_ 1405 0;
+BA_ "GenMsgCycleTime" BO_ 1405 500;
+BA_ "GenMsgDelayTime" BO_ 1405 0;
+BA_ "GenMsgSendType" BO_ 1406 0;
+BA_ "GenMsgCycleTime" BO_ 1406 500;
+BA_ "GenMsgDelayTime" BO_ 1406 0;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "GenMsgCycleTime" BO_ 2015 5;
+BA_ "GenMsgSendType" BO_ 2647662591 1;
+BA_ "GenMsgCycleTime" BO_ 2647662591 5;
+BA_ "GenMsgSendType" BO_ 2647659521 1;
+BA_ "GenMsgCycleTime" BO_ 2647659521 5;
+BA_ "GenMsgSendType" BO_ 2647659026 1;
+BA_ "GenMsgCycleTime" BO_ 2647659026 5;
+BA_ "GenMsgSendType" BO_ 2647661393 1;
+BA_ "GenMsgCycleTime" BO_ 2647661393 5;
+BA_ "GenMsgSendType" BO_ 2022 1;
+BA_ "GenMsgCycleTime" BO_ 2022 5;
+BA_ "GenMsgSendType" BO_ 1841 1;
+BA_ "GenMsgCycleTime" BO_ 1841 5;
+BA_ "GenMsgSendType" BO_ 2018 1;
+BA_ "GenMsgCycleTime" BO_ 2018 5;
+BA_ "GenMsgSendType" BO_ 2647660085 1;
+BA_ "GenMsgCycleTime" BO_ 2647660085 5;
+BA_ "GenMsgSendType" BO_ 2647661409 1;
+BA_ "GenMsgCycleTime" BO_ 2647661409 5;
+BA_ "GenMsgSendType" BO_ 2647661073 1;
+BA_ "GenMsgCycleTime" BO_ 2647661073 5;
+BA_ "GenMsgSendType" BO_ 2647661057 1;
+BA_ "GenMsgCycleTime" BO_ 2647661057 5;
+BA_ "GenMsgSendType" BO_ 2647661074 1;
+BA_ "GenMsgCycleTime" BO_ 2647661074 5;
+BA_ "GenMsgSendType" BO_ 2647660088 1;
+BA_ "GenMsgCycleTime" BO_ 2647660088 5;
+BA_ "GenMsgSendType" BO_ 1448 1;
+BA_ "GenMsgCycleTime" BO_ 1448 10;
+BA_ "GenMsgSendType" BO_ 1447 1;
+BA_ "GenMsgCycleTime" BO_ 1447 10;
+BA_ "GenMsgSendType" BO_ 1449 1;
+BA_ "GenMsgCycleTime" BO_ 1449 10;
+BA_ "GenMsgSendType" BO_ 1450 1;
+BA_ "GenMsgCycleTime" BO_ 1450 10;
+BA_ "GenMsgSendType" BO_ 1451 1;
+BA_ "GenMsgCycleTime" BO_ 1451 10;
+BA_ "GenMsgSendType" BO_ 1452 1;
+BA_ "GenMsgCycleTime" BO_ 1452 10;
+BA_ "GenMsgSendType" BO_ 2647660545 1;
+BA_ "GenMsgCycleTime" BO_ 2647660545 5;
+BA_ "GenMsgSendType" BO_ 2016 1;
+BA_ "GenMsgCycleTime" BO_ 2016 5;
+BA_ "GenMsgSendType" BO_ 2647660080 1;
+BA_ "GenMsgCycleTime" BO_ 2647660080 5;
+BA_ "GenMsgSendType" BO_ 2647660083 1;
+BA_ "GenMsgCycleTime" BO_ 2647660083 5;
+BA_ "GenMsgSendType" BO_ 2647660090 1;
+BA_ "GenMsgCycleTime" BO_ 2647660090 5;
+BA_ "GenMsgSendType" BO_ 2647660129 1;
+BA_ "GenMsgCycleTime" BO_ 2647660129 5;
+BA_ "GenMsgSendType" BO_ 2647660609 1;
+BA_ "GenMsgCycleTime" BO_ 2647660609 5;
+BA_ "GenMsgSendType" BO_ 2019 1;
+BA_ "GenMsgCycleTime" BO_ 2019 5;
+BA_ "GenMsgSendType" BO_ 2647660087 1;
+BA_ "GenMsgCycleTime" BO_ 2647660087 5;
+BA_ "GenMsgSendType" BO_ 2020 1;
+BA_ "GenMsgCycleTime" BO_ 2020 5;
+BA_ "GenMsgSendType" BO_ 2647660086 1;
+BA_ "GenMsgCycleTime" BO_ 2647660086 5;
+BA_ "GenMsgSendType" BO_ 2647659009 1;
+BA_ "GenMsgCycleTime" BO_ 2647659009 5;
+BA_ "GenMsgSendType" BO_ 2647661394 1;
+BA_ "GenMsgCycleTime" BO_ 2647661394 5;
+BA_ "GenMsgSendType" BO_ 2021 1;
+BA_ "GenMsgCycleTime" BO_ 2021 5;
+BA_ "GenMsgSendType" BO_ 2647660084 1;
+BA_ "GenMsgCycleTime" BO_ 2647660084 5;
+BA_ "GenMsgSendType" BO_ 2647661410 1;
+BA_ "GenMsgCycleTime" BO_ 2647661410 5;
+BA_ "GenMsgSendType" BO_ 2647661411 1;
+BA_ "GenMsgCycleTime" BO_ 2647661411 5;
+BA_ "GenMsgSendType" BO_ 2647661075 1;
+BA_ "GenMsgCycleTime" BO_ 2647661075 5;
+BA_ "GenMsgSendType" BO_ 2647661077 1;
+BA_ "GenMsgCycleTime" BO_ 2647661077 5;
+BA_ "GenMsgSendType" BO_ 2647660050 1;
+BA_ "GenMsgCycleTime" BO_ 2647660050 5;
+BA_ "GenMsgSendType" BO_ 2647661076 1;
+BA_ "GenMsgCycleTime" BO_ 2647661076 5;
+BA_ "GenMsgSendType" BO_ 2647661082 1;
+BA_ "GenMsgCycleTime" BO_ 2647661082 5;
+BA_ "GenMsgSendType" BO_ 2647659542 1;
+BA_ "GenMsgCycleTime" BO_ 2647659542 5;
+BA_ "GenMsgSendType" BO_ 2647659543 1;
+BA_ "GenMsgCycleTime" BO_ 2647659543 5;
+BA_ "GenMsgSendType" BO_ 2647660054 1;
+BA_ "GenMsgCycleTime" BO_ 2647660054 5;
+BA_ "GenMsgSendType" BO_ 2647660053 1;
+BA_ "GenMsgCycleTime" BO_ 2647660053 5;
+BA_ "GenMsgSendType" BO_ 2647659570 1;
+BA_ "GenMsgCycleTime" BO_ 2647659570 5;
+BA_ "GenMsgSendType" BO_ 2647659571 1;
+BA_ "GenMsgCycleTime" BO_ 2647659571 5;
+BA_ "GenMsgSendType" BO_ 2033 1;
+BA_ "GenMsgCycleTime" BO_ 2033 5;
+BA_ "GenMsgSendType" BO_ 2647661569 1;
+BA_ "GenMsgCycleTime" BO_ 2647661569 5;
+BA_ "GenMsgSendType" BO_ 2647660052 1;
+BA_ "GenMsgCycleTime" BO_ 2647660052 5;
+BA_ "GenMsgSendType" BO_ 2647661457 1;
+BA_ "GenMsgCycleTime" BO_ 2647661457 5;
+BA_ "GenMsgSendType" BO_ 2647660092 1;
+BA_ "GenMsgCycleTime" BO_ 2647660092 5;
+BA_ "GenMsgSendType" BO_ 1424 1;
+BA_ "GenMsgCycleTime" BO_ 1424 10;
+BA_ "GenMsgSendType" BO_ 1428 1;
+BA_ "GenMsgCycleTime" BO_ 1428 10;
+BA_ "GenMsgSendType" BO_ 2017 1;
+BA_ "GenMsgCycleTime" BO_ 2017 5;
+BA_ "GenMsgSendType" BO_ 2647660082 1;
+BA_ "GenMsgCycleTime" BO_ 2647660082 5;
+BA_ "GenMsgSendType" BO_ 2647661080 1;
+BA_ "GenMsgCycleTime" BO_ 2647661080 5;
+BA_ "GenMsgSendType" BO_ 2647661079 1;
+BA_ "GenMsgCycleTime" BO_ 2647661079 5;
+BA_ "GenMsgSendType" BO_ 2647659025 1;
+BA_ "GenMsgCycleTime" BO_ 2647659025 5;
+BA_ "GenMsgSendType" BO_ 2647658497 1;
+BA_ "GenMsgCycleTime" BO_ 2647658497 5;
+BA_ "GenMsgSendType" BO_ 1438 1;
+BA_ "GenMsgCycleTime" BO_ 1438 5;
+BA_ "GenMsgSendType" BO_ 1416 1;
+BA_ "GenMsgCycleTime" BO_ 1416 10;
+BA_ "GenMsgSendType" BO_ 2647660033 1;
+BA_ "GenMsgCycleTime" BO_ 2647660033 5;
+BA_ "GenMsgSendType" BO_ 1793 1;
+BA_ "GenMsgCycleTime" BO_ 1793 5;
+BA_ "GenMsgSendType" BO_ 2647659569 1;
+BA_ "GenMsgCycleTime" BO_ 2647659569 5;
+BA_ "GenMsgSendType" BO_ 2664181376 1;
+BA_ "GenMsgCycleTime" BO_ 2664181376 5;
+BA_ "GenMsgSendType" BO_ 1633 1;
+BA_ "GenMsgCycleTime" BO_ 1633 5;
+BA_ "GenMsgSendType" BO_ 2668113536 1;
+BA_ "GenMsgCycleTime" BO_ 2668113536 5;
+BA_ "GenMsgSendType" BO_ 69 0;
+BA_ "GenMsgCycleTime" BO_ 69 10;
+BA_ "GenMsgDelayTime" BO_ 69 0;
+BA_ "GenMsgSendType" BO_ 96 0;
+BA_ "GenMsgCycleTime" BO_ 96 15;
+BA_ "GenMsgDelayTime" BO_ 96 0;
+BA_ "GenMsgSendType" BO_ 773 0;
+BA_ "GenMsgCycleTime" BO_ 773 600;
+BA_ "GenMsgDelayTime" BO_ 773 0;
+BA_ "GenMsgSendType" BO_ 613 0;
+BA_ "GenMsgCycleTime" BO_ 613 80;
+BA_ "GenMsgDelayTime" BO_ 613 0;
+BA_ "GenMsgSendType" BO_ 1308 1;
+BA_ "GenMsgCycleTime" BO_ 1308 1000;
+BA_ "GenMsgSendType" BO_ 2027 1;
+BA_ "GenMsgCycleTime" BO_ 2027 5;
+BA_ "GenMsgSendType" BO_ 2663837312 1;
+BA_ "GenMsgCycleTime" BO_ 2663837312 5;
+BA_ "GenMsgSendType" BO_ 1591 1;
+BA_ "GenMsgCycleTime" BO_ 1591 5;
+BA_ "GenMsgSendType" BO_ 289 0;
+BA_ "GenMsgCycleTime" BO_ 289 15;
+BA_ "GenMsgDelayTime" BO_ 289 0;
+BA_ "GenMsgSendType" BO_ 342 0;
+BA_ "GenMsgCycleTime" BO_ 342 25;
+BA_ "GenMsgDelayTime" BO_ 342 0;
+BA_ "GenMsgSendType" BO_ 337 0;
+BA_ "GenMsgCycleTime" BO_ 337 20;
+BA_ "GenMsgDelayTime" BO_ 337 0;
+BA_ "GenMsgSendType" BO_ 625 0;
+BA_ "GenMsgCycleTime" BO_ 625 80;
+BA_ "GenMsgDelayTime" BO_ 625 0;
+BA_ "GenMsgSendType" BO_ 785 0;
+BA_ "GenMsgCycleTime" BO_ 785 600;
+BA_ "GenMsgDelayTime" BO_ 785 0;
+BA_ "GenMsgSendType" BO_ 1307 1;
+BA_ "GenMsgCycleTime" BO_ 1307 1000;
+BA_ "GenMsgSendType" BO_ 2028 1;
+BA_ "GenMsgCycleTime" BO_ 2028 5;
+BA_ "GenMsgSendType" BO_ 2663829120 1;
+BA_ "GenMsgCycleTime" BO_ 2663829120 5;
+BA_ "GenMsgSendType" BO_ 1590 1;
+BA_ "GenMsgCycleTime" BO_ 1590 5;
+BA_ "GenMsgSendType" BO_ 2655006336 1;
+BA_ "GenMsgCycleTime" BO_ 2655006336 5;
+BA_ "GenMsgSendType" BO_ 2674544256 1;
+BA_ "GenMsgCycleTime" BO_ 2674544256 5;
+BA_ "GenMsgSendType" BO_ 145 0;
+BA_ "GenMsgCycleTime" BO_ 145 15;
+BA_ "GenMsgDelayTime" BO_ 145 0;
+BA_ "GenMsgSendType" BO_ 1304 1;
+BA_ "GenMsgCycleTime" BO_ 1304 1000;
+BA_ "GenMsgSendType" BO_ 2029 1;
+BA_ "GenMsgCycleTime" BO_ 2029 5;
+BA_ "GenMsgSendType" BO_ 2663812736 1;
+BA_ "GenMsgCycleTime" BO_ 2663812736 5;
+BA_ "GenMsgSendType" BO_ 1588 1;
+BA_ "GenMsgCycleTime" BO_ 1588 5;
+BA_ "GenMsgSendType" BO_ 2674683520 1;
+BA_ "GenMsgCycleTime" BO_ 2674683520 5;
+BA_ "GenMsgSendType" BO_ 2674675328 1;
+BA_ "GenMsgCycleTime" BO_ 2674675328 5;
+BA_ "GenMsgSendType" BO_ 2671931008 1;
+BA_ "GenMsgCycleTime" BO_ 2671931008 5;
+BA_ "GenMsgSendType" BO_ 2671947392 1;
+BA_ "GenMsgCycleTime" BO_ 2671947392 5;
+BA_ "GenMsgSendType" BO_ 2663534208 1;
+BA_ "GenMsgCycleTime" BO_ 2663534208 5;
+BA_ "GenMsgSendType" BO_ 2671939200 1;
+BA_ "GenMsgCycleTime" BO_ 2671939200 5;
+BA_ "GenMsgSendType" BO_ 2671988352 1;
+BA_ "GenMsgCycleTime" BO_ 2671988352 5;
+BA_ "GenMsgSendType" BO_ 2659372672 1;
+BA_ "GenMsgCycleTime" BO_ 2659372672 5;
+BA_ "GenMsgSendType" BO_ 2659380864 1;
+BA_ "GenMsgCycleTime" BO_ 2659380864 5;
+BA_ "GenMsgSendType" BO_ 2663566976 1;
+BA_ "GenMsgCycleTime" BO_ 2663566976 5;
+BA_ "GenMsgSendType" BO_ 2663558784 1;
+BA_ "GenMsgCycleTime" BO_ 2663558784 5;
+BA_ "GenMsgSendType" BO_ 2659602048 1;
+BA_ "GenMsgCycleTime" BO_ 2659602048 5;
+BA_ "GenMsgSendType" BO_ 2659610240 1;
+BA_ "GenMsgCycleTime" BO_ 2659610240 5;
+BA_ "GenMsgCycleTime" BO_ 53 10;
+BA_ "GenMsgSendType" BO_ 1306 1;
+BA_ "GenMsgCycleTime" BO_ 1306 1000;
+BA_ "GenMsgSendType" BO_ 2041 1;
+BA_ "GenMsgCycleTime" BO_ 2041 5;
+BA_ "GenMsgSendType" BO_ 2675977856 1;
+BA_ "GenMsgCycleTime" BO_ 2675977856 5;
+BA_ "GenMsgSendType" BO_ 2663550592 1;
+BA_ "GenMsgCycleTime" BO_ 2663550592 5;
+BA_ "GenMsgSendType" BO_ 2675060352 1;
+BA_ "GenMsgCycleTime" BO_ 2675060352 5;
+BA_ "GenMsgSendType" BO_ 343 0;
+BA_ "GenMsgCycleTime" BO_ 343 25;
+BA_ "GenMsgDelayTime" BO_ 343 0;
+BA_ "GenMsgSendType" BO_ 1323 1;
+BA_ "GenMsgCycleTime" BO_ 1323 1000;
+BA_ "GenMsgSendType" BO_ 2663878272 1;
+BA_ "GenMsgCycleTime" BO_ 2663878272 5;
+BA_ "GenMsgSendType" BO_ 1425 1;
+BA_ "GenMsgCycleTime" BO_ 1425 10;
+BA_ "GenMsgSendType" BO_ 1426 1;
+BA_ "GenMsgCycleTime" BO_ 1426 10;
+BA_ "GenMsgSendType" BO_ 1427 1;
+BA_ "GenMsgCycleTime" BO_ 1427 10;
+BA_ "GenMsgSendType" BO_ 1596 1;
+BA_ "GenMsgCycleTime" BO_ 1596 5;
+BA_ "GenMsgSendType" BO_ 257 0;
+BA_ "GenMsgCycleTime" BO_ 257 15;
+BA_ "GenMsgDelayTime" BO_ 257 0;
+BA_ "GenMsgSendType" BO_ 273 0;
+BA_ "GenMsgCycleTime" BO_ 273 15;
+BA_ "GenMsgDelayTime" BO_ 273 0;
+BA_ "GenMsgSendType" BO_ 261 0;
+BA_ "GenMsgCycleTime" BO_ 261 15;
+BA_ "GenMsgDelayTime" BO_ 261 0;
+BA_ "GenMsgSendType" BO_ 385 0;
+BA_ "GenMsgCycleTime" BO_ 385 25;
+BA_ "GenMsgDelayTime" BO_ 385 0;
+BA_ "GenMsgSendType" BO_ 389 0;
+BA_ "GenMsgCycleTime" BO_ 389 25;
+BA_ "GenMsgDelayTime" BO_ 389 0;
+BA_ "GenMsgSendType" BO_ 629 0;
+BA_ "GenMsgCycleTime" BO_ 629 100;
+BA_ "GenMsgDelayTime" BO_ 629 0;
+BA_ "GenMsgSendType" BO_ 326 0;
+BA_ "GenMsgCycleTime" BO_ 326 20;
+BA_ "GenMsgDelayTime" BO_ 326 0;
+BA_ "GenMsgSendType" BO_ 1303 1;
+BA_ "GenMsgCycleTime" BO_ 1303 1000;
+BA_ "GenMsgSendType" BO_ 2025 1;
+BA_ "GenMsgCycleTime" BO_ 2025 5;
+BA_ "GenMsgSendType" BO_ 2663796352 1;
+BA_ "GenMsgCycleTime" BO_ 2663796352 5;
+BA_ "GenMsgSendType" BO_ 1586 1;
+BA_ "GenMsgCycleTime" BO_ 1586 5;
+BA_ "GenMsgSendType" BO_ 1279 0;
+BA_ "GenMsgCycleTime" BO_ 1279 50;
+BA_ "GenMsgDelayTime" BO_ 1279 0;
+BA_ "GenMsgSendType" BO_ 2671971968 1;
+BA_ "GenMsgCycleTime" BO_ 2671971968 5;
+BA_ "GenMsgSendType" BO_ 2671963776 1;
+BA_ "GenMsgCycleTime" BO_ 2671963776 5;
+BA_ "GenMsgSendType" BO_ 2655137408 1;
+BA_ "GenMsgCycleTime" BO_ 2655137408 5;
+BA_ "GenMsgSendType" BO_ 1791 1;
+BA_ "GenMsgCycleTime" BO_ 1791 5;
+BA_ "GenMsgSendType" BO_ 1790 1;
+BA_ "GenMsgCycleTime" BO_ 1790 5;
+BA_ "GenMsgSendType" BO_ 1789 1;
+BA_ "GenMsgCycleTime" BO_ 1789 5;
+BA_ "GenMsgSendType" BO_ 1788 1;
+BA_ "GenMsgCycleTime" BO_ 1788 5;
+BA_ "GenMsgSendType" BO_ 1787 1;
+BA_ "GenMsgCycleTime" BO_ 1787 5;
+BA_ "GenMsgSendType" BO_ 1786 1;
+BA_ "GenMsgCycleTime" BO_ 1786 5;
+BA_ "GenMsgSendType" BO_ 1770 1;
+BA_ "GenMsgCycleTime" BO_ 1770 5;
+BA_ "GenMsgSendType" BO_ 1771 1;
+BA_ "GenMsgCycleTime" BO_ 1771 5;
+BA_ "GenMsgSendType" BO_ 1776 1;
+BA_ "GenMsgCycleTime" BO_ 1776 5;
+BA_ "GenMsgSendType" BO_ 1777 1;
+BA_ "GenMsgCycleTime" BO_ 1777 5;
+BA_ "GenMsgSendType" BO_ 1778 1;
+BA_ "GenMsgCycleTime" BO_ 1778 5;
+BA_ "GenMsgSendType" BO_ 1779 1;
+BA_ "GenMsgCycleTime" BO_ 1779 5;
+BA_ "GenMsgSendType" BO_ 1780 1;
+BA_ "GenMsgCycleTime" BO_ 1780 5;
+BA_ "GenMsgSendType" BO_ 1781 1;
+BA_ "GenMsgCycleTime" BO_ 1781 5;
+BA_ "GenMsgSendType" BO_ 1785 1;
+BA_ "GenMsgCycleTime" BO_ 1785 5;
+BA_ "GenMsgSendType" BO_ 1784 1;
+BA_ "GenMsgCycleTime" BO_ 1784 5;
+BA_ "GenMsgSendType" BO_ 1783 1;
+BA_ "GenMsgCycleTime" BO_ 1783 5;
+BA_ "GenMsgSendType" BO_ 1782 1;
+BA_ "GenMsgCycleTime" BO_ 1782 5;
+BA_ "GenMsgSendType" BO_ 2650812032 1;
+BA_ "GenMsgCycleTime" BO_ 2650812032 5;
+BA_ "GenMsgSendType" BO_ 1437 1;
+BA_ "GenMsgCycleTime" BO_ 1437 5;
+BA_ "GenMsgSendType" BO_ 1417 1;
+BA_ "GenMsgCycleTime" BO_ 1417 10;
+BA_ "GenMsgSendType" BO_ 529 0;
+BA_ "GenMsgCycleTime" BO_ 529 50;
+BA_ "GenMsgDelayTime" BO_ 529 0;
+BA_ "GenMsgSendType" BO_ 134 0;
+BA_ "GenMsgCycleTime" BO_ 134 15;
+BA_ "GenMsgDelayTime" BO_ 134 0;
+BA_ "GenMsgSendType" BO_ 118 0;
+BA_ "GenMsgCycleTime" BO_ 118 15;
+BA_ "GenMsgDelayTime" BO_ 118 0;
+BA_ "GenMsgSendType" BO_ 565 1;
+BA_ "GenMsgCycleTime" BO_ 565 125;
+BA_ "GenMsgSendType" BO_ 113 0;
+BA_ "GenMsgCycleTime" BO_ 113 15;
+BA_ "GenMsgDelayTime" BO_ 113 0;
+BA_ "GenMsgSendType" BO_ 65 0;
+BA_ "GenMsgCycleTime" BO_ 65 10;
+BA_ "GenMsgDelayTime" BO_ 65 0;
+BA_ "GenMsgSendType" BO_ 129 0;
+BA_ "GenMsgCycleTime" BO_ 129 15;
+BA_ "GenMsgDelayTime" BO_ 129 0;
+BA_ "GenMsgSendType" BO_ 357 0;
+BA_ "GenMsgCycleTime" BO_ 357 25;
+BA_ "GenMsgDelayTime" BO_ 357 0;
+BA_ "GenMsgSendType" BO_ 369 0;
+BA_ "GenMsgCycleTime" BO_ 369 25;
+BA_ "GenMsgDelayTime" BO_ 369 0;
+BA_ "GenMsgSendType" BO_ 353 0;
+BA_ "GenMsgCycleTime" BO_ 353 25;
+BA_ "GenMsgDelayTime" BO_ 353 0;
+BA_ "GenMsgSendType" BO_ 561 0;
+BA_ "GenMsgCycleTime" BO_ 561 50;
+BA_ "GenMsgDelayTime" BO_ 561 0;
+BA_ "GenMsgSendType" BO_ 609 0;
+BA_ "GenMsgCycleTime" BO_ 609 80;
+BA_ "GenMsgDelayTime" BO_ 609 0;
+BA_ "GenMsgSendType" BO_ 597 0;
+BA_ "GenMsgCycleTime" BO_ 597 80;
+BA_ "GenMsgDelayTime" BO_ 597 0;
+BA_ "GenMsgSendType" BO_ 641 0;
+BA_ "GenMsgCycleTime" BO_ 641 150;
+BA_ "GenMsgDelayTime" BO_ 641 0;
+BA_ "GenMsgSendType" BO_ 86 0;
+BA_ "GenMsgCycleTime" BO_ 86 15;
+BA_ "GenMsgDelayTime" BO_ 86 0;
+BA_ "GenMsgSendType" BO_ 645 0;
+BA_ "GenMsgCycleTime" BO_ 645 200;
+BA_ "GenMsgDelayTime" BO_ 645 0;
+BA_ "GenMsgSendType" BO_ 1407 0;
+BA_ "GenMsgCycleTime" BO_ 1407 50;
+BA_ "GenMsgDelayTime" BO_ 1407 0;
+BA_ "GenMsgSendType" BO_ 344 0;
+BA_ "GenMsgCycleTime" BO_ 344 25;
+BA_ "GenMsgDelayTime" BO_ 344 0;
+BA_ "GenMsgSendType" BO_ 1314 1;
+BA_ "GenMsgCycleTime" BO_ 1314 1000;
+BA_ "GenMsgSendType" BO_ 2047 1;
+BA_ "GenMsgCycleTime" BO_ 2047 5;
+BA_ "GenMsgSendType" BO_ 1845 1;
+BA_ "GenMsgCycleTime" BO_ 1845 5;
+BA_ "GenMsgSendType" BO_ 1848 1;
+BA_ "GenMsgCycleTime" BO_ 1848 5;
+BA_ "GenMsgSendType" BO_ 1840 1;
+BA_ "GenMsgCycleTime" BO_ 1840 5;
+BA_ "GenMsgSendType" BO_ 1843 1;
+BA_ "GenMsgCycleTime" BO_ 1843 5;
+BA_ "GenMsgSendType" BO_ 1850 1;
+BA_ "GenMsgCycleTime" BO_ 1850 5;
+BA_ "GenMsgSendType" BO_ 1537 1;
+BA_ "GenMsgCycleTime" BO_ 1537 5;
+BA_ "GenMsgSendType" BO_ 2663394944 1;
+BA_ "GenMsgCycleTime" BO_ 2663394944 5;
+BA_ "GenMsgSendType" BO_ 1889 1;
+BA_ "GenMsgCycleTime" BO_ 1889 5;
+BA_ "GenMsgSendType" BO_ 1847 1;
+BA_ "GenMsgCycleTime" BO_ 1847 5;
+BA_ "GenMsgSendType" BO_ 1846 1;
+BA_ "GenMsgCycleTime" BO_ 1846 5;
+BA_ "GenMsgSendType" BO_ 1844 1;
+BA_ "GenMsgCycleTime" BO_ 1844 5;
+BA_ "GenMsgSendType" BO_ 1852 1;
+BA_ "GenMsgCycleTime" BO_ 1852 5;
+BA_ "GenMsgSendType" BO_ 1842 1;
+BA_ "GenMsgCycleTime" BO_ 1842 5;
+BA_ "GenMsgSendType" BO_ 2659593856 1;
+BA_ "GenMsgCycleTime" BO_ 2659593856 5;
+BA_ "GenSigStartValue" SG_ 327 HvBattEgyAvlDcha 0;
+BA_ "GenSigStartValue" SG_ 327 HvBattPwrLimDcha 0;
+BA_ "GenSigStartValue" SG_ 327 HvBattUDc 1520;
+BA_ "GenSigStartValue" SG_ 327 HvBattUDynMaxLim 0;
+BA_ "GenSigStartValue" SG_ 327 HvSysActvnInhb 0;
+BA_ "GenSigStartValue" SG_ 327 HvSysPwrOff 0;
+BA_ "GenSigStartValue" SG_ 327 HvSysRlySts 2;
+BA_ "GenSigStartValue" SG_ 327 HvSysSts 0;
+BA_ "GenSigStartValue" SG_ 373 HvBattIDc 4100;
+BA_ "GenSigStartValue" SG_ 373 HvBattLimnIndcn 0;
+BA_ "GenSigStartValue" SG_ 373 HvBattPwrLimChrg 0;
+BA_ "GenSigStartValue" SG_ 373 HvBattUDynMinLim 0;
+BA_ "GenSigStartValue" SG_ 581 HvBattChrgnCmpl 0;
+BA_ "GenSigStartValue" SG_ 581 HvBattCoolgReq 0;
+BA_ "GenSigStartValue" SG_ 581 HvBattILim 4100;
+BA_ "GenSigStartValue" SG_ 581 HvBattSoc 1000;
+BA_ "GenSigStartValue" SG_ 581 HvBattULim 0;
+BA_ "GenSigStartValue" SG_ 581 HvSysLimnIndcn 0;
+BA_ "GenSigStartValue" SG_ 659 HvBattEgyCdn 200;
+BA_ "GenSigStartValue" SG_ 659 HvBattErrIndcnReq 0;
+BA_ "GenSigStartValue" SG_ 659 HvBattSocLimHi 1700;
+BA_ "GenSigStartValue" SG_ 659 HvBattSocLimLo 240;
+BA_ "GenSigStartValue" SG_ 659 HvBattSocLimMax 1800;
+BA_ "GenSigStartValue" SG_ 659 HvBattSocLimMin 200;
+BA_ "GenSigStartValue" SG_ 661 HvBattChrgnPwrCritDes 0;
+BA_ "GenSigStartValue" SG_ 661 HvBattChrgnPwrNormDes 0;
+BA_ "GenSigStartValue" SG_ 661 HvBattChrgnTiReq 0;
+BA_ "GenSigStartValue" SG_ 661 HvBattCoolgEgyReq 0;
+BA_ "GenSigStartValue" SG_ 661 HvBattCoolgSts 1;
+BA_ "GenSigStartValue" SG_ 661 HvBattCoolgTiReq 0;
+BA_ "GenSigStartValue" SG_ 661 HvSysCrashFb 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte0 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte1 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte2 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte3 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte4 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte5 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte6 0;
+BA_ "GenSigStartValue" SG_ 837 HvBattIdCal1Byte7 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte0 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte1 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte2 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte3 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte4 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte5 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte6 0;
+BA_ "GenSigStartValue" SG_ 833 HvBattIdCal3Byte7 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte0 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte1 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte2 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte3 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte4 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte5 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte6 0;
+BA_ "GenSigStartValue" SG_ 821 HvBattIdCal2Byte7 0;
+BA_ "GenSigStartValue" SG_ 789 HvBattChrgnSts 1;
+BA_ "GenSigStartValue" SG_ 789 HvBattEgyAvlChrg 0;
+BA_ "GenSigStartValue" SG_ 789 HvBattFanReq 0;
+BA_ "GenSigStartValue" SG_ 789 HvBattTHvBattTAvg 200;
+BA_ "GenSigStartValue" SG_ 789 HvBattTHvBattTMax 200;
+BA_ "GenSigStartValue" SG_ 789 HvBattTHvBattTMin 200;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte0 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte1 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte2 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte3 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte4 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte5 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte6 0;
+BA_ "GenSigStartValue" SG_ 805 HvBattIdCal4Byte7 0;
+BA_ "GenSigStartValue" SG_ 817 HvBattCooltFlowEstimd 0;
+BA_ "GenSigStartValue" SG_ 817 HvBattCooltT 0;
+BA_ "GenSigStartValue" SG_ 817 HvBattEgyAvlForCdng 0;
+BA_ "GenSigStartValue" SG_ 769 HvBattChrgnPwrCns 0;
+BA_ "GenSigStartValue" SG_ 769 HvBattIdChks 0;
+BA_ "GenSigStartValue" SG_ 769 HvBattPwrCdn 200;
+BA_ "GenSigStartValue" SG_ 769 HvBattRInt 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte0 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte1 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte2 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte3 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte4 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte5 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte6 0;
+BA_ "GenSigStartValue" SG_ 1409 DftlCtrlInfo1Byte7 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte0 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte1 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte2 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte3 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte4 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte5 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte6 0;
+BA_ "GenSigStartValue" SG_ 1410 DftlCtrlInfo2Byte7 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte0 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte1 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte2 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte3 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte4 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte5 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte6 0;
+BA_ "GenSigStartValue" SG_ 1411 DftlCtrlInfo3Byte7 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte0 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte1 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte2 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte3 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte4 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte5 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte6 0;
+BA_ "GenSigStartValue" SG_ 1412 DftlCtrlInfo4Byte7 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte0 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte1 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte2 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte3 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte4 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte5 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte6 0;
+BA_ "GenSigStartValue" SG_ 1413 DftlCtrlInfo5Byte7 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte0 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte1 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte2 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte3 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte4 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte5 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte6 0;
+BA_ "GenSigStartValue" SG_ 1414 DftlCtrlInfo6Byte7 0;
+BA_ "GenSigStartValue" SG_ 294 DftlFltIndcn 0;
+BA_ "GenSigStartValue" SG_ 294 DftlRatReRi 0;
+BA_ "GenSigStartValue" SG_ 294 PtDrvModReqToDftlAckdLgt 0;
+BA_ "GenSigStartValue" SG_ 294 PtDrvModReqToDftlAckdVert 0;
+BA_ "GenSigStartValue" SG_ 294 TrsmStAxleReActr 0;
+BA_ "GenSigStartValue" SG_ 294 TrsmStAxleReLatActr 0;
+BA_ "GenSigStartValue" SG_ 294 TrsmTqDftlAxleReAct 0;
+BA_ "GenSigStartValue" SG_ 74 AccrPedlRat 0;
+BA_ "GenSigStartValue" SG_ 74 WhlMotSysTqReq 2047;
+BA_ "GenSigStartValue" SG_ 80 IsgModReq 0;
+BA_ "GenSigStartValue" SG_ 80 IsgTqReq 1024;
+BA_ "GenSigStartValue" SG_ 80 PrpsnTqFrntReq 0;
+BA_ "GenSigStartValue" SG_ 80 PtCluTqReq 1024;
+BA_ "GenSigStartValue" SG_ 80 WhlMotSysModReq 0;
+BA_ "GenSigStartValue" SG_ 102 EngN 0;
+BA_ "GenSigStartValue" SG_ 102 EngNChks 0;
+BA_ "GenSigStartValue" SG_ 102 EngNCntr 0;
+BA_ "GenSigStartValue" SG_ 102 EngNSafeEngNGrdt 0;
+BA_ "GenSigStartValue" SG_ 102 EngSt1WdSts 0;
+BA_ "GenSigStartValue" SG_ 102 EngTqLimDly 0;
+BA_ "GenSigStartValue" SG_ 102 PtGearAct 0;
+BA_ "GenSigStartValue" SG_ 277 DrvrDesDir 0;
+BA_ "GenSigStartValue" SG_ 277 PtCluTqPtCluTq 1024;
+BA_ "GenSigStartValue" SG_ 277 PtCluTqPtCluTqDyn 1024;
+BA_ "GenSigStartValue" SG_ 277 PtCluTqPtCluTqQly 0;
+BA_ "GenSigStartValue" SG_ 277 PtCluTqReqWoTrsmIntv 1024;
+BA_ "GenSigStartValue" SG_ 277 PtReqToTrsmActr 4;
+BA_ "GenSigStartValue" SG_ 305 DcDcActvdReq 0;
+BA_ "GenSigStartValue" SG_ 305 LoadValCalcd 0;
+BA_ "GenSigStartValue" SG_ 305 PrpsnActvnReq 0;
+BA_ "GenSigStartValue" SG_ 305 PtAllwdToTrsmActr 0;
+BA_ "GenSigStartValue" SG_ 305 PtAllwdToTrsmActrChks 0;
+BA_ "GenSigStartValue" SG_ 305 PtAllwdToTrsmActrCntr 0;
+BA_ "GenSigStartValue" SG_ 305 PtTiToCluEngmt 255;
+BA_ "GenSigStartValue" SG_ 305 WhlMotSysPwrLimMax 0;
+BA_ "GenSigStartValue" SG_ 405 EngCooltInhbFlow 0;
+BA_ "GenSigStartValue" SG_ 405 EngKdSts 0;
+BA_ "GenSigStartValue" SG_ 405 HvPwrEgyPrio 0;
+BA_ "GenSigStartValue" SG_ 405 IsgPwrLimMax 0;
+BA_ "GenSigStartValue" SG_ 405 IsgPwrLimMin 1022;
+BA_ "GenSigStartValue" SG_ 405 OnBdChrgrPwrEnaAllwd 0;
+BA_ "GenSigStartValue" SG_ 405 WhlMotSysSpdIdleReq 0;
+BA_ "GenSigStartValue" SG_ 405 WhlMotSysTqAllwd 0;
+BA_ "GenSigStartValue" SG_ 405 WhlMotSysTqAllwdChks 0;
+BA_ "GenSigStartValue" SG_ 405 WhlMotSysTqAllwdCntr 0;
+BA_ "GenSigStartValue" SG_ 401 HvOnMaiReq 2;
+BA_ "GenSigStartValue" SG_ 401 IsgTqAllwdIsgTqAllwd 0;
+BA_ "GenSigStartValue" SG_ 401 IsgTqAllwdIsgTqAllwdChks 0;
+BA_ "GenSigStartValue" SG_ 401 IsgTqAllwdIsgTqAllwdCntr 0;
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtGearReq 0;
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtGearReqInter 0;
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtLockFwAtGearFi 0;
+BA_ "SystemSignalLongSymbol" SG_ 401 PtToTrsmRatMgrIfPtLockFwAtGearFi "PtToTrsmRatMgrIfPtLockFwAtGearFirst";
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtLockUpReq 0;
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtLockUpSlipReq 8191;
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtShiftTypReq 0;
+BA_ "GenSigStartValue" SG_ 401 PtToTrsmRatMgrIfPtTrsmModReq 4;
+BA_ "GenSigStartValue" SG_ 401 WhlMotSysActvDampgModReq 0;
+BA_ "GenSigStartValue" SG_ 512 PtTqAtAxleFrntAct 0;
+BA_ "GenSigStartValue" SG_ 512 PtTqAtWhlFrntLeAct 0;
+BA_ "GenSigStartValue" SG_ 512 PtTqAtWhlFrntRiAct 0;
+BA_ "GenSigStartValue" SG_ 512 PtTqAtWhlsFrntQly 0;
+BA_ "GenSigStartValue" SG_ 512 WhlMotSysPwrLimMin 1022;
+BA_ "GenSigStartValue" SG_ 545 CoolgForHvBattSts 0;
+BA_ "GenSigStartValue" SG_ 545 DrvgCyc 0;
+BA_ "GenSigStartValue" SG_ 545 EngNLim 0;
+BA_ "GenSigStartValue" SG_ 545 EngT 50;
+BA_ "GenSigStartValue" SG_ 545 EngTQf 3;
+BA_ "GenSigStartValue" SG_ 545 GearLvrEna 0;
+BA_ "GenSigStartValue" SG_ 545 HvBattCoolgCmd 1;
+BA_ "GenSigStartValue" SG_ 545 IsgActvDampgModReq 0;
+BA_ "GenSigStartValue" SG_ 545 PrpsnFbLimnIndcn 0;
+BA_ "GenSigStartValue" SG_ 545 PtRatMgrMod 0;
+BA_ "GenSigStartValue" SG_ 545 ThrPos 0;
+BA_ "GenSigStartValue" SG_ 545 WrmUpCyc 0;
+BA_ "GenSigStartValue" SG_ 592 EngIdleCtrlRefVal 0;
+BA_ "GenSigStartValue" SG_ 592 HvBattChrgnCmd 1;
+BA_ "GenSigStartValue" SG_ 592 HvBattChrgnPwrAllwd 0;
+BA_ "GenSigStartValue" SG_ 592 IsgSpdReq 0;
+BA_ "GenSigStartValue" SG_ 592 PtRatMgrAdpvMod 0;
+BA_ "GenSigStartValue" SG_ 341 CluPedlPsdCluPedlPsd 0;
+BA_ "GenSigStartValue" SG_ 341 CluPedlPsdCluPedlPsdChks 0;
+BA_ "GenSigStartValue" SG_ 341 CluPedlPsdCluPedlPsdCntr 0;
+BA_ "GenSigStartValue" SG_ 341 CluPedlPsdCluPedlPsdSts 0;
+BA_ "GenSigStartValue" SG_ 341 EngTiOff 0;
+BA_ "GenSigStartValue" SG_ 341 IsgEngSpdOfActvDampg 0;
+BA_ "GenSigStartValue" SG_ 341 PtDrvModReqToDftl 0;
+BA_ "GenSigStartValue" SG_ 341 TrsmParkLockd 3;
+BA_ "GenSigStartValue" SG_ 341 TrsmParkLockdChks 0;
+BA_ "GenSigStartValue" SG_ 341 TrsmParkLockdCntr 0;
+BA_ "GenSigStartValue" SG_ 647 CooltFlowForDtElec 0;
+BA_ "GenSigStartValue" SG_ 647 CooltTSigForDtElec 400;
+BA_ "GenSigStartValue" SG_ 647 EngAmbTCalcd 120;
+BA_ "GenSigStartValue" SG_ 647 HvBattChrgnEgyCnsAllwd 0;
+BA_ "GenSigStartValue" SG_ 647 MonrCycCmpl 0;
+BA_ "GenSigStartValue" SG_ 647 PrpsnSysActv 0;
+BA_ "GenSigStartValue" SG_ 577 TrsmActrKeyEna 0;
+BA_ "GenSigStartValue" SG_ 577 TrsmActrKeyEnaChks 0;
+BA_ "GenSigStartValue" SG_ 577 TrsmActrKeyEnaCntr 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq1Chks 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq1Cntr 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq1DwnTipAut 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq1PosnAut 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq1UpTipAut 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq2Chks 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq2Cntr 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq2DwnTipAut 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq2PosnAut 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftDirReq2UpTipAut 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftManReqDwnTipReq 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftManReqSteerWhlDwnRe 0;
+BA_ "SystemSignalLongSymbol" SG_ 309 DrvrGearShiftManReqSteerWhlDwnRe "DrvrGearShiftManReqSteerWhlDwnReq";
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftManReqSteerWhlUpReq 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftManReqTipReq 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftManReqUpTipReq 0;
+BA_ "GenSigStartValue" SG_ 309 DrvrGearShiftParkReq 0;
+BA_ "GenSigStartValue" SG_ 309 GearShiftUnitSts 0;
+BA_ "GenSigStartValue" SG_ 1278 VFCVectorEGSMGrp1 0;
+BA_ "GenSigStartValue" SG_ 1278 VFCVectorEGSMGrp2 0;
+BA_ "GenSigStartValue" SG_ 1278 VFCVectorEGSMGrp3 0;
+BA_ "GenSigStartValue" SG_ 801 ComLostExtrSound 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte0 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte1 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte2 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte3 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte4 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte5 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte6 0;
+BA_ "GenSigStartValue" SG_ 1415 DftlDevCtrlByte7 0;
+BA_ "GenSigStartValue" SG_ 1405 IniValMstCfgIDPropulsionCAN 4405;
+BA_ "GenSigStartValue" SG_ 1406 IniValSigCfgIDPropulsionCAN 4405;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysModSts 0;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqAvlMax 2047;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqAvlMin 2047;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqEst 2047;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqEstChks 0;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqEstCntr 0;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqEstQlyFac 0;
+BA_ "GenSigStartValue" SG_ 69 WhlMotSysTqEstSpdLimn 255;
+BA_ "GenSigStartValue" SG_ 96 ImobEngSts2 0;
+BA_ "GenSigStartValue" SG_ 96 WhlMotSysCluSts 0;
+BA_ "GenSigStartValue" SG_ 96 WhlMotSysIDc 4100;
+BA_ "GenSigStartValue" SG_ 96 WhlMotSysLimnIndcn 0;
+BA_ "GenSigStartValue" SG_ 96 WhlMotSysSpdAct 16384;
+BA_ "GenSigStartValue" SG_ 96 WhlMotSysUdc 0;
+BA_ "GenSigStartValue" SG_ 773 WhlMotSysCoolgReq 0;
+BA_ "GenSigStartValue" SG_ 773 WhlMotSysErrIndcnReq 0;
+BA_ "GenSigStartValue" SG_ 773 WhlMotSysInvrT 50;
+BA_ "GenSigStartValue" SG_ 773 WhlMotSysMotT 50;
+BA_ "GenSigStartValue" SG_ 613 ImobEngChkSts2 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk20 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk21 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk22 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk23 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk24 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk25 0;
+BA_ "GenSigStartValue" SG_ 613 ImobEngDataChk26 0;
+BA_ "GenSigStartValue" SG_ 289 DcDcActvd 0;
+BA_ "GenSigStartValue" SG_ 289 IsgIDc 4100;
+BA_ "GenSigStartValue" SG_ 289 IsgModSts 0;
+BA_ "GenSigStartValue" SG_ 289 IsgSpdAct 0;
+BA_ "GenSigStartValue" SG_ 289 IsgTqActChks 0;
+BA_ "GenSigStartValue" SG_ 289 IsgTqActCntr 0;
+BA_ "GenSigStartValue" SG_ 289 IsgTqActIsgTqAct 1024;
+BA_ "GenSigStartValue" SG_ 289 IsgTqActQualityFactor 0;
+BA_ "GenSigStartValue" SG_ 342 FltElecDcDc 0;
+BA_ "GenSigStartValue" SG_ 342 FltTDcDc 0;
+BA_ "GenSigStartValue" SG_ 342 IDcDcActHiSide 4100;
+BA_ "GenSigStartValue" SG_ 342 IDcDcActLoSide 0;
+BA_ "GenSigStartValue" SG_ 342 IDcDcAvlMaxLoSide 0;
+BA_ "GenSigStartValue" SG_ 342 IsgUDc 0;
+BA_ "GenSigStartValue" SG_ 342 UDcDcActHiSide 0;
+BA_ "GenSigStartValue" SG_ 337 IsgLimnIndcn 0;
+BA_ "GenSigStartValue" SG_ 337 LimnIndcnDcDc 0;
+BA_ "GenSigStartValue" SG_ 337 TqAvlIsgMax 1024;
+BA_ "GenSigStartValue" SG_ 337 TqAvlIsgMin 1024;
+BA_ "GenSigStartValue" SG_ 625 ImobEngChkSts3 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk30 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk31 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk32 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk33 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk34 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk35 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngDataChk36 0;
+BA_ "GenSigStartValue" SG_ 625 ImobEngSts3 0;
+BA_ "GenSigStartValue" SG_ 785 DcDcCoolgReq 0;
+BA_ "GenSigStartValue" SG_ 785 IsgCoolgReqInvr 0;
+BA_ "GenSigStartValue" SG_ 785 IsgCooltT 40;
+BA_ "GenSigStartValue" SG_ 785 IsgErrIndcnReq 0;
+BA_ "GenSigStartValue" SG_ 785 IsgInvrT 50;
+BA_ "GenSigStartValue" SG_ 785 IsgMotCooltFlowReq 0;
+BA_ "GenSigStartValue" SG_ 785 IsgMotCooltTFlg 0;
+BA_ "GenSigStartValue" SG_ 785 IsgMotT 50;
+BA_ "GenSigStartValue" SG_ 785 TDcDc 40;
+BA_ "GenSigStartValue" SG_ 145 ChrgnTiEstimd 0;
+BA_ "GenSigStartValue" SG_ 145 ChrgrSt 0;
+BA_ "GenSigStartValue" SG_ 145 HldChrgnReq 0;
+BA_ "GenSigStartValue" SG_ 145 OnBdChrgrCoolgReq 0;
+BA_ "GenSigStartValue" SG_ 145 OnBdChrgrErrIndcnReq 0;
+BA_ "GenSigStartValue" SG_ 145 OnBdChrgrHndlSts 0;
+BA_ "GenSigStartValue" SG_ 145 OnBdChrgrT 40;
+BA_ "GenSigStartValue" SG_ 145 PwrDcDcAvl 0;
+BA_ "GenSigStartValue" SG_ 145 PwrEgyMgrAvl 0;
+BA_ "GenSigStartValue" SG_ 53 CrashSts2 1;
+BA_ "GenSigStartValue" SG_ 343 TrsmActrSnsrPosnChks 0;
+BA_ "GenSigStartValue" SG_ 343 TrsmActrSnsrPosnCntr 0;
+BA_ "GenSigStartValue" SG_ 343 TrsmActrSnsrPosnTrsmActrSnsrPosn 0;
+BA_ "GenSigStartValue" SG_ 343 TrsmActrUnitSts 0;
+BA_ "GenSigStartValue" SG_ 257 TrsmGearChgProgs 0;
+BA_ "GenSigStartValue" SG_ 257 TrsmModAct 0;
+BA_ "GenSigStartValue" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMaxF 1024;
+BA_ "SystemSignalLongSymbol" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMaxF "TrsmToPrpsnCluTqRecTrsmCluTqMaxFast";
+BA_ "GenSigStartValue" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluT_0000 1024;
+BA_ "SystemSignalLongSymbol" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluT_0000 "TrsmToPrpsnCluTqRecTrsmCluTqMaxForProtn";
+BA_ "GenSigStartValue" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMaxS 1024;
+BA_ "SystemSignalLongSymbol" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMaxS "TrsmToPrpsnCluTqRecTrsmCluTqMaxSlow";
+BA_ "GenSigStartValue" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMinF 1024;
+BA_ "SystemSignalLongSymbol" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMinF "TrsmToPrpsnCluTqRecTrsmCluTqMinFast";
+BA_ "GenSigStartValue" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMinS 1024;
+BA_ "SystemSignalLongSymbol" SG_ 257 TrsmToPrpsnCluTqRecTrsmCluTqMinS "TrsmToPrpsnCluTqRecTrsmCluTqMinSlow";
+BA_ "GenSigStartValue" SG_ 273 TrsmCluTqMaxDlyEstimn 1024;
+BA_ "GenSigStartValue" SG_ 273 TrsmGearAct 0;
+BA_ "GenSigStartValue" SG_ 273 TrsmNTrsmNChks 0;
+BA_ "GenSigStartValue" SG_ 273 TrsmNTrsmNCntr 0;
+BA_ "GenSigStartValue" SG_ 273 TrsmNTrsmNInp 0;
+BA_ "GenSigStartValue" SG_ 273 TrsmNTrsmNInpOk 0;
+BA_ "GenSigStartValue" SG_ 273 TrsmNTrsmNOutp 0;
+BA_ "GenSigStartValue" SG_ 273 TrsmNTrsmNOutpOk 0;
+BA_ "GenSigStartValue" SG_ 261 TrsmLockUpStTar 0;
+BA_ "GenSigStartValue" SG_ 261 TrsmModNotAvlSts 0;
+BA_ "GenSigStartValue" SG_ 261 TrsmParkLockEngdFlg 3;
+BA_ "GenSigStartValue" SG_ 261 TrsmToPrpsnNReqRecTrsmNReqCtrl 0;
+BA_ "GenSigStartValue" SG_ 261 TrsmToPrpsnNReqRecTrsmNReqMax 12767;
+BA_ "GenSigStartValue" SG_ 261 TrsmToPrpsnNReqRecTrsmNReqMin 0;
+BA_ "GenSigStartValue" SG_ 261 TrsmTqRat 0;
+BA_ "GenSigStartValue" SG_ 385 EngRunngReqByTrsm 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmGearRatTar 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmGearTar 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmLockUpStAct 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmNeutFailr 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmPLockUp 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmShiftInhb 0;
+BA_ "GenSigStartValue" SG_ 385 TrsmVehSpd 0;
+BA_ "GenSigStartValue" SG_ 389 TrsmActrPosn 7;
+BA_ "GenSigStartValue" SG_ 389 TrsmActrPosnChks 0;
+BA_ "GenSigStartValue" SG_ 389 TrsmActrPosnCntr 0;
+BA_ "GenSigStartValue" SG_ 389 TrsmFltIndcn 0;
+BA_ "GenSigStartValue" SG_ 389 TrsmGearRat 0;
+BA_ "GenSigStartValue" SG_ 389 TrsmOilT 60;
+BA_ "GenSigStartValue" SG_ 389 TrsmSelfLrngMod 0;
+BA_ "GenSigStartValue" SG_ 389 TrsmSelfLrngModAtPwrDwn 0;
+BA_ "GenSigStartValue" SG_ 629 FltDwnTipReq 0;
+BA_ "GenSigStartValue" SG_ 629 FltSteerWhlDwn 0;
+BA_ "GenSigStartValue" SG_ 629 FltSteerWhlUp 0;
+BA_ "GenSigStartValue" SG_ 629 FltTipReq 0;
+BA_ "GenSigStartValue" SG_ 629 FltUpTipReq 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmEngmtLimdTrsmEngmtLimd 1;
+BA_ "GenSigStartValue" SG_ 629 TrsmEngmtLimdTrsmEngmtLimdChks 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmEngmtLimdTrsmEngmtLimdCntr 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmErrIndcnReq 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmHotSt 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmReqForPfmncRedn 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmTqLossTrsmTqLoss 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmTqLossTrsmTqLossChks 0;
+BA_ "GenSigStartValue" SG_ 629 TrsmTqLossTrsmTqLossCntr 0;
+BA_ "GenSigStartValue" SG_ 326 TrsmEngNTqMax 1024;
+BA_ "GenSigStartValue" SG_ 326 TrsmEngNTqMaxChks 0;
+BA_ "GenSigStartValue" SG_ 326 TrsmEngNTqMaxCntr 0;
+BA_ "GenSigStartValue" SG_ 326 TrsmGearNotAvlSts 0;
+BA_ "GenSigStartValue" SG_ 1279 VFCVectorTCMGrp1 0;
+BA_ "GenSigStartValue" SG_ 1279 VFCVectorTCMGrp2 0;
+BA_ "GenSigStartValue" SG_ 1279 VFCVectorTCMGrp3 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte0 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte1 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte2 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte3 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte4 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte5 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte6 0;
+BA_ "GenSigStartValue" SG_ 1437 CCPFrameRespByte7 0;
+BA_ "GenSigStartValue" SG_ 529 SteerWhlAgSafe 0;
+BA_ "GenSigStartValue" SG_ 529 SteerWhlAgSpdSafe 0;
+BA_ "GenSigStartValue" SG_ 529 SteerWhlSnsrQf 1;
+BA_ "GenSigStartValue" SG_ 529 SteerWhlSnsrSafeChks 0;
+BA_ "GenSigStartValue" SG_ 529 SteerWhlSnsrSafeCntr 0;
+BA_ "GenSigStartValue" SG_ 134 WhlSpdCircumlFrntLe 0;
+BA_ "GenSigStartValue" SG_ 134 WhlSpdCircumlFrntLeQf 1;
+BA_ "GenSigStartValue" SG_ 134 WhlSpdCircumlFrntRiQf 1;
+BA_ "GenSigStartValue" SG_ 134 WhlSpdCircumlFrntWhlSpdCircumlFr 0;
+BA_ "SystemSignalLongSymbol" SG_ 134 WhlSpdCircumlFrntWhlSpdCircumlFr "WhlSpdCircumlFrntWhlSpdCircumlFrntChks";
+BA_ "GenSigStartValue" SG_ 134 WhlSpdCircumlFrntWhlSpdCirc_0000 0;
+BA_ "SystemSignalLongSymbol" SG_ 134 WhlSpdCircumlFrntWhlSpdCirc_0000 "WhlSpdCircumlFrntWhlSpdCircumlFrntCntr";
+BA_ "GenSigStartValue" SG_ 134 WhlSpdCircumlFrntWhlSpdCirc_0001 0;
+BA_ "SystemSignalLongSymbol" SG_ 134 WhlSpdCircumlFrntWhlSpdCirc_0001 "WhlSpdCircumlFrntWhlSpdCircumlFrntRi";
+BA_ "GenSigStartValue" SG_ 118 BrkPedlNotPsdSafe 0;
+BA_ "GenSigStartValue" SG_ 118 BrkPedlPsd 0;
+BA_ "GenSigStartValue" SG_ 118 BrkPedlPsdChks 0;
+BA_ "GenSigStartValue" SG_ 118 BrkPedlPsdCntr 0;
+BA_ "GenSigStartValue" SG_ 118 BrkPedlPsdQf 1;
+BA_ "GenSigStartValue" SG_ 118 VehMtnStChks 0;
+BA_ "GenSigStartValue" SG_ 118 VehMtnStCntr 0;
+BA_ "GenSigStartValue" SG_ 118 VehMtnStSafe 0;
+BA_ "GenSigStartValue" SG_ 118 VehSpdLgtSafe 0;
+BA_ "GenSigStartValue" SG_ 118 VehSpdLgtSafeChks 0;
+BA_ "GenSigStartValue" SG_ 118 VehSpdLgtSafeCntr 0;
+BA_ "GenSigStartValue" SG_ 118 VehSpdLgtSafeQf 1;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmBlk 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal1 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal2 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal3 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal4 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal5 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal6 0;
+BA_ "GenSigStartValue" SG_ 565 VehCfgPrmVal7 0;
+BA_ "GenSigStartValue" SG_ 113 AxleSlipRelAct 0;
+BA_ "GenSigStartValue" SG_ 113 WhlSpdCircumlReLe 0;
+BA_ "GenSigStartValue" SG_ 113 WhlSpdCircumlReLeQf 1;
+BA_ "GenSigStartValue" SG_ 113 WhlSpdCircumlReRi 0;
+BA_ "GenSigStartValue" SG_ 113 WhlSpdCircumlReRiQf 1;
+BA_ "GenSigStartValue" SG_ 113 WhlSpdCircumlReWhlSpdCircumlReCh 0;
+BA_ "SystemSignalLongSymbol" SG_ 113 WhlSpdCircumlReWhlSpdCircumlReCh "WhlSpdCircumlReWhlSpdCircumlReChks";
+BA_ "GenSigStartValue" SG_ 113 WhlSpdCircumlReWhlSpdCircumlReCn 0;
+BA_ "SystemSignalLongSymbol" SG_ 113 WhlSpdCircumlReWhlSpdCircumlReCn "WhlSpdCircumlReWhlSpdCircumlReCntr";
+BA_ "GenSigStartValue" SG_ 65 BrkTqAtWhlsReq 0;
+BA_ "GenSigStartValue" SG_ 65 PtTqAtAxleReMaxReq 20000;
+BA_ "GenSigStartValue" SG_ 65 PtTqAtAxleReMinReq -20000;
+BA_ "GenSigStartValue" SG_ 65 PtTqAtAxleReMinReqChks 0;
+BA_ "GenSigStartValue" SG_ 65 PtTqAtAxleReMinReqCntr 0;
+BA_ "GenSigStartValue" SG_ 129 ADataRawSafeChks 0;
+BA_ "GenSigStartValue" SG_ 129 ADataRawSafeCntr 0;
+BA_ "GenSigStartValue" SG_ 129 ALat1 0;
+BA_ "GenSigStartValue" SG_ 129 ALat1Qf1 1;
+BA_ "GenSigStartValue" SG_ 129 ALgt1 0;
+BA_ "GenSigStartValue" SG_ 129 ALgt1Qf1 1;
+BA_ "GenSigStartValue" SG_ 129 AVert2 0;
+BA_ "GenSigStartValue" SG_ 129 AVert2Qf1 1;
+BA_ "GenSigStartValue" SG_ 357 BrkFricTqAtWhlFrntLeAct 0;
+BA_ "GenSigStartValue" SG_ 357 BrkFricTqAtWhlFrntRiAct 0;
+BA_ "GenSigStartValue" SG_ 357 BrkFricTqAtWhlReLeAct 0;
+BA_ "GenSigStartValue" SG_ 357 BrkFricTqAtWhlReRiAct 0;
+BA_ "GenSigStartValue" SG_ 357 EngTracCtrlActvFrntMax 0;
+BA_ "GenSigStartValue" SG_ 369 BrkFricTqTotAtWhlsActBrkFricTqTo 0;
+BA_ "SystemSignalLongSymbol" SG_ 369 BrkFricTqTotAtWhlsActBrkFricTqTo "BrkFricTqTotAtWhlsActBrkFricTqTotAtWhlsAct";
+BA_ "GenSigStartValue" SG_ 369 BrkFricTqTotAtWhlsActBrkFri_0000 0;
+BA_ "SystemSignalLongSymbol" SG_ 369 BrkFricTqTotAtWhlsActBrkFri_0000 "BrkFricTqTotAtWhlsActBrkFricTqTotAtWhlsActChks";
+BA_ "GenSigStartValue" SG_ 369 BrkFricTqTotAtWhlsActBrkFri_0001 0;
+BA_ "SystemSignalLongSymbol" SG_ 369 BrkFricTqTotAtWhlsActBrkFri_0001 "BrkFricTqTotAtWhlsActBrkFricTqTotAtWhlsActCntr";
+BA_ "GenSigStartValue" SG_ 369 LockgCenStsLockSt 0;
+BA_ "GenSigStartValue" SG_ 369 LockgCenStsUpdEve 0;
+BA_ "GenSigStartValue" SG_ 369 LockgCenTrigSrc 0;
+BA_ "GenSigStartValue" SG_ 369 SpdRotlForWhlsAtAxleRe 0;
+BA_ "GenSigStartValue" SG_ 369 YawStabyCtrlActv 0;
+BA_ "GenSigStartValue" SG_ 353 AgDataRawSafeChks 0;
+BA_ "GenSigStartValue" SG_ 353 AgDataRawSafeCntr 0;
+BA_ "GenSigStartValue" SG_ 353 RollRate1 0;
+BA_ "GenSigStartValue" SG_ 353 RollRate1Qf1 1;
+BA_ "GenSigStartValue" SG_ 353 YawRate1 0;
+BA_ "GenSigStartValue" SG_ 353 YawRate1Qf1 1;
+BA_ "GenSigStartValue" SG_ 561 AmbTIndcd 1000;
+BA_ "GenSigStartValue" SG_ 561 AmbTIndcdQf 0;
+BA_ "GenSigStartValue" SG_ 561 AmbTIndcdUnit 0;
+BA_ "GenSigStartValue" SG_ 561 TiDrvgCycOff 0;
+BA_ "GenSigStartValue" SG_ 561 TrlrPrsnt 0;
+BA_ "GenSigStartValue" SG_ 561 WhlCircum 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq30 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq31 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq32 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq33 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq34 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq35 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngDataMgrReq36 0;
+BA_ "GenSigStartValue" SG_ 609 ImobEngMgrReqCmd3 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq20 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq21 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq22 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq23 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq24 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq25 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngDataMgrReq26 0;
+BA_ "GenSigStartValue" SG_ 597 ImobEngMgrReqCmd2 0;
+BA_ "GenSigStartValue" SG_ 641 CarTiGlb 0;
+BA_ "GenSigStartValue" SG_ 86 CarModSts1 0;
+BA_ "GenSigStartValue" SG_ 86 CarModSubtypWdCarModSubtyp 0;
+BA_ "GenSigStartValue" SG_ 86 ChrgnUReq 0;
+BA_ "GenSigStartValue" SG_ 86 EgyLvlElecMai 0;
+BA_ "GenSigStartValue" SG_ 86 EgyLvlElecSubtyp 0;
+BA_ "GenSigStartValue" SG_ 86 FltEgyCnsWdSts 0;
+BA_ "GenSigStartValue" SG_ 86 IntrBriSts 0;
+BA_ "GenSigStartValue" SG_ 86 PwrLvlElecMai 0;
+BA_ "GenSigStartValue" SG_ 86 PwrLvlElecSubtyp 0;
+BA_ "GenSigStartValue" SG_ 86 TwliBriSts 0;
+BA_ "GenSigStartValue" SG_ 86 UsgModSts 1;
+BA_ "GenSigStartValue" SG_ 86 VehModMngtGlbSafe1Chks 0;
+BA_ "GenSigStartValue" SG_ 86 VehModMngtGlbSafe1Cntr 0;
+BA_ "GenSigStartValue" SG_ 645 AmbTRawQly 1;
+BA_ "GenSigStartValue" SG_ 645 AmbTRawVal 700;
+BA_ "GenSigStartValue" SG_ 645 BkpOfDstTrvld 0;
+BA_ "GenSigStartValue" SG_ 645 VehBattUSysU 0;
+BA_ "GenSigStartValue" SG_ 645 VehBattUSysUQf 1;
+BA_ "GenSigStartValue" SG_ 1407 MstCfgIDPropulsionCAN 4405;
+BA_ "GenSigStartValue" SG_ 1407 PrpsnCntrForMissCom 0;
+BA_ "GenSigStartValue" SG_ 344 DrvrBrkTqAtWhlsReqd 0;
+BA_ "GenSigStartValue" SG_ 344 DrvrBrkTqAtWhlsReqdDrvrBrkTqAtWh 0;
+BA_ "SystemSignalLongSymbol" SG_ 344 DrvrBrkTqAtWhlsReqdDrvrBrkTqAtWh "DrvrBrkTqAtWhlsReqdDrvrBrkTqAtWhlsReqdChks";
+BA_ "GenSigStartValue" SG_ 344 DrvrBrkTqAtWhlsReqdDrvrBrkT_0000 0;
+BA_ "SystemSignalLongSymbol" SG_ 344 DrvrBrkTqAtWhlsReqdDrvrBrkT_0000 "DrvrBrkTqAtWhlsReqdDrvrBrkTqAtWhlsReqdCntr";
+BA_ "GenSigStartValue" SG_ 344 DrvrBrkTqAtWhlsReqdQf 1;
+BA_ "GenSigStartValue" SG_ 344 EpbStsEpbSts 0;
+BA_ "GenSigStartValue" SG_ 344 EpbStsEpbStsChks 0;
+BA_ "GenSigStartValue" SG_ 344 EpbStsEpbStsCntr 0;
+BA_ "GenSigStartValue" SG_ 344 PtActrReModReq 0;
+VAL_ 327 HvSysActvnInhb 0 "OkNotOk1_Ok" 1 "OkNotOk1_NotOk" ;
+VAL_ 327 HvSysPwrOff 0 "OkNotOk1_Ok" 1 "OkNotOk1_NotOk" ;
+VAL_ 327 HvSysRlySts 0 "HvActvnSts_Open" 1 "HvActvnSts_Clsd" 2 "HvActvnSts_KeepSt" 3 "HvActvnSts_OpenAndReqActvDcha" ;
+VAL_ 327 HvSysSts 0 "HvSysSts_Inin" 1 "HvSysSts_Test" 2 "HvSysSts_Rdy" ;
+VAL_ 581 HvBattChrgnCmpl 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 581 HvBattCoolgReq 0 "HvBattCoolgReq_NotReqd" 1 "HvBattCoolgReq_LoReq" 2 "HvBattCoolgReq_MedReq" 3 "HvBattCoolgReq_HiReq" ;
+VAL_ 659 HvBattErrIndcnReq 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 661 HvBattCoolgSts 0 "ClimaSts_Start" 1 "ClimaSts_Finish" ;
+VAL_ 661 HvSysCrashFb 0 "CrashFb_Idle" 1 "CrashFb_Evln" 2 "CrashFb_Nok" 3 "CrashFb_Ok" ;
+VAL_ 789 HvBattChrgnSts 0 "ClimaSts_Start" 1 "ClimaSts_Finish" ;
+VAL_ 789 HvBattFanReq 0 "FanSpdReq1_NoFanSpdReq" 1 "FanSpdReq1_FanSpdLoReq" 2 "FanSpdReq1_FanSpdHiReq" ;
+VAL_ 294 DftlFltIndcn 0 "DftlFltIndcn1_Ok" 1 "DftlFltIndcn1_DftlTHi" 2 "DftlFltIndcn1_DftlSysPfmncLo" 3 "DftlFltIndcn1_DftlSysSrvRqrd" 4 "DftlFltIndcn1_Resd1" 5 "DftlFltIndcn1_Resd2" 6 "DftlFltIndcn1_Resd3" 7 "DftlFltIndcn1_Resd4" ;
+VAL_ 294 PtDrvModReqToDftlAckdLgt 0 "AckSts1_NotAcpt" 1 "AckSts1_Acpt" ;
+VAL_ 294 PtDrvModReqToDftlAckdVert 0 "AckSts1_NotAcpt" 1 "AckSts1_Acpt" ;
+VAL_ 294 TrsmStAxleReActr 0 "TrsmStAxleReActr1_DftlInWOk" 1 "TrsmStAxleReActr1_DftlCluOpen" 2 "TrsmStAxleReActr1_DftlCluClsd" ;
+VAL_ 294 TrsmStAxleReLatActr 0 "TrsmStAxleReActr1_DftlInWOk" 1 "TrsmStAxleReActr1_DftlCluOpen" 2 "TrsmStAxleReActr1_DftlCluClsd" ;
+VAL_ 80 IsgModReq 0 "IsgModTyp1_Inin" 1 "IsgModTyp1_Stb" 2 "IsgModTyp1_TqCtrl" 3 "IsgModTyp1_SpdCtrl" 4 "IsgModTyp1_UDcCtrl" 5 "IsgModTyp1_PreChrg" 6 "IsgModTyp1_PwrDwn" 7 "IsgModTyp1_Flt" ;
+VAL_ 80 WhlMotSysModReq 0 "WhlMotSysModStsTyp1_Inin" 1 "WhlMotSysModStsTyp1_Stb" 2 "WhlMotSysModStsTyp1_TqCtrl" 3 "WhlMotSysModStsTyp1_SpdCtrlIdle" 4 "WhlMotSysModStsTyp1_CluOper" 5 "WhlMotSysModStsTyp1_PreChrg" 6 "WhlMotSysModStsTyp1_PwrDwn" 7 "WhlMotSysModStsTyp1_Flt" ;
+VAL_ 102 EngSt1WdSts 0 "EngSt1_Ini" 1 "EngSt1_Awake" 2 "EngSt1_Rdy" 3 "EngSt1_PreStrtg" 4 "EngSt1_StrtgInProgs" 5 "EngSt1_RunngRunng" 6 "EngSt1_RunngStb" 7 "EngSt1_RunngStrtgInProgs" 8 "EngSt1_RunngRemStrtd" 9 "EngSt1_AftRun" ;
+VAL_ 102 PtGearAct 0 "PtGearAct1_Neut" 1 "PtGearAct1_Gear1" 2 "PtGearAct1_Gear2" 3 "PtGearAct1_Gear3" 4 "PtGearAct1_Gear4" 5 "PtGearAct1_Gear5" 6 "PtGearAct1_Gear6" 7 "PtGearAct1_Gear7" 8 "PtGearAct1_Gear8" 9 "PtGearAct1_Gear9" 10 "PtGearAct1_Gear10" 11 "PtGearAct1_Gear11" 12 "PtGearAct1_Gear12" 13 "PtGearAct1_Gear13" 14 "PtGearAct1_Ukwn" 15 "PtGearAct1_Rvs" ;
+VAL_ 277 DrvrDesDir 0 "DrvrDesDir1_Undefd" 1 "DrvrDesDir1_Fwd" 2 "DrvrDesDir1_Rvs" 3 "DrvrDesDir1_Neut" 4 "DrvrDesDir1_Resd0" 5 "DrvrDesDir1_Resd1" 6 "DrvrDesDir1_Resd2" 7 "DrvrDesDir1_Resd3" ;
+VAL_ 277 PtCluTqPtCluTqQly 0 "Qly3_De0" 1 "Qly3_De1" 2 "Qly3_De2" 3 "Qly3_De3" 4 "Qly3_De4" 5 "Qly3_De5" 6 "Qly3_De6" 7 "Qly3_De7" ;
+VAL_ 277 PtReqToTrsmActr 0 "PtReqToTrsmActr2_ParkReq" 1 "PtReqToTrsmActr2_RvsReq" 2 "PtReqToTrsmActr2_NeutReq" 3 "PtReqToTrsmActr2_DrvReq" 4 "PtReqToTrsmActr2_NoMoveReq" 5 "PtReqToTrsmActr2_Resd1" 6 "PtReqToTrsmActr2_Resd2" 7 "PtReqToTrsmActr2_Resd3" ;
+VAL_ 305 DcDcActvdReq 0 "DcDcActvd_NoConversionToLVSide" 1 "DcDcActvd_ConversionToLVSide" ;
+VAL_ 305 PrpsnActvnReq 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 305 PtAllwdToTrsmActr 0 "PtAllwdToTrsmActr1_NotAllwd1" 1 "PtAllwdToTrsmActr1_RvsAllwd" 2 "PtAllwdToTrsmActr1_RvsNotAllwd" 3 "PtAllwdToTrsmActr1_NotAllwd2" 4 "PtAllwdToTrsmActr1_ParkRelsAllwd" 5 "PtAllwdToTrsmActr1_RvsAllwdAndParkRelsAllwd" 6 "PtAllwdToTrsmActr1_RvsNotAllwdAndParkRelsAllwd" 7 "PtAllwdToTrsmActr1_NotAllwd3" 8 "PtAllwdToTrsmActr1_ParkRelsNotAllwd" 9 "PtAllwdToTrsmActr1_RvsAllwdAndParkRelsNotAllwd" 10 "PtAllwdToTrsmActr1_RvsNotAllwdAndParkRelsNotAllwd" 11 "PtAllwdToTrsmActr1_NotAllwd4" 12 "PtAllwdToTrsmActr1_NotAllwd5" 13 "PtAllwdToTrsmActr1_NotAllwd6" 14 "PtAllwdToTrsmActr1_NotAllwd7" 15 "PtAllwdToTrsmActr1_NotAllwd8" ;
+VAL_ 405 EngCooltInhbFlow 0 "CooltInhb_CoolntFlowReqToEngAllwd" 1 "CooltInhb_CoolntFlowReqToEngNotAllwd" ;
+VAL_ 405 EngKdSts 0 "EngKdSts_Resd0" 1 "EngKdSts_NotActv" 2 "EngKdSts_Actv" 3 "EngKdSts_Resd3" ;
+VAL_ 405 HvPwrEgyPrio 0 "HvPwrEgyPrio_Stb" 1 "HvPwrEgyPrio_Chrgn" 2 "HvPwrEgyPrio_ClimaWithAc" 3 "HvPwrEgyPrio_ClimaWoAc" 4 "HvPwrEgyPrio_RemClima" ;
+VAL_ 405 OnBdChrgrPwrEnaAllwd 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 401 HvOnMaiReq 0 "HvActvnSts_Open" 1 "HvActvnSts_Clsd" 2 "HvActvnSts_KeepSt" 3 "HvActvnSts_OpenAndReqActvDcha" ;
+VAL_ 401 PtToTrsmRatMgrIfPtGearReq 0 "PtGearReq1_Gear1" 1 "PtGearReq1_Gear2" 2 "PtGearReq1_Gear3" 3 "PtGearReq1_Gear4" 4 "PtGearReq1_Gear5" 5 "PtGearReq1_Gear6" 6 "PtGearReq1_Gear7" 7 "PtGearReq1_Gear8" 8 "PtGearReq1_Spare" ;
+VAL_ 401 PtToTrsmRatMgrIfPtGearReqInter 0 "PtGearReq1_Gear1" 1 "PtGearReq1_Gear2" 2 "PtGearReq1_Gear3" 3 "PtGearReq1_Gear4" 4 "PtGearReq1_Gear5" 5 "PtGearReq1_Gear6" 6 "PtGearReq1_Gear7" 7 "PtGearReq1_Gear8" 8 "PtGearReq1_Spare" ;
+VAL_ 401 PtToTrsmRatMgrIfPtLockFwAtGearFi 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 401 PtToTrsmRatMgrIfPtLockUpReq 0 "PtLockUpType_OpenLockUp" 1 "PtLockUpType_SlipLockUp" 2 "PtLockUpType_MicroSlipLockUp" 3 "PtLockUpType_LockUpLockd" ;
+VAL_ 401 PtToTrsmRatMgrIfPtShiftTypReq 0 "PtShiftTypReq2_ShiftQly0" 1 "PtShiftTypReq2_ShiftQly1" 2 "PtShiftTypReq2_ShiftQly2" 3 "PtShiftTypReq2_ShiftQly3" 4 "PtShiftTypReq2_ShiftQly4" 5 "PtShiftTypReq2_ShiftQly5" 6 "PtShiftTypReq2_ShiftQly6" 7 "PtShiftTypReq2_ShiftQly7" 8 "PtShiftTypReq2_ShiftQly8" 9 "PtShiftTypReq2_ShiftQly9" 10 "PtShiftTypReq2_ShiftQly10" 11 "PtShiftTypReq2_ShiftQly11" 12 "PtShiftTypReq2_AShiftQly0" 13 "PtShiftTypReq2_AShiftQly1" 14 "PtShiftTypReq2_AShiftQly2" 15 "PtShiftTypReq2_AShiftQly3" ;
+VAL_ 401 PtToTrsmRatMgrIfPtTrsmModReq 0 "PtTrsmModReq_EngdWithPMax" 1 "PtTrsmModReq_Engd" 2 "PtTrsmModReq_EngdEco" 3 "PtTrsmModReq_Resd1" 4 "PtTrsmModReq_Neut" 5 "PtTrsmModReq_NeutEco" 6 "PtTrsmModReq_Tran" 7 "PtTrsmModReq_TranWithTqCpChg" ;
+VAL_ 401 WhlMotSysActvDampgModReq 0 "WhlMotSysActvDampgModCodSts_NoDampg" 1 "WhlMotSysActvDampgModCodSts_LoDampg" 2 "WhlMotSysActvDampgModCodSts_MedDampg" 3 "WhlMotSysActvDampgModCodSts_HiDampg" ;
+VAL_ 512 PtTqAtWhlsFrntQly 0 "Qly3_De0" 1 "Qly3_De1" 2 "Qly3_De2" 3 "Qly3_De3" 4 "Qly3_De4" 5 "Qly3_De5" 6 "Qly3_De6" 7 "Qly3_De7" ;
+VAL_ 545 CoolgForHvBattSts 0 "CoolgForHvBattSts_Off" 1 "CoolgForHvBattSts_On" 2 "CoolgForHvBattSts_Inhibited" 3 "CoolgForHvBattSts_Error" ;
+VAL_ 545 DrvgCyc 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 545 EngTQf 0 "Qf1_DevOfDataUndefd" 1 "Qf1_DataTmpUndefdAndEvlnInProgs" 2 "Qf1_DevOfDataNotWithinRngAllwd" 3 "Qf1_DataCalcdWithDevDefd" ;
+VAL_ 545 GearLvrEna 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 545 HvBattCoolgCmd 0 "HVBattChargnCmd_OK" 1 "HVBattChargnCmd_NOK" 2 "HVBattChargnCmd_INIT" 3 "HVBattChargnCmd_HOLD" ;
+VAL_ 545 IsgActvDampgModReq 0 "WhlMotSysActvDampgModCodSts_NoDampg" 1 "WhlMotSysActvDampgModCodSts_LoDampg" 2 "WhlMotSysActvDampgModCodSts_MedDampg" 3 "WhlMotSysActvDampgModCodSts_HiDampg" ;
+VAL_ 545 WrmUpCyc 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 592 HvBattChrgnCmd 0 "HVBattChargnCmd_OK" 1 "HVBattChargnCmd_NOK" 2 "HVBattChargnCmd_INIT" 3 "HVBattChargnCmd_HOLD" ;
+VAL_ 341 CluPedlPsdCluPedlPsd 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 341 CluPedlPsdCluPedlPsdSts 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 341 PtDrvModReqToDftl 0 "PtDrvModReqToDftl1_Norm" 1 "PtDrvModReqToDftl1_Dyn" 2 "PtDrvModReqToDftl1_XC1" 3 "PtDrvModReqToDftl1_XC2" ;
+VAL_ 341 TrsmParkLockd 0 "TrsmParkLock1_ParkNotEngd" 1 "TrsmParkLock1_ParkEngd" 2 "TrsmParkLock1_NotInUse" 3 "TrsmParkLock1_Undefd" ;
+VAL_ 647 MonrCycCmpl 0 "NotCmpl1_NotCmpl" 1 "NotCmpl1_Cmpl" ;
+VAL_ 647 PrpsnSysActv 0 "NotCmpl1_NotCmpl" 1 "NotCmpl1_Cmpl" ;
+VAL_ 309 DrvrGearShiftDirReq1DwnTipAut 0 "DwnTipAut1_DwnTipAutNotActv" 1 "DwnTipAut1_DwnTipAutActv" ;
+VAL_ 309 DrvrGearShiftDirReq1PosnAut 0 "PosnAut_PosnAutNotActv" 1 "PosnAut_PosnAutActv" ;
+VAL_ 309 DrvrGearShiftDirReq1UpTipAut 0 "UpTipAut1_UpTipAutNotActv" 1 "UpTipAut1_UpTipAutActv" ;
+VAL_ 309 DrvrGearShiftDirReq2DwnTipAut 0 "DwnTipAut1_DwnTipAutNotActv" 1 "DwnTipAut1_DwnTipAutActv" ;
+VAL_ 309 DrvrGearShiftDirReq2PosnAut 0 "PosnAut_PosnAutNotActv" 1 "PosnAut_PosnAutActv" ;
+VAL_ 309 DrvrGearShiftDirReq2UpTipAut 0 "UpTipAut1_UpTipAutNotActv" 1 "UpTipAut1_UpTipAutActv" ;
+VAL_ 309 DrvrGearShiftManReqDwnTipReq 0 "DwnTipReq_DwnTipReqNotActv" 1 "DwnTipReq_DwnTipReqActv" ;
+VAL_ 309 DrvrGearShiftManReqSteerWhlDwnRe 0 "SteerWhlDwnReq1_SteerWhlDwnReqNotActv" 1 "SteerWhlDwnReq1_SteerWhlDwnReqActv" ;
+VAL_ 309 DrvrGearShiftManReqSteerWhlUpReq 0 "SteerWhlUpReq_SteerWhlUpReqNotActv" 1 "SteerWhlUpReq_SteerWhlUpReqActv" ;
+VAL_ 309 DrvrGearShiftManReqTipReq 0 "TipReq1_TipReqNotActv" 1 "TipReq1_TipReqActv" ;
+VAL_ 309 DrvrGearShiftManReqUpTipReq 0 "UpTipReq1_UpTipReqNotActv" 1 "UpTipReq1_UpTipReqActv" ;
+VAL_ 309 DrvrGearShiftParkReq 0 "SwtPark1_SwtParkNotActv" 1 "SwtPark1_SwtParkActv" ;
+VAL_ 309 GearShiftUnitSts 0 "GearShiftUnitSts_NoFlt" 1 "GearShiftUnitSts_NoUpTipAut" 2 "GearShiftUnitSts_NoDwnTipAut" 3 "GearShiftUnitSts_NoPark" 4 "GearShiftUnitSts_SrvRqrd" 5 "GearShiftUnitSts_GearShiftUnitSts5" 6 "GearShiftUnitSts_GearShiftUnitSts6" 7 "GearShiftUnitSts_GearShiftUnitSts7" ;
+VAL_ 801 ComLostExtrSound 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 69 WhlMotSysModSts 0 "WhlMotSysModStsTyp1_Inin" 1 "WhlMotSysModStsTyp1_Stb" 2 "WhlMotSysModStsTyp1_TqCtrl" 3 "WhlMotSysModStsTyp1_SpdCtrlIdle" 4 "WhlMotSysModStsTyp1_CluOper" 5 "WhlMotSysModStsTyp1_PreChrg" 6 "WhlMotSysModStsTyp1_PwrDwn" 7 "WhlMotSysModStsTyp1_Flt" ;
+VAL_ 69 WhlMotSysTqEstQlyFac 0 "QualityFactor_QfUndefd" 1 "QualityFactor_QfInProgs" 2 "QualityFactor_QfNotSpc" 3 "QualityFactor_QfSnsrDataOk" ;
+VAL_ 96 ImobEngSts2 0 "ImobSts_ImobUndefd" 1 "ImobSts_ImobImobn" 2 "ImobSts_ImobMtn" 3 "ImobSts_ImobNoMtn" ;
+VAL_ 96 WhlMotSysCluSts 0 "EradCluSts1_CluOpen" 1 "EradCluSts1_CluClsd" ;
+VAL_ 773 WhlMotSysCoolgReq 0 "HvCoolg1_NoRequestForMoreCoolantPower" 1 "HvCoolg1_IncreaseLevel1ForMoreCoolantPower" 2 "HvCoolg1_IncreaseLevel2ForMoreCoolantPower" 3 "HvCoolg1_MaxCoolingPower" 4 "HvCoolg1_NotDefined" ;
+VAL_ 773 WhlMotSysErrIndcnReq 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 613 ImobEngChkSts2 0 "AvlSts2_NotAvl" 1 "AvlSts2_Avl" ;
+VAL_ 289 DcDcActvd 0 "DcDcActvd_NoConversionToLVSide" 1 "DcDcActvd_ConversionToLVSide" ;
+VAL_ 289 IsgModSts 0 "IsgModTyp1_Inin" 1 "IsgModTyp1_Stb" 2 "IsgModTyp1_TqCtrl" 3 "IsgModTyp1_SpdCtrl" 4 "IsgModTyp1_UDcCtrl" 5 "IsgModTyp1_PreChrg" 6 "IsgModTyp1_PwrDwn" 7 "IsgModTyp1_Flt" ;
+VAL_ 289 IsgTqActQualityFactor 0 "QualityFactor_QfUndefd" 1 "QualityFactor_QfInProgs" 2 "QualityFactor_QfNotSpc" 3 "QualityFactor_QfSnsrDataOk" ;
+VAL_ 342 FltElecDcDc 0 "DevErrSts2_NoFlt" 1 "DevErrSts2_Flt" ;
+VAL_ 342 FltTDcDc 0 "DevErrSts2_NoFlt" 1 "DevErrSts2_Flt" ;
+VAL_ 625 ImobEngChkSts3 0 "AvlSts2_NotAvl" 1 "AvlSts2_Avl" ;
+VAL_ 625 ImobEngSts3 0 "ImobSts_ImobUndefd" 1 "ImobSts_ImobImobn" 2 "ImobSts_ImobMtn" 3 "ImobSts_ImobNoMtn" ;
+VAL_ 785 DcDcCoolgReq 0 "HvCoolg1_NoRequestForMoreCoolantPower" 1 "HvCoolg1_IncreaseLevel1ForMoreCoolantPower" 2 "HvCoolg1_IncreaseLevel2ForMoreCoolantPower" 3 "HvCoolg1_MaxCoolingPower" 4 "HvCoolg1_NotDefined" ;
+VAL_ 785 IsgCoolgReqInvr 0 "HvCoolg1_NoRequestForMoreCoolantPower" 1 "HvCoolg1_IncreaseLevel1ForMoreCoolantPower" 2 "HvCoolg1_IncreaseLevel2ForMoreCoolantPower" 3 "HvCoolg1_MaxCoolingPower" 4 "HvCoolg1_NotDefined" ;
+VAL_ 785 IsgErrIndcnReq 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 785 IsgMotCooltTFlg 0 "EngTLoFlg_ActvLoTForEng" 1 "EngTLoFlg_DeactvLoTForEng" ;
+VAL_ 145 ChrgrSt 0 "ChrgrSts_Idle" 1 "ChrgrSts_PreStrt" 2 "ChrgrSts_Chrgn" 3 "ChrgrSts_Alrm" 4 "ChrgrSts_Srv" 5 "ChrgrSts_Diagc" 6 "ChrgrSts_Boot" 7 "ChrgrSts_Rstrt" ;
+VAL_ 145 HldChrgnReq 0 "HldChrg_AllowCharging" 1 "HldChrg_DelayCharging" ;
+VAL_ 145 OnBdChrgrCoolgReq 0 "HvCoolg1_NoRequestForMoreCoolantPower" 1 "HvCoolg1_IncreaseLevel1ForMoreCoolantPower" 2 "HvCoolg1_IncreaseLevel2ForMoreCoolantPower" 3 "HvCoolg1_MaxCoolingPower" 4 "HvCoolg1_NotDefined" ;
+VAL_ 145 OnBdChrgrErrIndcnReq 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 145 OnBdChrgrHndlSts 0 "OnBdChrgrHndlSts_Disconnected" 1 "OnBdChrgrHndlSts_ConnectedWithoutPower" 2 "OnBdChrgrHndlSts_PowerAvailableButNotActivated" 3 "OnBdChrgrHndlSts_ConnectedWithPower" 4 "OnBdChrgrHndlSts_Init" 5 "OnBdChrgrHndlSts_Fault" ;
+VAL_ 53 CrashSts2 0 "CrashSts3_Resd1" 1 "CrashSts3_NoCrash" 2 "CrashSts3_Crash" 3 "CrashSts3_Resd2" ;
+VAL_ 343 TrsmActrSnsrPosnTrsmActrSnsrPosn 0 "TrsmActrSnsrPosn1_Undefd" 1 "TrsmActrSnsrPosn1_Drv" 2 "TrsmActrSnsrPosn1_NeutDrv" 3 "TrsmActrSnsrPosn1_Neut" 4 "TrsmActrSnsrPosn1_RvsNeut" 5 "TrsmActrSnsrPosn1_Rvs" 6 "TrsmActrSnsrPosn1_ParkRvs" 7 "TrsmActrSnsrPosn1_Park" ;
+VAL_ 343 TrsmActrUnitSts 0 "TrsmActrUnitSts1_NoFlt" 1 "TrsmActrUnitSts1_ActrMovmtNoPsbl" 2 "TrsmActrUnitSts1_SrvRqrd" 3 "TrsmActrUnitSts1_ActrFlt" ;
+VAL_ 257 TrsmGearChgProgs 0 "TrsmGearChgProgs1_GearShiftChgNotActv" 1 "TrsmGearChgProgs1_StrtPha" 2 "TrsmGearChgProgs1_TqPha" 3 "TrsmGearChgProgs1_JPha" 4 "TrsmGearChgProgs1_EndPha" ;
+VAL_ 257 TrsmModAct 0 "PtTrsmModReq_EngdWithPMax" 1 "PtTrsmModReq_Engd" 2 "PtTrsmModReq_EngdEco" 3 "PtTrsmModReq_Resd1" 4 "PtTrsmModReq_Neut" 5 "PtTrsmModReq_NeutEco" 6 "PtTrsmModReq_Tran" 7 "PtTrsmModReq_TranWithTqCpChg" ;
+VAL_ 273 TrsmGearAct 0 "PtGearAct1_Neut" 1 "PtGearAct1_Gear1" 2 "PtGearAct1_Gear2" 3 "PtGearAct1_Gear3" 4 "PtGearAct1_Gear4" 5 "PtGearAct1_Gear5" 6 "PtGearAct1_Gear6" 7 "PtGearAct1_Gear7" 8 "PtGearAct1_Gear8" 9 "PtGearAct1_Gear9" 10 "PtGearAct1_Gear10" 11 "PtGearAct1_Gear11" 12 "PtGearAct1_Gear12" 13 "PtGearAct1_Gear13" 14 "PtGearAct1_Ukwn" 15 "PtGearAct1_Rvs" ;
+VAL_ 273 TrsmNTrsmNInpOk 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 273 TrsmNTrsmNOutpOk 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 261 TrsmLockUpStTar 0 "PtLockUpType_OpenLockUp" 1 "PtLockUpType_SlipLockUp" 2 "PtLockUpType_MicroSlipLockUp" 3 "PtLockUpType_LockUpLockd" ;
+VAL_ 261 TrsmParkLockEngdFlg 0 "TrsmParkLock1_ParkNotEngd" 1 "TrsmParkLock1_ParkEngd" 2 "TrsmParkLock1_NotInUse" 3 "TrsmParkLock1_Undefd" ;
+VAL_ 261 TrsmToPrpsnNReqRecTrsmNReqCtrl 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 385 EngRunngReqByTrsm 0 "EngRunngReq_Dft" 1 "EngRunngReq_StopInhb" 2 "EngRunngReq_RunReq" 3 "EngRunngReq_Resd" ;
+VAL_ 385 TrsmGearTar 0 "PtGearAct1_Neut" 1 "PtGearAct1_Gear1" 2 "PtGearAct1_Gear2" 3 "PtGearAct1_Gear3" 4 "PtGearAct1_Gear4" 5 "PtGearAct1_Gear5" 6 "PtGearAct1_Gear6" 7 "PtGearAct1_Gear7" 8 "PtGearAct1_Gear8" 9 "PtGearAct1_Gear9" 10 "PtGearAct1_Gear10" 11 "PtGearAct1_Gear11" 12 "PtGearAct1_Gear12" 13 "PtGearAct1_Gear13" 14 "PtGearAct1_Ukwn" 15 "PtGearAct1_Rvs" ;
+VAL_ 385 TrsmLockUpStAct 0 "PtLockUpType_OpenLockUp" 1 "PtLockUpType_SlipLockUp" 2 "PtLockUpType_MicroSlipLockUp" 3 "PtLockUpType_LockUpLockd" ;
+VAL_ 385 TrsmNeutFailr 0 "TrsmNeutFailr1_NeutPsbl" 1 "TrsmNeutFailr1_NeutNotPsbl" ;
+VAL_ 385 TrsmShiftInhb 0 "TrsmShiftInhb1_TrsmShiftInhbNotActv" 1 "TrsmShiftInhb1_TrsmShiftInhbActv" ;
+VAL_ 389 TrsmActrPosn 0 "TrsmActrPosn1_Park" 1 "TrsmActrPosn1_ParkRvs" 2 "TrsmActrPosn1_Rvs" 3 "TrsmActrPosn1_RvsNeut" 4 "TrsmActrPosn1_Neut" 5 "TrsmActrPosn1_NeutDrv" 6 "TrsmActrPosn1_Drv" 7 "TrsmActrPosn1_Undefd" ;
+VAL_ 389 TrsmFltIndcn 0 "TrsmFltIndcn1_TrsmFltIndcnNoReq" 1 "TrsmFltIndcn1_TrsmFltIndcn1" 2 "TrsmFltIndcn1_TrsmFltIndcn2" 3 "TrsmFltIndcn1_TrsmFltIndcn3" 4 "TrsmFltIndcn1_TrsmFltIndcn4" 5 "TrsmFltIndcn1_TrsmFltIndcn5" 6 "TrsmFltIndcn1_TrsmFltIndcn6" 7 "TrsmFltIndcn1_TrsmFltIndcn7" 8 "TrsmFltIndcn1_TrsmFltIndcn8" 9 "TrsmFltIndcn1_TrsmFltIndcn9" 10 "TrsmFltIndcn1_TrsmFltIndcn10" 11 "TrsmFltIndcn1_TrsmFltIndcn11" 12 "TrsmFltIndcn1_TrsmFltIndcn12" 13 "TrsmFltIndcn1_TrsmFltIndcn13" 14 "TrsmFltIndcn1_TrsmFltIndcn14" 15 "TrsmFltIndcn1_TrsmFltIndcn15" 16 "TrsmFltIndcn1_TrsmFltIndcn16" 17 "TrsmFltIndcn1_TrsmFltIndcn17" 18 "TrsmFltIndcn1_TrsmFltIndcn18" 19 "TrsmFltIndcn1_TrsmFltIndcn19" 20 "TrsmFltIndcn1_TrsmFltIndcn20" 21 "TrsmFltIndcn1_TrsmFltIndcn21" 22 "TrsmFltIndcn1_TrsmFltIndcn22" 23 "TrsmFltIndcn1_TrsmFltIndcn23" 24 "TrsmFltIndcn1_TrsmFltIndcn24" 25 "TrsmFltIndcn1_TrsmFltIndcn25" 26 "TrsmFltIndcn1_TrsmFltIndcn26" 27 "TrsmFltIndcn1_TrsmFltIndcn27" 28 "TrsmFltIndcn1_TrsmFltIndcn28" 29 "TrsmFltIndcn1_TrsmFltIndcn29" 30 "TrsmFltIndcn1_TrsmFltIndcn30" 31 "TrsmFltIndcn1_TrsmFltIndcn31" ;
+VAL_ 629 FltDwnTipReq 0 "FltActv2_FltNotActv" 1 "FltActv2_FltActv" ;
+VAL_ 629 FltSteerWhlDwn 0 "FltActv2_FltNotActv" 1 "FltActv2_FltActv" ;
+VAL_ 629 FltSteerWhlUp 0 "FltActv2_FltNotActv" 1 "FltActv2_FltActv" ;
+VAL_ 629 FltTipReq 0 "FltActv2_FltNotActv" 1 "FltActv2_FltActv" ;
+VAL_ 629 FltUpTipReq 0 "FltActv2_FltNotActv" 1 "FltActv2_FltActv" ;
+VAL_ 629 TrsmEngmtLimdTrsmEngmtLimd 0 "YesNo1_Yes" 1 "YesNo1_No" ;
+VAL_ 629 TrsmErrIndcnReq 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 629 TrsmHotSt 0 "TrsmHotSt1_HotStNotActv" 1 "TrsmHotSt1_LvlHotSt1" 2 "TrsmHotSt1_LvlHotSt2" ;
+VAL_ 629 TrsmReqForPfmncRedn 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 529 SteerWhlSnsrQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 134 WhlSpdCircumlFrntLeQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 134 WhlSpdCircumlFrntRiQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 118 BrkPedlNotPsdSafe 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 118 BrkPedlPsd 0 "NoYes1_No" 1 "NoYes1_Yes" ;
+VAL_ 118 BrkPedlPsdQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 118 VehMtnStSafe 0 "VehMtnSt2_Ukwn" 1 "VehMtnSt2_StandStillVal1" 2 "VehMtnSt2_StandStillVal2" 3 "VehMtnSt2_StandStillVal3" 4 "VehMtnSt2_RollgFwdVal1" 5 "VehMtnSt2_RollgFwdVal2" 6 "VehMtnSt2_RollgBackwVal1" 7 "VehMtnSt2_RollgBackwVal2" ;
+VAL_ 118 VehSpdLgtSafeQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 113 WhlSpdCircumlReLeQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 113 WhlSpdCircumlReRiQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 129 ALat1Qf1 0 "Qf1_DevOfDataUndefd" 1 "Qf1_DataTmpUndefdAndEvlnInProgs" 2 "Qf1_DevOfDataNotWithinRngAllwd" 3 "Qf1_DataCalcdWithDevDefd" ;
+VAL_ 129 ALgt1Qf1 0 "Qf1_DevOfDataUndefd" 1 "Qf1_DataTmpUndefdAndEvlnInProgs" 2 "Qf1_DevOfDataNotWithinRngAllwd" 3 "Qf1_DataCalcdWithDevDefd" ;
+VAL_ 129 AVert2Qf1 0 "Qf1_DevOfDataUndefd" 1 "Qf1_DataTmpUndefdAndEvlnInProgs" 2 "Qf1_DevOfDataNotWithinRngAllwd" 3 "Qf1_DataCalcdWithDevDefd" ;
+VAL_ 357 EngTracCtrlActvFrntMax 0 "CtrlSts1_NoCtrl" 1 "CtrlSts1_InCtrl" ;
+VAL_ 369 LockgCenStsLockSt 0 "LockSt3_LockUndefd" 1 "LockSt3_LockUnlckd" 2 "LockSt3_LockTrUnlckd" 3 "LockSt3_LockLockd" ;
+VAL_ 369 LockgCenStsUpdEve 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 369 LockgCenTrigSrc 0 "LockTrigSrc2_NoTrigSrc" 1 "LockTrigSrc2_KeyRem" 2 "LockTrigSrc2_Keyls" 3 "LockTrigSrc2_IntrSwt" 4 "LockTrigSrc2_SpdAut" 5 "LockTrigSrc2_TmrAut" 6 "LockTrigSrc2_Slam" 7 "LockTrigSrc2_Telm" 8 "LockTrigSrc2_Crash" ;
+VAL_ 369 YawStabyCtrlActv 0 "CtrlSts1_NoCtrl" 1 "CtrlSts1_InCtrl" ;
+VAL_ 353 RollRate1Qf1 0 "Qf1_DevOfDataUndefd" 1 "Qf1_DataTmpUndefdAndEvlnInProgs" 2 "Qf1_DevOfDataNotWithinRngAllwd" 3 "Qf1_DataCalcdWithDevDefd" ;
+VAL_ 353 YawRate1Qf1 0 "Qf1_DevOfDataUndefd" 1 "Qf1_DataTmpUndefdAndEvlnInProgs" 2 "Qf1_DevOfDataNotWithinRngAllwd" 3 "Qf1_DataCalcdWithDevDefd" ;
+VAL_ 561 AmbTIndcdQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 561 AmbTIndcdUnit 0 "AmbTIndcdUnit_Celsius" 1 "AmbTIndcdUnit_Fahrenheit" 2 "AmbTIndcdUnit_UkwnUnit" ;
+VAL_ 561 TrlrPrsnt 0 "TrlrPrsntSts_TrlrNotPrsnt" 1 "TrlrPrsntSts_TrlrPrsnt" ;
+VAL_ 609 ImobEngMgrReqCmd3 0 "ImobEngMgrReqCmd_ImobEngCmdTarIdle" 1 "ImobEngMgrReqCmd_ImobEngMtnStrtReqCmd" 2 "ImobEngMgrReqCmd_ImobEngNoMtnStrtReqCmd" 3 "ImobEngMgrReqCmd_ImobEngTurnOffCmd" ;
+VAL_ 597 ImobEngMgrReqCmd2 0 "ImobEngMgrReqCmd_ImobEngCmdTarIdle" 1 "ImobEngMgrReqCmd_ImobEngMtnStrtReqCmd" 2 "ImobEngMgrReqCmd_ImobEngNoMtnStrtReqCmd" 3 "ImobEngMgrReqCmd_ImobEngTurnOffCmd" ;
+VAL_ 86 CarModSts1 0 "CarModSts1_CarModNorm" 1 "CarModSts1_CarModTrnsp" 2 "CarModSts1_CarModFcy" 3 "CarModSts1_CarModCrash" 5 "CarModSts1_CarModDyno" ;
+VAL_ 86 FltEgyCnsWdSts 0 "FltEgyCns1_NoFlt" 1 "FltEgyCns1_Flt" ;
+VAL_ 86 TwliBriSts 0 "TwliBriSts1_Night" 1 "TwliBriSts1_Day" ;
+VAL_ 86 UsgModSts 0 "UsgModSts1_UsgModAbdnd" 1 "UsgModSts1_UsgModInActv" 2 "UsgModSts1_UsgModCnvinc" 11 "UsgModSts1_UsgModActv" 13 "UsgModSts1_UsgModDrvg" ;
+VAL_ 645 AmbTRawQly 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 645 SoundExtActvSts 0 "OnOff1_Off" 1 "OnOff1_On" ;
+VAL_ 645 VehBattUSysUQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 344 DrvrBrkTqAtWhlsReqdQf 0 "GenQf1_UndefindDataAccur" 1 "GenQf1_TmpUndefdData" 2 "GenQf1_DataAccurNotWithinSpcn" 3 "GenQf1_AccurData" ;
+VAL_ 344 EpbStsEpbSts 0 "EpbSts_Resd0" 1 "EpbSts_Resd1" 2 "EpbSts_Resd2" 3 "EpbSts_AllAppld" 4 "EpbSts_Resd4" 5 "EpbSts_AllInTran" 6 "EpbSts_BrkgDynByActr" 7 "EpbSts_Resd7" 8 "EpbSts_Resd8" 9 "EpbSts_ActrAllReld" 10 "EpbSts_BrkgDynDegraded" 11 "EpbSts_Resd11" 12 "EpbSts_BrkgDyn" 13 "EpbSts_Resd13" 14 "EpbSts_Resd14" 15 "EpbSts_Err" ;
+VAL_ 344 PtActrReModReq 0 "PtActrMod1_NoReq" 1 "PtActrMod1_ActrMod1" 2 "PtActrMod1_ActrMod2" 3 "PtActrMod1_ActrMod3" ;
+
