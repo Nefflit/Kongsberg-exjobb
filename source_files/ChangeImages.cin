@@ -6,7 +6,7 @@ includes
 
 variables
 {
-  
+  int oldRule1 = 0, oldRule2 = 0, oldRule3 = 0, oldRule4 = 0, oldRule5 = 0;
 }
 
 void ChangeBackground(int background)
@@ -58,19 +58,78 @@ void ChangeDisplaySensors(int sensors)
 //Reset the background images in the MBBError panel for the next test
 void SetMBBErrors(int found[])
 {
-  if (found[0]) setPictureBoxImage("MBBRules", "rule1", "..\\images\\error1.png");
-  else setPictureBoxImage("MBBRules", "rule1", "..\\images\\okay1.png");
+  if (found[0]) 
+  {
+    setPictureBoxImage("MBBRules", "rule1", "..\\images\\error1.png");
+    if (!oldRule1)
+    {
+      putValueToControl("sensorPanel", "outputText", "Rule1 \n");
+      oldRule1 = 1;
+    }
+  }
+  else 
+  {
+    setPictureBoxImage("MBBRules", "rule1", "..\\images\\okay1.png");
+    oldRule1 = 0;
+  }
   
-  if (found[1]) setPictureBoxImage("MBBRules", "rule2", "..\\images\\error2.png");
-  else setPictureBoxImage("MBBRules", "rule2", "..\\images\\okay2.png");
+  if (found[1])
+  {
+    setPictureBoxImage("MBBRules", "rule2", "..\\images\\error2.png");
+    if (!oldRule2)
+    {
+      putValueToControl("sensorPanel", "outputText", "Rule2 \n");
+      oldRule2 = 1;
+    }
+  }
+  else 
+  {
+    setPictureBoxImage("MBBRules", "rule2", "..\\images\\okay2.png");
+    oldRule2 = 0;
+  }
   
-  if (found[2]) setPictureBoxImage("MBBRules", "rule3", "..\\images\\error3.png");
-  else setPictureBoxImage("MBBRules", "rule3", "..\\images\\okay3.png");
+  if (found[2])
+  {
+    setPictureBoxImage("MBBRules", "rule3", "..\\images\\error3.png");
+    if (!oldRule3)
+    {
+      putValueToControl("sensorPanel", "outputText", "Rule3 \n");
+      oldRule3 = 1;
+    }
+  }
+  else 
+  {
+    setPictureBoxImage("MBBRules", "rule3", "..\\images\\okay3.png");
+    oldRule3 = 0;
+  }
   
-  if (found[3]) setPictureBoxImage("MBBRules", "rule4", "..\\images\\error4.png");
-  else setPictureBoxImage("MBBRules", "rule4", "..\\images\\okay4.png");
+  if (found[3])
+  {
+    setPictureBoxImage("MBBRules", "rule4", "..\\images\\error4.png");
+    if (!oldRule4)
+    {
+      putValueToControl("sensorPanel", "outputText", "Rule4 \n");
+      oldRule4 = 1;
+    }
+  }
+  else
+  {
+    setPictureBoxImage("MBBRules", "rule4", "..\\images\\okay4.png");
+    oldRule4 = 0;
+  }
   
-  if (found[4]) setPictureBoxImage("MBBRules", "rule5", "..\\images\\error5.png");
-  else setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay5.png");
-  putValueToControl("sensorPanel", "output_view", "test");
+  if (found[4])
+  {
+    setPictureBoxImage("MBBRules", "rule5", "..\\images\\error5.png");
+    if (!oldRule5)
+    {
+      putValueToControl("sensorPanel", "outputText", "Rule5 \n");
+      oldRule5 = 1;
+    }
+  }
+  else
+  {
+    setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay5.png");
+    oldRule5 = 0;
+  }
 }

@@ -142,6 +142,7 @@ void MBB(int sensor_status)
   //Rule 1
   if (!_sensors_active) //No active sensor
     _found_error[0] = 1;
+    
   //Rule 2
   if (_sensors_active > 2) //More than 2 active sensors
     _found_error[1] = 1;
