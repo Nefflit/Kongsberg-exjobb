@@ -47,7 +47,7 @@ variables
     { 0x0D, 0x09, 0x05 },
     { 0x09, 0x0D }
   };
-    
+    long time;
 }
 
 //Returns 1 if a non-adjacent sensor is active
@@ -119,7 +119,7 @@ int AddErrors(int sensor)
 //Input value should be in format:
 //7:0, 6:--, 5:++, 4:-, 3:+, 2:C, 1:A, 0:M
 void MBB(int sensor_status)
-{  
+{ 
   /*******************************************************************
     Change the background before altering the signal
   *******************************************************************/
@@ -128,7 +128,6 @@ void MBB(int sensor_status)
   /*******************************************************************
     Add user specified errors to the sensor value
   *******************************************************************/
-  
   sensor_status = AddErrors(sensor_status);
   
   /*******************************************************************
@@ -141,7 +140,7 @@ void MBB(int sensor_status)
   for(i = 0; i < 5; i++)
     if ( (((sensor_status >> 2) >> i) & 0x1) == 1)
       _sensors_active++; // count the number of active sensors
-    3
+    
   //Rule 1
   if (!_sensors_active) //No active sensor
     _found_error[0] = 1;
@@ -191,4 +190,6 @@ void MBB(int sensor_status)
     Update Interface
   *******************************************************************/
   ChangeDisplaySensors(sensor_status);
+  SetMBBErrors(_found_error);
+  for(i = 0; i < 5; i++) _found_error[i] = 0;
 }
