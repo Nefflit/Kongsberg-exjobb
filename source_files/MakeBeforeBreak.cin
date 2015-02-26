@@ -190,5 +190,5 @@ void MBB(int sensor_status)
   *******************************************************************/
   ChangeDisplaySensors(sensor_status);
   SetMBBErrors(_found_error);
-  for(i = 0; i < 5; i++) _found_error[i] = 0;
+  for(i = 0; i < 5; i++) _found_error[i] = 0; //Reset the error array for the next time
 }

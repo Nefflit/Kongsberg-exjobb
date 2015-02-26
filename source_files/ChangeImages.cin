@@ -7,6 +7,7 @@ includes
 variables
 {
   int oldRule1 = 0, oldRule2 = 0, oldRule3 = 0, oldRule4 = 0, oldRule5 = 0;
+  int old_state[5];
 }
 
 void ChangeBackground(int background)
@@ -58,12 +59,20 @@ void ChangeDisplaySensors(int sensors)
 //Reset the background images in the MBBError panel for the next test
 void SetMBBErrors(int found[])
 {
+  for(i = 0; i < 5; i++) 
+    if (old_state[i] != found[i])
+    { 
+      deleteControlContent("sensorPanel", "outputText");
+      oldRule1 = 0; oldRule2 = 0; oldRule3 = 0; oldRule4 = 0; oldRule5 = 0;
+      break; //Doing anything with outputText is costly, so avoid it if more than 1 changed place
+    }
+    
   if (found[0]) 
   {
     setPictureBoxImage("MBBRules", "rule1", "..\\images\\error1.png");
     if (!oldRule1)
     {
-      putValueToControl("sensorPanel", "outputText", "Rule1 \n");
+      putValueToControl("sensorPanel", "outputText", "Rule 1 broken: \nThere is no sensor active of the positional sensors!\n");
       oldRule1 = 1;
     }
   }
@@ -123,7 +132,7 @@ void SetMBBErrors(int found[])
     setPictureBoxImage("MBBRules", "rule5", "..\\images\\error5.png");
     if (!oldRule5)
     {
-      putValueToControl("sensorPanel", "outputText", "Rule5 \n");
+      putValueToControl("sensorPanel", "outputText", "Rule 5 broken:\nThis is not a combination of moves that is possible by hardware limitations!");
       oldRule5 = 1;
     }
   }
@@ -132,4 +141,6 @@ void SetMBBErrors(int found[])
     setPictureBoxImage("MBBRules", "rule5", "..\\images\\okay5.png");
     oldRule5 = 0;
   }
+  
+  for(i = 0; i < 5; i++) old_state[i] = found[i];//Save the last state for next time
 }

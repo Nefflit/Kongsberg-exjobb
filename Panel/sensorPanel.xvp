@@ -4,37 +4,43 @@
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl7" Children="Controls" ControlName="Static Text 7">
       <Property Name="Name">StaticTextControl7</Property>
       <Property Name="Size">23, 13</Property>
-      <Property Name="Location">434, 428</Property>
+      <Property Name="Location">310, 427</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">NN</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl6" Children="Controls" ControlName="Static Text 6">
       <Property Name="Name">StaticTextControl6</Property>
       <Property Name="Size">15, 13</Property>
-      <Property Name="Location">431, 344</Property>
+      <Property Name="Location">318, 347</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">N</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl5" Children="Controls" ControlName="Static Text 5">
       <Property Name="Name">StaticTextControl5</Property>
       <Property Name="Size">14, 13</Property>
-      <Property Name="Location">434, 242</Property>
+      <Property Name="Location">319, 242</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">C</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl4" Children="Controls" ControlName="Static Text 4">
       <Property Name="Name">StaticTextControl4</Property>
       <Property Name="Size">15, 13</Property>
-      <Property Name="Location">434, 156</Property>
+      <Property Name="Location">318, 162</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">U</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 3">
       <Property Name="Name">StaticTextControl3</Property>
       <Property Name="Size">23, 13</Property>
-      <Property Name="Location">431, 67</Property>
+      <Property Name="Location">310, 60</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">UU</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.CAPLOutputViewControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CAPLOutputViewControl1" Children="Controls" ControlName="outputText">
       <Property Name="Name">CAPLOutputViewControl1</Property>
       <Property Name="Size">259, 208</Property>
       <Property Name="Location">34, 242</Property>
+      <Property Name="BoxFont">Microsoft Sans Serif, 12pt</Property>
       <Property Name="BoxBackgroundColor">Control</Property>
       <Property Name="TabIndex">10</Property>
     </Object>
@@ -48,12 +54,14 @@
       <Property Name="Name">StaticTextControl2</Property>
       <Property Name="Size">54, 13</Property>
       <Property Name="Location">182, 99</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">Automatic</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
       <Property Name="Name">StaticTextControl1</Property>
       <Property Name="Size">43, 13</Property>
       <Property Name="Location">67, 99</Property>
+      <Property Name="BackColor">240, 240, 240</Property>
       <Property Name="Text">Manual</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl7" ControlName="M">
@@ -94,11 +102,11 @@
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl1" ControlName="sensorBackground">
       <Property Name="Name">PictureBoxControl1</Property>
-      <Property Name="Size">542, 525</Property>
+      <Property Name="Size">515, 551</Property>
       <Property Name="Location">0, 0</Property>
       <Property Name="ImageFile">..\images\N.png</Property>
     </Object>
     <Property Name="Name">Panel</Property>
-    <Property Name="Size">542, 525</Property>
+    <Property Name="Size">516, 525</Property>
   </Object>
 </Panel>
