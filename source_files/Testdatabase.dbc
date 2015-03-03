@@ -36,6 +36,20 @@ BS_:
 BU_: receiver_node test_node
 
 
+BO_ 1843 VddmToEgsmPropDiagReqFrame: 4 Vector__XXX
+ SG_ identifier2 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ identidier1 : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ service : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ req_length : 7|8@0+ (1,0) [0|8] "" Vector__XXX
+
+BO_ 1587 EgsmToVddmPropDiagResFrame: 6 Vector__XXX
+ SG_ identifier2 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ identidier1 : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ data2 : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ data1 : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ praise_the_sun : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ res_length : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
 
 
 EV_ M_A: 0 [0|1] "Bit" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;

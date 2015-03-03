@@ -6,21 +6,32 @@ includes
 
 variables
 {
-  msTimer timer1ms;
+  message EgsmToVddmPropDiagResFrame res;
+  message EgsmToVddmPropDiagResFrame req;
+  int res_data;
+  int sensor_status;
   int last_value;
+  
+  diagRequest Hall_Sensors_Read hall_req;
 }
+
+
 
 //Tar emot diagnosmeddelanden från växelspaken
 on message EgsmToVddmPropDiagResFrame
 {
+  res_data = this.data1;
+  if (this.praise_the_sun != 0x62) return;
+  sensor_status = 0;
+  //write("%d", timeNow()/100);
   
-}
-
-//Skickar en diagnosförfrågan en gång per ms till växelspaken
-on timer timer1ms
-{
-  MBB(last_value);
-  setTimer(timer1ms, 1);
+  sensor_status |= (res_data & 0x10) >> 4;
+  sensor_status |= (res_data & 0x08) >> 2;
+  sensor_status |= (res_data & 0x04) << 2;
+  sensor_status |= (res_data & 0x02) << 1;
+  sensor_status |= (res_data & 0x01) << 3;
+  
+  MBB(sensor_status);
 }
 
 on key '5'
@@ -28,7 +39,6 @@ on key '5'
   write("Pressed key: %c", this);
   MBB(0x06); //AC
   last_value = 0x06;
-  setTimer(timer1ms, 1);
 }
 
 on key '4'

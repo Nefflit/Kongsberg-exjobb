@@ -181,7 +181,10 @@ void MBB(int sensor_status)
           _matched_pattern++;
         
   if(!_matched_pattern)
+  {
     _found_error[4] = 1;
+    write("(%d/%d)", sensor_status, _last_move);
+  }
 
   _last_position = sensor_status;
   
