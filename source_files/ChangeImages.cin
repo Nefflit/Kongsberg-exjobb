@@ -72,7 +72,7 @@ void SetMBBErrors(int found[])
     setPictureBoxImage("MBBRules", "rule1", "..\\images\\error1.png");
     if (!oldRule1)
     {
-      putValueToControl("sensorPanel", "outputText", "Rule 1 broken: \nThere is no sensor active of the positional sensors!\n");
+      putValueToControl("sensorPanel", "outputText", "Rule 1 broken:\nThere is no sensor active of the positional sensors!\n\n");
       oldRule1 = 1;
     }
   }
@@ -87,7 +87,7 @@ void SetMBBErrors(int found[])
     setPictureBoxImage("MBBRules", "rule2", "..\\images\\error2.png");
     if (!oldRule2)
     {
-      putValueToControl("sensorPanel", "outputText", "Rule2 \n");
+      putValueToControl("sensorPanel", "outputText", "Rule 2 broken:\nOnly two sensors can be active at any time!\n\n");
       oldRule2 = 1;
     }
   }
@@ -102,7 +102,7 @@ void SetMBBErrors(int found[])
     setPictureBoxImage("MBBRules", "rule3", "..\\images\\error3.png");
     if (!oldRule3)
     {
-      putValueToControl("sensorPanel", "outputText", "Rule3 \n");
+      putValueToControl("sensorPanel", "outputText", "Rule 3 broken:\nThe sensors active are not adjacent to each other!\n\n");
       oldRule3 = 1;
     }
   }
@@ -117,7 +117,7 @@ void SetMBBErrors(int found[])
     setPictureBoxImage("MBBRules", "rule4", "..\\images\\error4.png");
     if (!oldRule4)
     {
-      putValueToControl("sensorPanel", "outputText", "Rule4 \n");
+      putValueToControl("sensorPanel", "outputText", "Rule 4 broken:\nNot enough time passed between two movements!\n\n");
       oldRule4 = 1;
     }
   }

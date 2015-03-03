@@ -38,8 +38,8 @@
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.CAPLOutputViewControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CAPLOutputViewControl1" Children="Controls" ControlName="outputText">
       <Property Name="Name">CAPLOutputViewControl1</Property>
-      <Property Name="Size">259, 208</Property>
-      <Property Name="Location">34, 242</Property>
+      <Property Name="Size">259, 286</Property>
+      <Property Name="Location">45, 211</Property>
       <Property Name="BoxFont">Microsoft Sans Serif, 12pt</Property>
       <Property Name="BoxBackgroundColor">Control</Property>
       <Property Name="TabIndex">10</Property>
