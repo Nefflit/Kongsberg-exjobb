@@ -58,7 +58,6 @@ EV_ shift_down: 0 [0|1] "boolean" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 EV_ shift_up: 0 [0|1] "boolean" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-<<<<<<< HEAD
 EV_ Gear_Down: 1 [0|1] "%" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 EV_ Gear_up: 1 [0|1] "%" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
@@ -91,34 +90,6 @@ EV_ UU: 0 [0|1] "Bit" 0 15 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 EV_ NN: 0 [0|1] "Bit" 0 16 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-=======
-EV_ M_A: 0 [0|1] "Bit" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ A_A: 0 [0|1] "Bit" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ C_A: 0 [0|1] "Bit" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ U_A: 0 [0|1] "Bit" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ UU_A: 0 [0|1] "Bit" 0 8 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ N_A: 0 [0|1] "Bit" 0 9 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ M: 0 [0|1] "Bit" 0 10 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ A: 0 [0|1] "Bit" 0 11 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ C: 0 [0|1] "Bit" 0 12 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ N: 0 [0|1] "Bit" 0 13 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ U: 0 [0|1] "Bit" 0 14 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ UU: 0 [0|1] "Bit" 0 15 DUMMY_NODE_VECTOR0 Vector__XXX;
-
-EV_ NN: 0 [0|1] "Bit" 0 16 DUMMY_NODE_VECTOR0 Vector__XXX;
-
->>>>>>> ba0788133d0651f0d18d7084fdbf6a1f145e0761
 EV_ NN_A: 0 [0|1] "Bit" 0 17 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 BA_DEF_  "BusType" STRING ;
