@@ -37,16 +37,6 @@ on message EgsmToVddmPropDiagResFrame
 }
 */
 
-on envVar shift_up
-{
-  if (getValue(gear) > 1) putValue(gear, getValue(gear) - 0xA);
-}
-
-on envVar shift_down
-{
-  if (getValue(gear) < 999) putValue(gear, getValue(gear) + 0xA);
-}
-
 //Testkod nedan
 on key '5'
 {

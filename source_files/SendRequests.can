@@ -7,30 +7,124 @@ includes
 variables
 {
   int sensor_status;
+  int requests_failed;
+  int res;
   
-  msTimer timer1ms_cyclicRequest;
-  diagRequest Hall_Sensors_Read hall_req;
-  diagResponse Hall_Sensors_Read hall_resp;
+  timer timer1s_searching;
+  msTimer timer1ms_EGSMcyclicRequest;
+  msTimer timer1ms_AGSMcyclicRequest;
+  diagRequest Hall_Sensors_Read EGSM_hall_req;
+  diagRequest AGSM_sensor_position_Read AGSM_hall_req;
   byte hall_respBuffer[6];
 }
 
 on start
 {
-  if ( 0 != diagSetTarget("EGSM")) write("Error setting target!");
-  setTimerCyclic(timer1ms_cyclicRequest, 11);
+  requests_failed = 0;
+  if ( 0 == diagSetTarget("EGSM"))
+  {
+    setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
+    /*
+    if ( diagSendRequest(EGSM_hall_req) >= 0)
+    {
+      setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
+    }
+    else 
+    {
+      setTimer(timer1s_searching, 5);
+      write("Error sending request");
+    }
+  }
+  else if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))
+  {
+    if ( diagSendRequest(AGSM_hall_req) >= 0)
+      setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
+    else
+    {
+      setTimer(timer1s_searching, 5);
+      write("Error sending request");
+    }
+  }
+  else 
+  {
+    setTimer(timer1s_searching, 5);
+    write("Error setting target!");*/
+  }
+}
+/*
+on timer timer1s_searching
+{
+  write("searching...");
+  if ( 0 == diagSetTarget("EGSM"))
+  {
+    if ( diagSendRequest(EGSM_hall_req) >= 0)
+      setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
+    else
+    {
+      setTimer(timer1s_searching, 5);
+      write("Error sending request");
+    }
+  }
+  else if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))
+  {
+    if ( diagSendRequest(AGSM_hall_req) >= 0)
+      setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
+    else
+    {
+      setTimer(timer1s_searching, 5);
+      write("Error sending request");
+    }
+  }
+  else setTimer(timer1s_searching, 5);
+}
+*/
+on timer timer1ms_EGSMcyclicRequest
+{
+  if ( diagSendRequest(EGSM_hall_req) < 0)
+  {/*
+    requests_failed++;
+    if (requests_failed > 5)
+    {
+      setTimer(timer1s_searching, 5);
+      cancelTimer(timer1ms_EGSMcyclicRequest);
+      requests_failed = 0;
+    }*/
+    write("Error calling DiagSendRequest!");
+  }
+  else requests_failed = 0;
+}
+on timer timer1ms_AGSMcyclicRequest
+{
+  /*
+  if ( diagSendRequest(AGSM_hall_req) < 0)
+  {
+    requests_failed++;
+    if (requests_failed > 5)
+    {
+      setTimer(timer1s_searching, 5);
+      cancelTimer(timer1ms_EGSMcyclicRequest);
+      requests_failed = 0;
+    }
+    write("*** Error calling DiagSendRequest!");
+  }
+  else requests_failed = 0;
+  */
 }
 
-on timer timer1ms_cyclicRequest
-{
-  if ( diagSendRequest(hall_req) < 0) write("*** Error calling DiagSendRequest!");
-}
 
-on diagResponse Hall_Sensors_Read
+on diagResponse EGSM.Classes::DIDs::Hall_Sensors_Read
 {
-  DiagGetPrimitiveData(this, hall_respBuffer, 6);
+  this.GetPrimitiveData(hall_respBuffer, 6);
   write("%x %x %x %x %x %x", hall_respBuffer[0],hall_respBuffer[1],hall_respBuffer[2],hall_respBuffer[3],hall_respBuffer[4],hall_respBuffer[5]);
   
+  //data=0x0_: hall_respBuffer[3]
   //convert response to correct output
+  sensor_status = 0;
+  sensor_status |= (hall_respBuffer[3] & 0x10) >> 4;
+  sensor_status |= (hall_respBuffer[3] & 0x08) >> 2;
+  sensor_status |= (hall_respBuffer[3] & 0x04) << 2;
+  sensor_status |= (hall_respBuffer[3] & 0x02) << 1;
+  sensor_status |= (hall_respBuffer[3] & 0x01) << 3;
   
   MBB(sensor_status);
 }

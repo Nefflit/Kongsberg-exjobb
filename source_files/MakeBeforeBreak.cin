@@ -117,6 +117,7 @@ int AddErrors(int sensor)
 //Evaluates MakeBeforeBreak on the input value
 //Input value should be in format:
 //7:0, 6:--, 5:++, 4:-, 3:+, 2:C, 1:A, 0:M
+//0 NN UU N U C A M
 void MBB(int sensor_status)
 { 
   /*******************************************************************
