@@ -1,0 +1,36 @@
+/*@!Encoding:1252*/
+includes
+{
+  #include "..\source_files\MakeBeforeBreak.cin"
+}
+
+variables
+{
+  int sensor_status;
+  
+  msTimer timer1ms_cyclicRequest;
+  diagRequest Hall_Sensors_Read hall_req;
+  diagResponse Hall_Sensors_Read hall_resp;
+  byte hall_respBuffer[6];
+}
+
+on start
+{
+  if ( 0 != diagSetTarget("EGSM")) write("Error setting target!");
+  setTimerCyclic(timer1ms_cyclicRequest, 11);
+}
+
+on timer timer1ms_cyclicRequest
+{
+  if ( diagSendRequest(hall_req) < 0) write("*** Error calling DiagSendRequest!");
+}
+
+on diagResponse Hall_Sensors_Read
+{
+  DiagGetPrimitiveData(this, hall_respBuffer, 6);
+  write("%x %x %x %x %x %x", hall_respBuffer[0],hall_respBuffer[1],hall_respBuffer[2],hall_respBuffer[3],hall_respBuffer[4],hall_respBuffer[5]);
+  
+  //convert response to correct output
+  
+  MBB(sensor_status);
+}
