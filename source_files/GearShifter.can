@@ -1,72 +1,200 @@
 /*@!Encoding:1252*/
 includes
 {
-  
+  #include "..\source_files\MakeBeforeBreak.cin"
 }
 
 variables
 {
-  int i;
+  int ind;
   int Shiftstep;
+  int shift_end_value;
+  int virtual_sensor_value;
+  int step_count;
+  int shifter_mode_value;
+  int shifter_state;
   msTimer waitdown_Time;
   msTimer waitup_Time;
   msTimer timerdown;
   msTimer timerup;
+  msTimer timer_mode_auto;
+  msTimer timer_mode_man;
+  msTimer measure_signal;
 }
 on start
 {
-  Shiftstep = (1000/(2*getValue(Sensor_Counter) - 1));
+  step_count = 2*getValue(Sensor_Counter) - 1;
+  Shiftstep = (1000/step_count);
+  
+  setTimerCyclic(measure_signal, 1);
+  enableControl("GearShifter", "Button_Automatic", 0);
 }
 on envVar Sensor_Counter
 {
-  Shiftstep = (1000/(2*getValue(Sensor_Counter) - 1));
+  step_count = 2*getValue(Sensor_Counter) - 1;
+  Shiftstep = (1000/step_count);
   write("%d", Shiftstep);
 }
 
 on envVar Gear_Down
 {
-  if (!getValue(Gear_Down)) return;
+  if (!getValue(this)) return;
+  shift_end_value = getValue(Gear_Shift) + Shiftstep*2;
   
   if(getValue(Gear_Shift) < 999)
     setTimerCyclic(timerdown, 10);
 }
-
 on envVar Gear_up
 {
-  if (!getValue(Gear_up)) return;
+  if (!getValue(this)) return;
+  shift_end_value = getValue(Gear_Shift) - Shiftstep*2;
   
   if(getValue(Gear_Shift) > 1)
     setTimerCyclic(timerup, 10);
+}
+on envVar Mode_Auto
+{
+  if (!getValue(this)) return;
+  setTimerCyclic(timer_mode_man, 20);
+}
+on envVar Mode_Man
+{
+  if (!getValue(this)) return;
+  setTimerCyclic(timer_mode_auto, 20);
 }
 
 on timer timerdown
 {
   putValue(Gear_Shift, getValue(Gear_Shift) + Shiftstep/4);
-  if(getValue(Gear_Shift) >= 1000)
+  if(getValue(Gear_Shift) >= 1000 || shift_end_value < getValue(Gear_Shift))
   {
     setTimer(waitdown_Time, 300);
-    cancelTimer(timerdown);
+    cancelTimer(this);
   }
 }
-
 on timer timerup
 {
   putValue(Gear_Shift, getValue(Gear_Shift) - Shiftstep/4);
-  if(getValue(Gear_Shift) <= 0)
+  if(getValue(Gear_Shift) <= 0 || shift_end_value > getValue(Gear_Shift))
   {
     setTimer(waitup_Time, 300);
-    cancelTimer(timerup);
+    cancelTimer(this);
+  }
+}
+on timer timer_mode_auto
+{
+  putValue(Mode_shift, getValue(Mode_shift) - 40);
+  if (getValue(Mode_shift) <= 40)
+  {
+    enableControl("GearShifter", "Button_Manual", 0);
+    enableControl("GearShifter", "Button_Automatic", 1);
+    cancelTimer(this);
+  }
+}
+on timer timer_mode_man
+{
+  putValue(Mode_shift, getValue(Mode_shift) + 40);
+  if (getValue(Mode_shift) >= 260)
+  {
+    enableControl("GearShifter", "Button_Manual", 1);
+    enableControl("GearShifter", "Button_Automatic", 0);
+    cancelTimer(this);
   }
 }
 
 on timer waitdown_Time
 {
-  for(i = getValue(Gear_Shift); i >= 500; i-=50 )
-      putValue(Gear_Shift, getValue(Gear_Shift) - 50);
+  putValue(Gear_Shift, getValue(Gear_Shift) - 50);
+  if (getValue(Gear_Shift) > 500)
+    setTimer(waitdown_Time, 5);
 }
-
 on timer waitup_Time
 {
-  for(i = getValue(Gear_Shift); i <= 500; i+=50 )
-      putValue(Gear_Shift, getValue(Gear_Shift) + 50);
+  putValue(Gear_Shift, getValue(Gear_Shift) + 50);
+  if (getValue(Gear_Shift) < 500)
+    setTimer(waitup_Time, 5);
+}
+
+on timer measure_signal
+{
+  virtual_sensor_value = getValue(Gear_Shift);
+  shifter_mode_value = getValue(Mode_shift);
+  
+  //calculate which sensors of the automatic/manual sensors that are active
+  if (0 <= shifter_mode_value && shifter_mode_value <= 100) shifter_state = 0x1;
+  else if (100 < shifter_mode_value && shifter_mode_value <= 200) shifter_state = 0x3;
+  else shifter_state = 0x2;
+  
+  for (ind = 0; ind < step_count; ind++)
+  {
+    if (Shiftstep * ind <= virtual_sensor_value && virtual_sensor_value < Shiftstep * (ind+1))
+    {
+      if (step_count == 5)
+      {
+        switch(ind)
+        {
+          case 0:
+            MBB(0x08 | shifter_state);//UPP
+            break;
+          case 1:
+            MBB(0x0C | shifter_state);//UPP-CENTER
+            break;
+          case 2:
+            MBB(0x04 | shifter_state);//CENTER
+            break;
+          case 3:
+            MBB(0x14 | shifter_state);//CENTER-DOWN
+            break;
+          case 4:
+            MBB(0x10 | shifter_state);//DOWN
+            break;
+          default:
+            //something went horribly wrong if the program entered here :[
+            //print out a warning and leave
+            write("Invalid code for MBB shift simulator.");
+            break;
+        }
+      }
+      else if (step_count == 9)
+      {
+        switch(ind)
+        {
+          case 0:
+            MBB(0x22);//UP-UP
+            break;
+          case 1:
+            MBB(0x2A);//UP->UP-UP
+            break;
+          case 2:
+            MBB(0x08 | shifter_state);//UP
+            break;
+          case 3:
+            MBB(0x0C | shifter_state);//UP->CENTER
+            break;
+          case 4:
+            MBB(0x04 | shifter_state);//CENTER
+            break;
+          case 5:
+            MBB(0x14 | shifter_state);//CENTER->DOWN
+            break;
+          case 6:
+            MBB(0x10 | shifter_state);//DOWN
+            break;
+          case 7:
+            MBB(0x52);//DOWN->DOWN-DOWN
+            break;
+          case 8:
+            MBB(0x42);//DOWN-DOWN
+            break;
+          default:
+            //something went horribly wrong if the program entered here :[
+            //print out a warning and leave
+            write("Invalid code for MBB shift simulator.");
+            break;
+        }
+      }
+      else
+        MBB(0x06);
+    }
+  }
 }

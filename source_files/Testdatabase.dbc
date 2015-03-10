@@ -52,19 +52,19 @@ BO_ 1587 EgsmToVddmPropDiagResFrame: 6 Vector__XXX
 
 
 
-EV_ Sensor_Counter: 0 [1|5] "" 3 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Mode_Man: 0 [0|1] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ Mode_Select: 0 [0|2] "states" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Mode_Auto: 0 [0|1] "" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ gear: 0 [0|1000] "" 500 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Mode_shift: 1 [0|300] "%" 290 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ shift_down: 0 [0|1] "boolean" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Sensor_Counter: 0 [1|5] "" 3 4 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ shift_up: 0 [0|1] "boolean" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Mode_Select: 0 [0|2] "states" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ Gear_Down: 1 [0|1] "%" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Gear_Down: 0 [0|1] "" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
 
-EV_ Gear_up: 1 [0|1] "%" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
+EV_ Gear_up: 0 [0|1] "" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 EV_ Gear_Shift: 1 [0|1000] "%" 500 8 DUMMY_NODE_VECTOR0 Vector__XXX;
 
