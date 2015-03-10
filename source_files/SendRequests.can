@@ -8,11 +8,12 @@ variables
 {
   int sensor_status;
   int requests_failed;
+  int sim_mode;
   int res;
   
-  timer timer1s_searching;
   msTimer timer1ms_EGSMcyclicRequest;
   msTimer timer1ms_AGSMcyclicRequest;
+  timer timer5s_search;
   diagRequest Hall_Sensors_Read EGSM_hall_req;
   diagRequest AGSM_sensor_position_Read AGSM_hall_req;
   byte hall_respBuffer[6];
@@ -21,104 +22,138 @@ variables
 on start
 {
   requests_failed = 0;
-  if ( 0 == diagSetTarget("EGSM"))
+  sim_mode = getValue(Mode_Select);
+  switch (sim_mode)
   {
-    setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
-    /*
-    if ( diagSendRequest(EGSM_hall_req) >= 0)
-    {
-      setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
-    }
-    else 
-    {
-      setTimer(timer1s_searching, 5);
-      write("Error sending request");
-    }
+    case 0: //simulator mode, set no target
+      break;
+      
+    case 1: //EGSM 3 sensor shifter mode
+      if ( 0 == diagSetTarget("EGSM"))//set the target to EGSM and stat its cyclic timer
+        setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
+      break;
+      
+    case 2: //"AGSM" 5 sensor shifter mode
+      if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))//set the target to the "AGSM" and stat its cyclic timer
+        setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
+      break;
+      
+    default:
+        //default state for safety reasons, do nothing if entering here
+        //as this runs on start up it should reasonably never enter here
+        //Send out a warning if it does
+        write("*** Entered default state on startup!");
+      break;
   }
-  else if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))
-  {
-    if ( diagSendRequest(AGSM_hall_req) >= 0)
-      setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
-    else
-    {
-      setTimer(timer1s_searching, 5);
-      write("Error sending request");
-    }
-  }
-  else 
-  {
-    setTimer(timer1s_searching, 5);
-    write("Error setting target!");*/
-  }
+  sim_mode = 0;//reset sim_mode in case something happens elesewhere
 }
 
-on timer timer1s_searching
-{/*
-  write("searching...");
-  if ( 0 == diagSetTarget("EGSM"))
+//Controlls the selecting on which module sends input to 
+on envVar Mode_Select
+{
+  sim_mode = getValue(Mode_Select);
+  switch (sim_mode)
   {
-    if ( diagSendRequest(EGSM_hall_req) >= 0)
-      setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
-    else
-    {
-      setTimer(timer1s_searching, 5);
-      write("Error sending request");
-    }
+    case 0: //simulator mode, set no target and disable timers
+      //start simulation and stop "AGSM" timer
+      cancelTimer(timer1ms_AGSMcyclicRequest);
+      break;
+      
+    case 1: //EGSM 3 sensor shifter mode
+      if ( 0 == diagSetTarget("EGSM"))//set the target to EGSM and stat its cyclic timer
+      {
+        //stop simulation and start EGSM timer
+        setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
+      }
+      break;
+      
+    case 2: //"AGSM" 5 sensor shifter mode
+      if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))//set the target to the "AGSM" and stat its cyclic timer
+      {
+        //stop EGSM timer and start "AGSM" timer
+        cancelTimer(timer1ms_EGSMcyclicRequest);
+        setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
+      }
+      break;
+      
+    default:
+        //default state for safety reasons, do nothing if entering here
+        //If Mode_Select gets forced to anything other than 0:1:2 during rutime it will go in here
+        //Send out a warning if it does
+        write("*** Entered default state for Mode_Select!");
+      break;
   }
-  else if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))
+  sim_mode = 0;//reset sim_mode in case something happens elesewhere
+}
+on timer timer5s_search
+{
+  //Restart the timer for the selected shifter if it stopped for any reason
+  write("Retrying connection...");
+  sim_mode = getValue(Mode_Select);
+  switch (sim_mode)
   {
-    if ( diagSendRequest(AGSM_hall_req) >= 0)
-      setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
-    else
-    {
-      setTimer(timer1s_searching, 5);
-      write("Error sending request");
-    }
+    //Restart the selected timer (based on Mode_Select) in an attempt to restore the connection to the shifter
+    case 1: //EGSM 3 sensor shifter mode
+      if ( 0 == diagSetTarget("EGSM"))
+        setTimerCyclic(timer1ms_EGSMcyclicRequest, 11);
+      break;
+      
+    case 2: //"AGSM" 5 sensor shifter mode
+      if ( 0 == diagSetTarget("_952_AGSM_Automatic_Gearbox_Shifter_Module"))
+        setTimerCyclic(timer1ms_AGSMcyclicRequest, 11);
+      break;
+      
+    default:
+        //default state enters if timer5 gets started during simulation mode or if an error occurs
+        //Normal runtime shouldn't enter
+        write("*** Entered default state during search for shifter!");
+      break;
   }
-  else setTimer(timer1s_searching, 5);*/
+  sim_mode = 0;//reset sim_mode in case something happens elesewhere
 }
 
+//Sends requests to the correct module
 on timer timer1ms_EGSMcyclicRequest
 {
   if ( diagSendRequest(EGSM_hall_req) < 0)
-  {/*
+  {
+    write("*** Error calling DiagSendRequest!");
     requests_failed++;
     if (requests_failed > 5)
     {
-      setTimer(timer1s_searching, 5);
-      cancelTimer(timer1ms_EGSMcyclicRequest);
+      setTimer(timer5s_search, 5);            //set a timer to wait 5 seconds before retrying the connection
+      cancelTimer(timer1ms_EGSMcyclicRequest);//cancel the cyclic timer to not interfere with the search timer
       requests_failed = 0;
-    }*/
-    write("Error calling DiagSendRequest!");
+      write("Searching...");
+    }
   }
   else requests_failed = 0;
 }
 on timer timer1ms_AGSMcyclicRequest
 {
-  /*
   if ( diagSendRequest(AGSM_hall_req) < 0)
   {
+    write("*** Error calling DiagSendRequest!");
     requests_failed++;
     if (requests_failed > 5)
     {
-      setTimer(timer1s_searching, 5);
-      cancelTimer(timer1ms_EGSMcyclicRequest);
+      setTimer(timer5s_search, 5);            //set a timer to wait 5 seconds before retrying the connection
+      cancelTimer(timer1ms_EGSMcyclicRequest);//cancel the cyclic timer to not interfere with the search timer
       requests_failed = 0;
+      write("Searching...");
     }
-    write("*** Error calling DiagSendRequest!");
   }
   else requests_failed = 0;
-  */
 }
 
-
+//waits on responses xdr
 on diagResponse EGSM.Classes::DIDs::Hall_Sensors_Read
 {
   this.GetPrimitiveData(hall_respBuffer, 6);
   write("%x %x %x %x %x %x", hall_respBuffer[0],hall_respBuffer[1],hall_respBuffer[2],hall_respBuffer[3],hall_respBuffer[4],hall_respBuffer[5]);
   
   //data=0x0_: hall_respBuffer[3]
-  //convert response to correct output
+  //convert response to correct MBB input
   sensor_status = 0;
   sensor_status |= (hall_respBuffer[3] & 0x10) >> 4;
   sensor_status |= (hall_respBuffer[3] & 0x08) >> 2;
@@ -127,4 +162,14 @@ on diagResponse EGSM.Classes::DIDs::Hall_Sensors_Read
   sensor_status |= (hall_respBuffer[3] & 0x01) << 3;
   
   MBB(sensor_status);
+}
+on diagResponse _952_AGSM_Automatic_Gearbox_Shifter_Module.Classes::EngeneeringParameters::AGSM_sensor_position_Read
+{
+  this.GetPrimitiveData(hall_respBuffer, 6);
+  write("%x %x %x %x %x %x", hall_respBuffer[0],hall_respBuffer[1],hall_respBuffer[2],hall_respBuffer[3],hall_respBuffer[4],hall_respBuffer[5]);
+  
+  //TODO: convert bytes to MBB input
+  sensor_status = 0;
+  
+  //MBB(sensor_status);
 }
