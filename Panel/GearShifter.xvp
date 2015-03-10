@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="GearShifter">
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl2" Children="Controls" ControlName="Gear_Down">
+      <Property Name="Name">ButtonControl2</Property>
+      <Property Name="Size">85, 31</Property>
+      <Property Name="Location">303, 129</Property>
+      <Property Name="Text">Gear Down</Property>
+      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;Gear_Down;2;;;-1</Property>
+      <Property Name="TabIndex">2</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl1" Children="Controls" ControlName="Gear_up">
+      <Property Name="Name">ButtonControl1</Property>
+      <Property Name="Size">85, 31</Property>
+      <Property Name="Location">303, 77</Property>
+      <Property Name="Text">Gear Up</Property>
+      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;Gear_up;2;;;-1</Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="ProgressBarControl1" Children="Controls" ControlName="Progress_Bar">
+      <Property Name="Name">ProgressBarControl1</Property>
+      <Property Name="Size">43, 188</Property>
+      <Property Name="Location">97, 35</Property>
+      <Property Name="OriginValue">0</Property>
+      <Property Name="Maximum">1000</Property>
+      <Property Name="Orientation">Vertical</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="ValueSize">38, 28</Property>
+      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;Gear_Shift;1;;;-1</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">480, 270</Property>
+  </Object>
+</Panel>
