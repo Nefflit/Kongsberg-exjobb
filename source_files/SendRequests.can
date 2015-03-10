@@ -51,12 +51,14 @@ on start
 //Controlls the selecting on which module sends input to 
 on envVar Mode_Select
 {
+  cancelTimer(timer5s_search);//stop the searching timer in case it was running
   sim_mode = getValue(Mode_Select);
   switch (sim_mode)
   {
     case 0: //simulator mode, set no target and disable timers
       //start simulation and stop "AGSM" timer
       cancelTimer(timer1ms_AGSMcyclicRequest);
+      write("Searching ended, entering simulation mode.");
       break;
       
     case 1: //EGSM 3 sensor shifter mode
@@ -105,8 +107,8 @@ on timer timer5s_search
       
     default:
         //default state enters if timer5 gets started during simulation mode or if an error occurs
-        //Normal runtime shouldn't enter
-        write("*** Entered default state during search for shifter!");
+        //Normal runtime shouldn't enter, unless timer5s times out and the select button is in simulator mode
+        write("Entered default state during search for shifter.\nIf the mode-select button currently is in sim mode, ignore this message.");
       break;
   }
   sim_mode = 0;//reset sim_mode in case something happens elesewhere
@@ -138,7 +140,7 @@ on timer timer1ms_AGSMcyclicRequest
     if (requests_failed > 5)
     {
       setTimer(timer5s_search, 5);            //set a timer to wait 5 seconds before retrying the connection
-      cancelTimer(timer1ms_EGSMcyclicRequest);//cancel the cyclic timer to not interfere with the search timer
+      cancelTimer(timer1ms_AGSMcyclicRequest);//cancel the cyclic timer to not interfere with the search timer
       requests_failed = 0;
       write("Searching...");
     }

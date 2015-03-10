@@ -12,6 +12,7 @@ variables
 
 void ChangeBackground(int background)
 {
+  //Each case represents a single background with a few fall-through cases for manual shifting
   switch (background)
   {
     case 0x05:
@@ -34,6 +35,8 @@ void ChangeBackground(int background)
 //Updates the display sensors on screen to the new active states
 void ChangeDisplaySensors(int sensors)
 {
+  //Each if-statements test if the (value & mask) return a 1 to find which sensors are active or not
+  //then set the appropriate image for the result
   if (sensors & 0x40) setPictureBoxImage("sensorPanel", "NN", "..\\images\\ActiveSensor.png");
   else setPictureBoxImage("sensorPanel", "NN", "..\\images\\InactiveSensor.png");
   
@@ -59,18 +62,20 @@ void ChangeDisplaySensors(int sensors)
 //Reset the background images in the MBBError panel for the next test
 void SetMBBErrors(int found[])
 {
+  //Remove the text in the output textbox if last time set the text to anything
   for(i = 0; i < 5; i++) 
-    if (old_state[i] != found[i])
+    if (old_state[i] != found[i])//only reset if a rule-value is different from last time
     { 
-      deleteControlContent("sensorPanel", "outputText");
+      deleteControlContent("sensorPanel", "outputText");//remove everything from the output textbox
       oldRule1 = 0; oldRule2 = 0; oldRule3 = 0; oldRule4 = 0; oldRule5 = 0;
       break; //Doing anything with outputText is costly, so avoid it if more than 1 changed place
     }
-    
+   
   if (found[0]) 
   {
+    //if it found an error for [0] set rule 1 to broken and output the correct text to the textbox
     setPictureBoxImage("MBBRules", "rule1", "..\\images\\error1.png");
-    if (!oldRule1)
+    if (!oldRule1)//make sure the text isn't already displayed in the text after the potential reset, if it is don't output it again
     {
       putValueToControl("sensorPanel", "outputText", "Rule 1 broken:\nThere is no sensor active of the positional sensors!\n\n");
       oldRule1 = 1;
@@ -78,10 +83,11 @@ void SetMBBErrors(int found[])
   }
   else 
   {
+    //otherwise just set the rule background to okay and try the next
     setPictureBoxImage("MBBRules", "rule1", "..\\images\\okay1.png");
     oldRule1 = 0;
   }
-  
+  //see found[0] for information on found[1] -> found[4]
   if (found[1])
   {
     setPictureBoxImage("MBBRules", "rule2", "..\\images\\error2.png");
@@ -144,4 +150,3 @@ void SetMBBErrors(int found[])
   
   for(i = 0; i < 5; i++) old_state[i] = found[i];//Save the last state for next time
 }
-
