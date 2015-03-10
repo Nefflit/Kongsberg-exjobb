@@ -51,9 +51,9 @@ on start
     write("Error setting target!");*/
   }
 }
-/*
+
 on timer timer1s_searching
-{
+{/*
   write("searching...");
   if ( 0 == diagSetTarget("EGSM"))
   {
@@ -75,9 +75,9 @@ on timer timer1s_searching
       write("Error sending request");
     }
   }
-  else setTimer(timer1s_searching, 5);
+  else setTimer(timer1s_searching, 5);*/
 }
-*/
+
 on timer timer1ms_EGSMcyclicRequest
 {
   if ( diagSendRequest(EGSM_hall_req) < 0)
