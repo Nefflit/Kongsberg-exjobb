@@ -7,30 +7,42 @@ includes
 variables
 {
   int i;
+  int Shiftstep;
   msTimer waitdown_Time;
   msTimer waitup_Time;
   msTimer timerdown;
   msTimer timerup;
 }
+on start
+{
+  Shiftstep = (1000/(2*getValue(Sensor_Counter) - 1));
+}
+on envVar Sensor_Counter
+{
+  Shiftstep = (1000/(2*getValue(Sensor_Counter) - 1));
+  write("%d", Shiftstep);
+}
 
 on envVar Gear_Down
 {
+  if (!getValue(Gear_Down)) return;
+  
   if(getValue(Gear_Shift) < 999)
-    putValue(Gear_Shift, getValue(Gear_Shift) + 50);
-    setTimerCyclic(timerdown, 1);
+    setTimerCyclic(timerdown, 10);
 }
 
 on envVar Gear_up
 {
+  if (!getValue(Gear_up)) return;
+  
   if(getValue(Gear_Shift) > 1)
-    putValue(Gear_Shift, getValue(Gear_Shift) - 50);
-    setTimerCyclic(timerup, 1);
+    setTimerCyclic(timerup, 10);
 }
 
 on timer timerdown
 {
-  putValue(Gear_Shift, getValue(Gear_Shift) + 60);
-  if(getValue(Gear_Shift) >= 700)
+  putValue(Gear_Shift, getValue(Gear_Shift) + Shiftstep/4);
+  if(getValue(Gear_Shift) >= 1000)
   {
     setTimer(waitdown_Time, 300);
     cancelTimer(timerdown);
@@ -39,8 +51,8 @@ on timer timerdown
 
 on timer timerup
 {
-  putValue(Gear_Shift, getValue(Gear_Shift) - 60);
-  if(getValue(Gear_Shift) <= 300)
+  putValue(Gear_Shift, getValue(Gear_Shift) - Shiftstep/4);
+  if(getValue(Gear_Shift) <= 0)
   {
     setTimer(waitup_Time, 300);
     cancelTimer(timerup);
@@ -58,6 +70,3 @@ on timer waitup_Time
   for(i = getValue(Gear_Shift); i <= 500; i+=50 )
       putValue(Gear_Shift, getValue(Gear_Shift) + 50);
 }
-
-
-
