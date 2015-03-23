@@ -13,6 +13,8 @@ variables
   int step_count;
   int shifter_mode_value;
   int shifter_state;
+  int standby_value;
+  const int measure_signal_cycle = 10; //cycle time in ms for the state read
   msTimer waitdown_Time;
   msTimer waitup_Time;
   msTimer timerdown;
@@ -25,20 +27,26 @@ on start
 {
   step_count = 2*getValue(Sensor_Counter) - 1;
   Shiftstep = (1000/step_count);
+  standby_value = getValue(Gear_Shift);
   
-  setTimerCyclic(measure_signal, 1);
+  setTimerCyclic(measure_signal, measure_signal_cycle);
   enableControl("GearShifter", "Button_Automatic", 0);
 }
 on envVar Sensor_Counter
 {
   step_count = 2*getValue(Sensor_Counter) - 1;
   Shiftstep = (1000/step_count);
-  write("%d", Shiftstep);
 }
 
 on envVar Gear_Down
 {
+  //exit on events when the envVar turned 0
   if (!getValue(this)) return;
+  //exit without doing anything if shifter is in manual and it's not 
+  //in an idle position
+  if (0 <= shifter_mode_value && shifter_mode_value <= 100) 
+    if (standby_value != getValue(Gear_Shift)) return;
+    
   shift_end_value = getValue(Gear_Shift) + Shiftstep*2;
   
   if(getValue(Gear_Shift) < 999)
@@ -46,7 +54,13 @@ on envVar Gear_Down
 }
 on envVar Gear_up
 {
+  //exit on events when the envVar turned 0
   if (!getValue(this)) return;
+  //exit without doing anything if shifter is in manual and it's not 
+  //in an idle position
+  if (0 <= shifter_mode_value && shifter_mode_value <= 100) 
+    if (standby_value != getValue(Gear_Shift)) return;
+    
   shift_end_value = getValue(Gear_Shift) - Shiftstep*2;
   
   if(getValue(Gear_Shift) > 1)
@@ -107,12 +121,14 @@ on timer waitdown_Time
   putValue(Gear_Shift, getValue(Gear_Shift) - 50);
   if (getValue(Gear_Shift) > 500)
     setTimer(waitdown_Time, 5);
+  else standby_value = getValue(Gear_Shift);
 }
 on timer waitup_Time
 {
   putValue(Gear_Shift, getValue(Gear_Shift) + 50);
   if (getValue(Gear_Shift) < 500)
     setTimer(waitup_Time, 5);
+  else standby_value = getValue(Gear_Shift);
 }
 
 on timer measure_signal

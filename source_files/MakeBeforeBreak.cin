@@ -47,6 +47,8 @@ variables
     { 0x0D, 0x09, 0x05 },
     { 0x09, 0x0D }
   };
+  
+  char bits[16][5] = {"0000","0001","0010","0011","0100","0101","0110","0111","1000","1001","1010","1011","1100","1101","1110","1111"};
 }
 
 //Returns 1 if a non-adjacent sensor is active
@@ -120,6 +122,8 @@ int AddErrors(int sensor)
 //0 NN UU N U C A M
 void MBB(int sensor_status)
 { 
+  /*examine code*/
+  write("%s%s", bits[sensor_status>>4], bits[sensor_status&0xf] );
   /*******************************************************************
     Change the background before altering the signal
   *******************************************************************/

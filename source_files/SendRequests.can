@@ -152,11 +152,11 @@ on timer timer1ms_AGSMcyclicRequest
 on diagResponse EGSM.Classes::DIDs::Hall_Sensors_Read
 {
   this.GetPrimitiveData(hall_respBuffer, 6);
-  write("%x %x %x %x %x %x", hall_respBuffer[0],hall_respBuffer[1],hall_respBuffer[2],hall_respBuffer[3],hall_respBuffer[4],hall_respBuffer[5]);
   
   //data=0x0_: hall_respBuffer[3]
   //convert response to correct MBB input
   sensor_status = 0;
+  //up and down are invertet for a more intuitive motion on-screen when shifting
   sensor_status |= (hall_respBuffer[3] & 0x10) >> 4;
   sensor_status |= (hall_respBuffer[3] & 0x08) >> 2;
   sensor_status |= (hall_respBuffer[3] & 0x04) << 2;
