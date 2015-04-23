@@ -7,6 +7,7 @@ includes
 variables
 {
   int oldRule1 = 0, oldRule2 = 0, oldRule3 = 0, oldRule4 = 0, oldRule5 = 0;
+  int old_shift_state;
   int old_state[5];
 }
 
@@ -59,8 +60,38 @@ void ChangeDisplaySensors(int sensors)
   else setPictureBoxImage("sensorPanel", "M", "..\\images\\InactiveSensor.png");
 }
 
+//Prints out which position the shifter is expected to be in
+void WriteShifterState(int state)
+{
+  if (old_shift_state != state)
+  {
+    deleteControlContent("sensorPanel", "outputText");
+    switch (state)
+    {
+      case 0x05: putValueToControl("sensorPanel", "outputText", "Shifter is in manual at C.\n"); break;
+      case 0x06: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic at C.\n"); break;
+      case 0x07: putValueToControl("sensorPanel", "outputText", "Shifter is between automtic and manual.\n"); break;
+      case 0x15: putValueToControl("sensorPanel", "outputText", "Shifter is in manual between C and D.\n"); break;
+      case 0x16: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic between C and D.\n"); break;
+      case 0x11: putValueToControl("sensorPanel", "outputText", "Shifter is in manual at D.\n"); break;
+      case 0x12: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic at D.\n"); break;
+      case 0x52: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic between D and DD.\n"); break;
+      case 0x42: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic at DD.\n"); break;
+      case 0x0D: putValueToControl("sensorPanel", "outputText", "Shifter is in manual between C and U.\n"); break;
+      case 0x0E: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic between C and U\n"); break;
+      case 0x09: putValueToControl("sensorPanel", "outputText", "Shifter is in manual at U.\n"); break;
+      case 0x0A: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic at U.\n"); break;
+      case 0x2A: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic between U and UU.\n"); break;
+      case 0x22: putValueToControl("sensorPanel", "outputText", "Shifter is in automatic at UU.\n"); break;
+      //default state should never happen, so write and error message
+      default: write("***ERROR: WriteShifterState recived invalid value"); break;
+    }
+    old_shift_state = state;
+  }
+}
+
 //Reset the background images in the MBBError panel for the next test
-void SetMBBErrors(int found[])
+void SetMBBErrors(int state, int found[])
 {
   //Remove the text in the output textbox if last time set the text to anything
   for(i = 0; i < 5; i++) 
@@ -68,6 +99,7 @@ void SetMBBErrors(int found[])
     { 
       deleteControlContent("sensorPanel", "outputText");//remove everything from the output textbox
       oldRule1 = 0; oldRule2 = 0; oldRule3 = 0; oldRule4 = 0; oldRule5 = 0;
+      WriteShifterState(state); //do anoter call to WriteShifterState since we deleted the last value
       break; //Doing anything with outputText is costly, so avoid it if more than 1 changed place
     }
    

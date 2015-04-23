@@ -6,14 +6,14 @@
       <Property Name="Size">23, 13</Property>
       <Property Name="Location">310, 427</Property>
       <Property Name="BackColor">240, 240, 240</Property>
-      <Property Name="Text">NN</Property>
+      <Property Name="Text">DD</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl6" Children="Controls" ControlName="Static Text 6">
       <Property Name="Name">StaticTextControl6</Property>
       <Property Name="Size">15, 13</Property>
       <Property Name="Location">318, 347</Property>
       <Property Name="BackColor">240, 240, 240</Property>
-      <Property Name="Text">N</Property>
+      <Property Name="Text">D</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl5" Children="Controls" ControlName="Static Text 5">
       <Property Name="Name">StaticTextControl5</Property>
@@ -48,7 +48,7 @@
       <Property Name="Name">PictureBoxControl8</Property>
       <Property Name="Size">88, 78</Property>
       <Property Name="Location">166, 118</Property>
-      <Property Name="ImageFile">..\images\ActiveSensor.png</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
       <Property Name="Name">StaticTextControl2</Property>
@@ -86,7 +86,7 @@
       <Property Name="Name">PictureBoxControl4</Property>
       <Property Name="Size">88, 78</Property>
       <Property Name="Location">339, 213</Property>
-      <Property Name="ImageFile">..\images\ActiveSensor.png</Property>
+      <Property Name="ImageFile">..\images\InactiveSensor.png</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl3" ControlName="U">
       <Property Name="Name">PictureBoxControl3</Property>

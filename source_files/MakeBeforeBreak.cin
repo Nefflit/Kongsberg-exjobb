@@ -10,6 +10,7 @@ variables
   int j = 0;
   int _last_position = 0x06; //Assume shifter begin in neutral
   int _last_move = 0x06;
+  int _this_state_clean = 0x06; //never contaminate this variable with errors
   int _repeated = 0;
   int _sensors_active = 0;
   int _allowed = 0;
@@ -131,6 +132,7 @@ void MBB(int sensor_status)
   /*******************************************************************
     Add user specified errors to the sensor value
   *******************************************************************/
+  _this_state_clean = sensor_status; //save the value before contaminating it with errors
   sensor_status = AddErrors(sensor_status);
   
   /*******************************************************************
@@ -197,6 +199,7 @@ void MBB(int sensor_status)
     Update Interface
   *******************************************************************/
   ChangeDisplaySensors(sensor_status);
-  SetMBBErrors(_found_error);
+  WriteShifterState(_this_state_clean);
+  SetMBBErrors(_this_state_clean, _found_error);
   for(i = 0; i < 5; i++) _found_error[i] = 0; //Reset the error array for the next time
 }

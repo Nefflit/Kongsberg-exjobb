@@ -32,7 +32,7 @@
       <Property Name="Name">CheckBoxControl5</Property>
       <Property Name="Size">42, 30</Property>
       <Property Name="Location">28, 177</Property>
-      <Property Name="Text">NN</Property>
+      <Property Name="Text">DD</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;NN_A;1;;;-1</Property>
       <Property Name="TabIndex">11</Property>
     </Object>
@@ -40,7 +40,7 @@
       <Property Name="Name">CheckBoxControl4</Property>
       <Property Name="Size">34, 30</Property>
       <Property Name="Location">28, 141</Property>
-      <Property Name="Text">N</Property>
+      <Property Name="Text">D</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;N_A;1;;;-1</Property>
       <Property Name="TabIndex">10</Property>
     </Object>
@@ -136,12 +136,12 @@
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl1" ControlName="Switch/Indicator UU">
       <Property Name="Name">SwitchControl1</Property>
-      <Property Name="Size">29, 30</Property>
+      <Property Name="Size">101, 30</Property>
       <Property Name="Location">76, 33</Property>
       <Property Name="StateCnt">2</Property>
       <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
+      <Property Name="SwitchValues">1;2;1;0</Property>
+      <Property Name="ImageFile">..\images\test1.png</Property>
       <Property Name="SymbolConfiguration">4;1;Testdatabase;;;UU;1;;;-1</Property>
       <Property Name="TabIndex">0</Property>
     </Object>
@@ -153,6 +153,6 @@
       <Property Name="TabIndex">14</Property>
     </Object>
     <Property Name="Name">Panel</Property>
-    <Property Name="Size">271, 281</Property>
+    <Property Name="Size">267, 239</Property>
   </Object>
 </Panel>
