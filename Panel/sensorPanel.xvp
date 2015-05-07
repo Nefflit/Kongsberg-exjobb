@@ -1,6 +1,24 @@
 <?xml version="1.0"?>
 <Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null">
   <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="sensorPanel">
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl11" ControlName="magnet_m">
+      <Property Name="Name">PictureBoxControl11</Property>
+      <Property Name="Size">91, 58</Property>
+      <Property Name="Location">46, 34</Property>
+      <Property Name="ImageFile">..\images\empty.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl10" ControlName="magnet_a">
+      <Property Name="Name">PictureBoxControl10</Property>
+      <Property Name="Size">91, 58</Property>
+      <Property Name="Location">166, 35</Property>
+      <Property Name="ImageFile">..\images\magnet.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl9" ControlName="magnet_am">
+      <Property Name="Name">PictureBoxControl9</Property>
+      <Property Name="Size">91, 58</Property>
+      <Property Name="Location">107, 34</Property>
+      <Property Name="ImageFile">..\images\empty.png</Property>
+    </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl7" Children="Controls" ControlName="Static Text 7">
       <Property Name="Name">StaticTextControl7</Property>
       <Property Name="Size">23, 13</Property>
