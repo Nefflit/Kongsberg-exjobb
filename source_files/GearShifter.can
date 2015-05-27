@@ -15,10 +15,11 @@ variables
   int shifter_state;
   int standby_value;
   const int measure_signal_cycle = 10; //cycle time in ms for the state read
+  const int stop_delay = 350; //the delay time where it waits in a forced position before returning to standby
   msTimer waitdown_Time;
   msTimer waitup_Time;
-  msTimer timerdown;
-  msTimer timerup;
+  msTimer timer_down;
+  msTimer timer_up;
   msTimer timer_mode_auto;
   msTimer timer_mode_man;
   msTimer measure_signal;
@@ -29,7 +30,7 @@ on start
   Shiftstep = (1000/step_count);
   standby_value = getValue(Gear_Shift);
   
-  setTimerCyclic(measure_signal, measure_signal_cycle);
+  setTimerCyclic(measure_signal, measure_signal_cycle); //start the simulator
   enableControl("GearShifter", "Button_Automatic", 0);
 }
 on envVar Sensor_Counter
@@ -50,7 +51,7 @@ on envVar Gear_Down
   shift_end_value = getValue(Gear_Shift) + Shiftstep*2;
   
   if(getValue(Gear_Shift) < 999)
-    setTimerCyclic(timerdown, 10);
+    setTimerCyclic(timer_down, 10);
 }
 on envVar Gear_up
 {
@@ -64,7 +65,7 @@ on envVar Gear_up
   shift_end_value = getValue(Gear_Shift) - Shiftstep*2;
   
   if(getValue(Gear_Shift) > 1)
-    setTimerCyclic(timerup, 10);
+    setTimerCyclic(timer_up, 10);
 }
 on envVar Mode_Auto
 {
@@ -77,21 +78,21 @@ on envVar Mode_Man
   setTimerCyclic(timer_mode_auto, 20);
 }
 
-on timer timerdown
+on timer timer_down
 {
-  putValue(Gear_Shift, getValue(Gear_Shift) + Shiftstep/4);
+  putValue(Gear_Shift, getValue(Gear_Shift) + Shiftstep/6);
   if(getValue(Gear_Shift) >= 1000 || shift_end_value < getValue(Gear_Shift))
   {
-    setTimer(waitdown_Time, 300);
+    setTimer(waitdown_Time, stop_delay);
     cancelTimer(this);
   }
 }
-on timer timerup
+on timer timer_up
 {
-  putValue(Gear_Shift, getValue(Gear_Shift) - Shiftstep/4);
+  putValue(Gear_Shift, getValue(Gear_Shift) - Shiftstep/6);
   if(getValue(Gear_Shift) <= 0 || shift_end_value > getValue(Gear_Shift))
   {
-    setTimer(waitup_Time, 300);
+    setTimer(waitup_Time, stop_delay);
     cancelTimer(this);
   }
 }

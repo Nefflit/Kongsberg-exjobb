@@ -172,7 +172,7 @@ on diagResponse _952_AGSM_Automatic_Gearbox_Shifter_Module.Classes::EngeneeringP
   
   //TODO: convert bytes to MBB input
   sensor_status = 0;
-  //WARNING: THE FOLLOWING CODE IS NOT SAFE, DO NOT USE IN TAIWAN!
+  //WARNING: THE FOLLOWING CODE IS INCOMPLETE AND UNSAFE, DO NOT USE!
   //it assumes that the raw data is in hall_respBuffer for now
   sensor_status |= (hall_respBuffer[3]/*PLACEHOLDER*/ & 0x40) >> 6;
   sensor_status |= (hall_respBuffer[3]/*PLACEHOLDER*/ & 0x20) >> 4;

@@ -1,158 +1,259 @@
 <?xml version="1.0"?>
 <Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null">
   <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="ErrorSelectPanel">
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl8" ControlName="Switch/Indicator">
-      <Property Name="Name">SwitchControl8</Property>
-      <Property Name="Size">77, 39</Property>
-      <Property Name="Location">28, 239</Property>
-      <Property Name="StateCnt">3</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;3;0;1;2</Property>
-      <Property Name="ImageFile">..\images\select.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;Mode_Select;1;;;-1</Property>
-      <Property Name="TabIndex">15</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl7" Children="Controls" ControlName="Check Box 3">
-      <Property Name="Name">CheckBoxControl7</Property>
-      <Property Name="Size">73, 30</Property>
-      <Property Name="Location">121, 141</Property>
-      <Property Name="Text">Manual</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;M_A;1;;;-1</Property>
-      <Property Name="TabIndex">13</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl6" Children="Controls" ControlName="Check Box 3">
-      <Property Name="Name">CheckBoxControl6</Property>
-      <Property Name="Size">73, 30</Property>
-      <Property Name="Location">121, 105</Property>
-      <Property Name="Text">Automatic</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;A_A;1;;;-1</Property>
-      <Property Name="TabIndex">12</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl5" Children="Controls" ControlName="Check Box 2">
-      <Property Name="Name">CheckBoxControl5</Property>
-      <Property Name="Size">42, 30</Property>
-      <Property Name="Location">28, 177</Property>
-      <Property Name="Text">NN</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;NN_A;1;;;-1</Property>
-      <Property Name="TabIndex">11</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl4" Children="Controls" ControlName="Check Box 2">
-      <Property Name="Name">CheckBoxControl4</Property>
-      <Property Name="Size">34, 30</Property>
-      <Property Name="Location">28, 141</Property>
-      <Property Name="Text">N</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;N_A;1;;;-1</Property>
-      <Property Name="TabIndex">10</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl3" Children="Controls" ControlName="Check Box 2">
-      <Property Name="Name">CheckBoxControl3</Property>
-      <Property Name="Size">33, 30</Property>
-      <Property Name="Location">28, 105</Property>
-      <Property Name="Text">C</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;C_A;1;;;-1</Property>
-      <Property Name="TabIndex">9</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl2" Children="Controls" ControlName="Check Box 2">
-      <Property Name="Name">CheckBoxControl2</Property>
-      <Property Name="Size">34, 30</Property>
-      <Property Name="Location">28, 69</Property>
-      <Property Name="Text">U</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;U_A;1;;;-1</Property>
-      <Property Name="TabIndex">8</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl1" Children="Controls" ControlName="Check Box">
-      <Property Name="Name">CheckBoxControl1</Property>
-      <Property Name="Size">42, 30</Property>
-      <Property Name="Location">28, 33</Property>
-      <Property Name="Text">UU</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;UU_A;1;;;-1</Property>
-      <Property Name="TabIndex">7</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl7" ControlName="Switch/Indicator A">
-      <Property Name="Name">SwitchControl7</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">200, 141</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;M;1;;;-1</Property>
-      <Property Name="TabIndex">6</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl6" ControlName="Switch/Indicator M">
-      <Property Name="Name">SwitchControl6</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">200, 105</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;A;1;;;-1</Property>
-      <Property Name="TabIndex">5</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl5" ControlName="Switch/Indicator NN">
-      <Property Name="Name">SwitchControl5</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">76, 177</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;NN;1;;;-1</Property>
-      <Property Name="TabIndex">4</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl4" ControlName="Switch/Indicator N">
-      <Property Name="Name">SwitchControl4</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">76, 141</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;N;1;;;-1</Property>
-      <Property Name="TabIndex">3</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl3" ControlName="Switch/Indicator C">
-      <Property Name="Name">SwitchControl3</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">76, 105</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;C;1;;;-1</Property>
-      <Property Name="TabIndex">2</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl2" ControlName="Switch/Indicator U">
-      <Property Name="Name">SwitchControl2</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">76, 69</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;U;1;;;-1</Property>
-      <Property Name="TabIndex">1</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl1" ControlName="Switch/Indicator UU">
-      <Property Name="Name">SwitchControl1</Property>
-      <Property Name="Size">29, 30</Property>
-      <Property Name="Location">76, 33</Property>
-      <Property Name="StateCnt">2</Property>
-      <Property Name="Activation">Left</Property>
-      <Property Name="SwitchValues">1;2;0;1</Property>
-      <Property Name="ImageFile">..\images\SensorSwitch.png</Property>
-      <Property Name="SymbolConfiguration">4;1;Testdatabase;;;UU;1;;;-1</Property>
-      <Property Name="TabIndex">0</Property>
-    </Object>
-    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl1" ControlName="Group Box">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl1" Children="Controls" ControlName="Group Box">
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl13" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl13</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">288, 120</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl14" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl14</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">288, 96</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl7" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl7</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">248, 88</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;M;1;;;-1</Property>
+        <Property Name="TabIndex">33</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl7" Children="Controls" ControlName="Check Box 3">
+        <Property Name="Name">CheckBoxControl7</Property>
+        <Property Name="Size">61, 17</Property>
+        <Property Name="Location">176, 104</Property>
+        <Property Name="Text">Manual</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;M_A;1;;;-1</Property>
+        <Property Name="TabIndex">13</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl11" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl11</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">288, 56</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl12" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl12</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">288, 32</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl6" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl6</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">248, 24</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;A;1;;;-1</Property>
+        <Property Name="TabIndex">30</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl9" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl9</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">96, 272</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl6" Children="Controls" ControlName="Check Box 3">
+        <Property Name="Name">CheckBoxControl6</Property>
+        <Property Name="Size">73, 17</Property>
+        <Property Name="Location">176, 40</Property>
+        <Property Name="Text">Automatic</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;A_A;1;;;-1</Property>
+        <Property Name="TabIndex">12</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl7" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl7</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">96, 216</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl10" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl10</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">96, 248</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl8" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl8</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">96, 192</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl5" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl5</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">56, 240</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;NN;1;;;-1</Property>
+        <Property Name="TabIndex">23</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl4" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl4</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">56, 184</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;N;1;;;-1</Property>
+        <Property Name="TabIndex">27</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl10" Children="Controls" ControlName="Check Box 2">
+        <Property Name="Name">CheckBoxControl10</Property>
+        <Property Name="Size">42, 17</Property>
+        <Property Name="Location">8, 256</Property>
+        <Property Name="Text">DD</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;NN_A;1;;;-1</Property>
+        <Property Name="TabIndex">21</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl9" Children="Controls" ControlName="Check Box 2">
+        <Property Name="Name">CheckBoxControl9</Property>
+        <Property Name="Size">34, 17</Property>
+        <Property Name="Location">8, 200</Property>
+        <Property Name="Text">D</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;N_A;1;;;-1</Property>
+        <Property Name="TabIndex">25</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl5" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl5</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">96, 160</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl6" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl6</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">96, 136</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl3" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl3</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">56, 128</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;C;1;;;-1</Property>
+        <Property Name="TabIndex">23</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl8" Children="Controls" ControlName="Check Box 2">
+        <Property Name="Name">CheckBoxControl8</Property>
+        <Property Name="Size">33, 17</Property>
+        <Property Name="Location">8, 144</Property>
+        <Property Name="Text">C</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;C_A;1;;;-1</Property>
+        <Property Name="TabIndex">21</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl3</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">96, 104</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl4" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl4</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">96, 80</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl2" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl2</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">56, 72</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;U;1;;;-1</Property>
+        <Property Name="TabIndex">19</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl2</Property>
+        <Property Name="Size">57, 13</Property>
+        <Property Name="Location">96, 48</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always Off</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+        <Property Name="Name">StaticTextControl1</Property>
+        <Property Name="Size">57, 16</Property>
+        <Property Name="Location">96, 24</Property>
+        <Property Name="BackColor">240, 240, 240</Property>
+        <Property Name="Text">Always On</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl1</Property>
+        <Property Name="Size">32, 51</Property>
+        <Property Name="Location">56, 16</Property>
+        <Property Name="Maximum">1</Property>
+        <Property Name="Orientation">Vertical</Property>
+        <Property Name="LargeChange">1</Property>
+        <Property Name="LargeChangeDouble">1</Property>
+        <Property Name="MaximumDouble">1</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;UU;1;;;-1</Property>
+        <Property Name="TabIndex">16</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl1" Children="Controls" ControlName="Check Box">
+        <Property Name="Name">CheckBoxControl1</Property>
+        <Property Name="Size">42, 17</Property>
+        <Property Name="Location">8, 32</Property>
+        <Property Name="Text">UU</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;UU_A;1;;;-1</Property>
+        <Property Name="TabIndex">7</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.2.98.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl2" Children="Controls" ControlName="Check Box 2">
+        <Property Name="Name">CheckBoxControl2</Property>
+        <Property Name="Size">34, 17</Property>
+        <Property Name="Location">8, 88</Property>
+        <Property Name="Text">U</Property>
+        <Property Name="SymbolConfiguration">4;1;Testdatabase;;;U_A;1;;;-1</Property>
+        <Property Name="TabIndex">8</Property>
+      </Object>
       <Property Name="Name">GroupBoxControl1</Property>
-      <Property Name="Size">260, 222</Property>
+      <Property Name="Size">365, 304</Property>
       <Property Name="Location">3, 11</Property>
       <Property Name="Text">Sensor Errors</Property>
       <Property Name="TabIndex">14</Property>
     </Object>
     <Property Name="Name">Panel</Property>
-    <Property Name="Size">271, 281</Property>
+    <Property Name="Size">372, 318</Property>
   </Object>
 </Panel>
