@@ -198,7 +198,7 @@ void MBB(int sensor_status)
   /*******************************************************************
     Update Interface
   *******************************************************************/
-  ChangeDisplaySensors(sensor_status);
+  ChangeDisplaySensors(_this_state_clean, sensor_status);
   FillOutputTextBox(_this_state_clean, _found_error);
   for (i = 0; i < 5; i++) _found_error[i] = 0; //Reset the error array for the next time
 }

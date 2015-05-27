@@ -49,29 +49,36 @@ void ChangeBackground(int background)
 }
 
 //Updates the display sensors on screen to the new active states
-void ChangeDisplaySensors(int sensors)
+void ChangeDisplaySensors(int sensors, int with_errors)
 {
   //Each if-statements test if the (value & mask) return a 1 to find which sensors are active or not
   //then set the appropriate image for the result
   if (sensors & 0x40) setPictureBoxImage("sensorPanel", "NN", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x40) setPictureBoxImage("sensorPanel", "NN", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "NN", "..\\images\\InactiveSensor.png");
   
   if (sensors & 0x20) setPictureBoxImage("sensorPanel", "UU", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x20) setPictureBoxImage("sensorPanel", "UU", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "UU", "..\\images\\InactiveSensor.png");
   
   if (sensors & 0x10) setPictureBoxImage("sensorPanel", "N", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x10) setPictureBoxImage("sensorPanel", "N", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "N", "..\\images\\InactiveSensor.png");
   
   if (sensors & 0x08) setPictureBoxImage("sensorPanel", "U", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x08) setPictureBoxImage("sensorPanel", "U", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "U", "..\\images\\InactiveSensor.png");
   
   if (sensors & 0x04) setPictureBoxImage("sensorPanel", "C", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x04) setPictureBoxImage("sensorPanel", "C", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "C", "..\\images\\InactiveSensor.png");
   
   if (sensors & 0x02) setPictureBoxImage("sensorPanel", "A", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x02) setPictureBoxImage("sensorPanel", "A", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "A", "..\\images\\InactiveSensor.png");
   
   if (sensors & 0x01) setPictureBoxImage("sensorPanel", "M", "..\\images\\ActiveSensor.png");
+  else if (with_errors & 0x01) setPictureBoxImage("sensorPanel", "M", "..\\images\\FaultySensor.png");
   else setPictureBoxImage("sensorPanel", "M", "..\\images\\InactiveSensor.png");
 }
 
