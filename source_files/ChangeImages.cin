@@ -8,6 +8,7 @@ variables
 {
   int oldRule1 = 0, oldRule2 = 0, oldRule3 = 0, oldRule4 = 0, oldRule5 = 0;
   int old_shift_state;
+  int last_logged;
   int shifter_state_displayed = 0;
   int old_state[5];
 }
@@ -216,14 +217,16 @@ void FillOutputTextBox(int state, int found[])
   for (i = 0; i < 5; i++) old_state[i] = found[i];//Save the last state for next time
 }
 
-void LogAction(int state)
+void LogAction(int act)
 {
+  if (last_logged == act) return;
   switch (act)
+    case 2: putValueToControl("logPanel", "logOutput", "Shift down.\n\n"); break;
   {
     case 1: putValueToControl("logPanel", "logOutput", "Shift up.\n\n"); break;
-    case 2: putValueToControl("logPanel", "logOutput", "Shift down.\n\n"); break;
     case 3: putValueToControl("logPanel", "logOutput", "Shift automatic.\n\n"); break;
     case 4: putValueToControl("logPanel", "logOutput", "Shift manual.\n\n"); break;
     default: putValueToControl("logPanel", "logOutput", "***ERROR: Wrong input to LogAction().\n\n"); break;
   }
+  last_logged = act;
 }

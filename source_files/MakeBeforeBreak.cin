@@ -130,8 +130,8 @@ void MBB(int sensor_status)
   
   // Figure out which action happened and log it 
   _action = 0;
-  if ((_last_move & 0xFB) == 0x04 && (sensor_status & 0xFB) == 0x0B) _action = 1;
-  else if ((_last_move & 0xFB) == 0x04 && (sensor_status & 0xFB) == 0x14) _action = 2;
+  if ((_last_move & 0xFC) == 0x04 && (sensor_status & 0xFC) == 0x0B) _action = 1;
+  else if ((_last_move & 0xFC) == 0x04 && (sensor_status & 0xFC) == 0x14) _action = 2;
   else if (_last_move == 0x05 && sensor_status == 0x07) _action = 3;
   else if (_last_move == 0x06 && sensor_status == 0x07) _action = 4;
   
