@@ -138,6 +138,7 @@ void FillOutputTextBox(int state, int found[])
     if (!oldRule1)//make sure the text isn't already displayed in the text after the potential reset, if it is don't output it again
     {
       putValueToControl("sensorPanel", "outputText", "Rule 1 broken:\nThere is no sensor active of the positional sensors!\n\n");
+      putValueToControl("logPanel", "logOutput", "Detected rule 1 broken.\n\n");
       oldRule1 = 1;
     }
   }
@@ -154,6 +155,7 @@ void FillOutputTextBox(int state, int found[])
     if (!oldRule2)
     {
       putValueToControl("sensorPanel", "outputText", "Rule 2 broken:\nOnly two sensors can be active at any time!\n\n");
+      putValueToControl("logPanel", "logOutput", "Detected rule 2 broken.\n\n");
       oldRule2 = 1;
     }
   }
@@ -169,6 +171,7 @@ void FillOutputTextBox(int state, int found[])
     if (!oldRule3)
     {
       putValueToControl("sensorPanel", "outputText", "Rule 3 broken:\nThe sensors active are not adjacent to each other!\n\n");
+      putValueToControl("logPanel", "logOutput", "Detected rule 3 broken.\n\n");
       oldRule3 = 1;
     }
   }
@@ -184,6 +187,7 @@ void FillOutputTextBox(int state, int found[])
     if (!oldRule4)
     {
       putValueToControl("sensorPanel", "outputText", "Rule 4 broken:\nNot enough time passed between two movements!\n\n");
+      putValueToControl("logPanel", "logOutput", "Detected rule 4 broken.\n\n");
       oldRule4 = 1;
     }
   }
@@ -199,6 +203,7 @@ void FillOutputTextBox(int state, int found[])
     if (!oldRule5)
     {
       putValueToControl("sensorPanel", "outputText", "Rule 5 broken:\nThis is not a combination of moves that is possible by hardware limitations!");
+      putValueToControl("logPanel", "logOutput", "Detected rule 5 broken.\n\n");
       oldRule5 = 1;
     }
   }
@@ -209,4 +214,16 @@ void FillOutputTextBox(int state, int found[])
   }
   
   for (i = 0; i < 5; i++) old_state[i] = found[i];//Save the last state for next time
+}
+
+void LogAction(int state)
+{
+  switch (act)
+  {
+    case 1: putValueToControl("logPanel", "logOutput", "Shift up.\n\n"); break;
+    case 2: putValueToControl("logPanel", "logOutput", "Shift down.\n\n"); break;
+    case 3: putValueToControl("logPanel", "logOutput", "Shift automatic.\n\n"); break;
+    case 4: putValueToControl("logPanel", "logOutput", "Shift manual.\n\n"); break;
+    default: putValueToControl("logPanel", "logOutput", "***ERROR: Wrong input to LogAction().\n\n"); break;
+  }
 }

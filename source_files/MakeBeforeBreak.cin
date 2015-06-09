@@ -11,6 +11,7 @@ variables
   int _last_position = 0x06; //Assume shifter begin in neutral
   int _last_move = 0x06;
   int _this_state_clean = 0x06; //never contaminate this variable with errors
+  int _action;
   int _repeated = 0;
   int _sensors_active = 0;
   int _allowed = 0;
@@ -126,14 +127,15 @@ void MBB(int sensor_status)
 { 
   /*examine code that print the current state in bits*/
   //write("%s%s", bits[sensor_status>>4], bits[sensor_status&0xf] ); //Used during development
-  /*
-  The shifter sometimes miss a reading, giving assumed false positives.
-  The values are run through the following function in order for the false
-  positives to not get marked.
-  This also mean any actual errors will be masked as false positives, as
-  the program assumes that everything from the gear shifter is never faulty.
-  */
-  sensor_status = TestMissedReading(sensor_status, _last_position);
+  
+  // Figure out which action happened and log it 
+  _action = 0;
+  if ((_last_move & 0xFB) == 0x04 && (sensor_status & 0xFB) == 0x0B) _action = 1;
+  else if ((_last_move & 0xFB) == 0x04 && (sensor_status & 0xFB) == 0x14) _action = 2;
+  else if (_last_move == 0x05 && sensor_status == 0x07) _action = 3;
+  else if (_last_move == 0x06 && sensor_status == 0x07) _action = 4;
+  
+  if (_action) LogAction(_action);
   /*******************************************************************
     Change the background before altering the signal
   *******************************************************************/

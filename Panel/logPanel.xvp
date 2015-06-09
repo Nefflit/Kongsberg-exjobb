@@ -5,7 +5,8 @@
       <Property Name="Name">CAPLOutputViewControl1</Property>
       <Property Name="Size">477, 267</Property>
       <Property Name="Location">0, 0</Property>
-      <Property Name="BoxBackgroundColor">ControlLightLight</Property>
+      <Property Name="BoxFont">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="BoxBackgroundColor">Control</Property>
       <Property Name="TabIndex">0</Property>
     </Object>
     <Property Name="Name">Panel</Property>
