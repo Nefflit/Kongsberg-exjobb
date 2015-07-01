@@ -14,7 +14,7 @@ variables
   int shifter_mode_value;
   int shifter_state;
   int standby_value;
-  const int measure_signal_cycle = 10; //cycle time in ms for the state read
+  const int measure_signal_cycle = 1; //cycle time in ms for the state read
   const int stop_delay = 350; //the delay time where it waits in a forced position before returning to standby
   msTimer waitdown_Time;
   msTimer waitup_Time;
