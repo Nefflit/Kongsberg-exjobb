@@ -221,8 +221,8 @@ void LogAction(int act)
 {
   if (last_logged == act) return;
   switch (act)
-    case 2: putValueToControl("logPanel", "logOutput", "Shift down.\n\n"); break;
   {
+    case 2: putValueToControl("logPanel", "logOutput", "Shift down.\n\n"); break;
     case 1: putValueToControl("logPanel", "logOutput", "Shift up.\n\n"); break;
     case 3: putValueToControl("logPanel", "logOutput", "Shift automatic.\n\n"); break;
     case 4: putValueToControl("logPanel", "logOutput", "Shift manual.\n\n"); break;

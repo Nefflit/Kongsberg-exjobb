@@ -89,7 +89,7 @@ on timer timer_down
   if(getValue(Gear_Shift) >= 1000 || shift_end_value <= getValue(Gear_Shift))
   {
     cancelTimer(this);
-    while (getValue(Gear_Down)) ; // Remain at the edge of a shift as long as the button is pressed
+    //while (getValue(Gear_Down)) ; // Remain at the edge of a shift as long as the button is pressed
     setTimer(waitdown_Time, stop_delay);
   }
 }
@@ -99,7 +99,7 @@ on timer timer_up
   if(getValue(Gear_Shift) <= 0 || shift_end_value >= getValue(Gear_Shift))
   {
     cancelTimer(this);
-    while (getValue(Gear_up)) ; // Remain at the edge of a shift as long as the button is pressed
+    //while (getValue(Gear_up)) ; // Remain at the edge of a shift as long as the button is pressed
     setTimer(waitup_Time, stop_delay);
   }
 }
