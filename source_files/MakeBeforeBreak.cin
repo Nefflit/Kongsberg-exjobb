@@ -17,6 +17,7 @@ variables
   int _non_adjacent_active = 0;
   int _matched_pattern = 0;
   int _found_error[5] = {0,0,0,0,0};
+  int _expected_value; //What MBB expects to get from the next reading
   int _legal_patterns[15][4] = 
   {
     /* 
@@ -31,25 +32,48 @@ variables
     */
     //Automatic shift
     { 0x42, 0x52 },
-    { 0x52, 0x42, 0x12 },
+    { 0x52, 0x42, 0x12 }, //In-between
     { 0x12, 0x52, 0x16 },
-    { 0x16, 0x12, 0x06 },
-    { 0x0E, 0x06, 0x0A },
+    { 0x16, 0x12, 0x06 }, //In-between
+    { 0x0E, 0x06, 0x0A }, //In-between
     { 0x0A, 0x0E, 0x2A },
-    { 0x2A, 0x0A, 0x22 },
+    { 0x2A, 0x0A, 0x22 }, //In-between
     { 0x22, 0x2A },
     //Switching Automatic -> Manual
     { 0x06, 0x16, 0x0E, 0x07 },
-    { 0x07, 0x05, 0x06 },
+    { 0x07, 0x05, 0x06 }, //In-between
     { 0x05, 0x0D, 0x15, 0x07 },
     //Manual shift
-    { 0x15, 0x05, 0x11 },
+    { 0x15, 0x05, 0x11 }, //In-between
     { 0x11, 0x15 }, 
-    { 0x0D, 0x09, 0x05 },
+    { 0x0D, 0x09, 0x05 }, //In-between
     { 0x09, 0x0D }
+  };
+  //0:from/to 1:between 2:to/from
+  int movements[7][3] =
+  {
+    { 0x12, 0x52, 0x42 },
+    { 0x12, 0x16, 0x06 },
+    { 0x22, 0x2A, 0x0A },
+    { 0x06, 0x0E, 0x0A },
+    { 0x06, 0x07, 0x05 },
+    { 0x05, 0x0D, 0x09 },
+    { 0x05, 0x15, 0x11 }
   };
   
   char bits[16][5] = {"0000","0001","0010","0011","0100","0101","0110","0111","1000","1001","1010","1011","1100","1101","1110","1111"};
+}
+
+//Returns the value MBB should have gotten
+int TestMissedReading(int status, int last)
+{
+  //If the shifter didn't change position there's no need to check further
+  if (status == last) return status;
+  
+  for (i = 0; i < 7; i++)
+    if ((movements[i][0] == last || movements[i][2] == last) && movements[i][1] != status)
+      return movements[i][1];
+  return status; //Return the original value if neither check matches
 }
 
 //Returns 1 if a non-adjacent sensor is active
@@ -124,7 +148,15 @@ int AddErrors(int sensor)
 void MBB(int sensor_status)
 { 
   /*examine code that print the current state in bits*/
-  write("%s%s", bits[sensor_status>>4], bits[sensor_status&0xf] );
+  //write("%s%s", bits[sensor_status>>4], bits[sensor_status&0xf] ); //Used during development
+  /*
+  The shifter sometimes miss a reading, giving assumed false positives.
+  The values are run through the following function in order for the false
+  positives to not get marked.
+  This also mean any actual errors will be masked as false positives, as
+  the program assumes that everything from the gear shifter is never faulty.
+  */
+  sensor_status = TestMissedReading(sensor_status, _last_position);
   /*******************************************************************
     Change the background before altering the signal
   *******************************************************************/
