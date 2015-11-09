@@ -49,31 +49,8 @@ variables
     { 0x0D, 0x09, 0x05 }, //In-between
     { 0x09, 0x0D }
   };
-  //0:from/to 1:between 2:to/from
-  int movements[7][3] =
-  {
-    { 0x12, 0x52, 0x42 },
-    { 0x12, 0x16, 0x06 },
-    { 0x22, 0x2A, 0x0A },
-    { 0x06, 0x0E, 0x0A },
-    { 0x06, 0x07, 0x05 },
-    { 0x05, 0x0D, 0x09 },
-    { 0x05, 0x15, 0x11 }
-  };
   
   char bits[16][5] = {"0000","0001","0010","0011","0100","0101","0110","0111","1000","1001","1010","1011","1100","1101","1110","1111"};
-}
-
-//Returns the value MBB should have gotten
-int TestMissedReading(int status, int last)
-{
-  //If the shifter didn't change position there's no need to check further
-  if (status == last) return status;
-  
-  for (i = 0; i < 7; i++)
-    if ((movements[i][0] == last || movements[i][2] == last) && movements[i][1] != status)
-      return movements[i][1];
-  return status; //Return the original value if neither check matches
 }
 
 //Returns 1 if a non-adjacent sensor is active

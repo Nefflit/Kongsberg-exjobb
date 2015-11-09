@@ -26,6 +26,10 @@ variables
 }
 on start
 {
+  // Calculates the number of positions for the shifter
+  // and how long the distance is between two positions.
+  //
+  // Based on the number of sensors on the simulated shifter.
   step_count = 2*getValue(Sensor_Counter) - 1;
   Shiftstep = (1000/step_count);
   standby_value = getValue(Gear_Shift);
@@ -35,6 +39,7 @@ on start
 }
 on envVar Sensor_Counter
 {
+  // Update the position count and distance when the number of sensors change
   step_count = 2*getValue(Sensor_Counter) - 1;
   Shiftstep = (1000/step_count);
 }
@@ -45,7 +50,7 @@ on envVar Gear_Down
   if (!getValue(this)) return;
   //exit without doing anything if shifter is in manual and it's not 
   //in an idle position
-  if (0 <= shifter_mode_value && shifter_mode_value <= 100) 
+  if (0 <= shifter_mode_value && shifter_mode_value <= 100)
     if (standby_value != getValue(Gear_Shift)) return;
     
   shift_end_value = getValue(Gear_Shift) + Shiftstep*2;
@@ -59,7 +64,7 @@ on envVar Gear_up
   if (!getValue(this)) return;
   //exit without doing anything if shifter is in manual and it's not 
   //in an idle position
-  if (0 <= shifter_mode_value && shifter_mode_value <= 100) 
+  if (0 <= shifter_mode_value && shifter_mode_value <= 100)
     if (standby_value != getValue(Gear_Shift)) return;
     
   shift_end_value = getValue(Gear_Shift) - Shiftstep*2;
@@ -81,19 +86,21 @@ on envVar Mode_Man
 on timer timer_down
 {
   putValue(Gear_Shift, getValue(Gear_Shift) + Shiftstep/6);
-  if(getValue(Gear_Shift) >= 1000 || shift_end_value < getValue(Gear_Shift))
+  if(getValue(Gear_Shift) >= 1000 || shift_end_value <= getValue(Gear_Shift))
   {
-    setTimer(waitdown_Time, stop_delay);
     cancelTimer(this);
+    while (getValue(Gear_Down)) ; // Remain at the edge of a shift as long as the button is pressed
+    setTimer(waitdown_Time, stop_delay);
   }
 }
 on timer timer_up
 {
   putValue(Gear_Shift, getValue(Gear_Shift) - Shiftstep/6);
-  if(getValue(Gear_Shift) <= 0 || shift_end_value > getValue(Gear_Shift))
+  if(getValue(Gear_Shift) <= 0 || shift_end_value >= getValue(Gear_Shift))
   {
-    setTimer(waitup_Time, stop_delay);
     cancelTimer(this);
+    while (getValue(Gear_up)) ; // Remain at the edge of a shift as long as the button is pressed
+    setTimer(waitup_Time, stop_delay);
   }
 }
 on timer timer_mode_auto
