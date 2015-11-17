@@ -219,7 +219,6 @@ void FillOutputTextBox(int state, int found[])
 
 void LogAction(int act)
 {
-  if (last_logged == act) return;
   switch (act)
   {
     case 2: putValueToControl("logPanel", "logOutput", "Shift down.\n\n"); break;
